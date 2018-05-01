@@ -1,0 +1,31 @@
+{
+  "name": "bs-recharts",
+  "version": "0.0.1",
+  "description": "Bucklescript bindings for Recharts",
+  "homepage": "https://github.com/ahrefs/bs-recharts#readme",
+  "repository": "git@github.com:ahrefs/bs-recharts.git",
+  "bugs": {
+    "url": "https://github.com/ahrefs/bs-recharts/issues"
+  },
+  "author": "Rusty Key <iam@stfoo.ru>",
+  "license": "MIT",
+  "keywords": [
+    "bucklescript",
+    "recharts",
+    "charts",
+    "binding"
+  ],
+  "devDependencies": {
+    "bs-platform": "^3.0.0"
+  },
+  "dependencies": {
+    "reason-react": "^0.3.4",
+    "recharts": "^1.0.0-beta.10"
+  },
+  "scripts": {
+    "build": "bsb -make-world",
+    "watch": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "test": "exit 0"
+  }
+}
