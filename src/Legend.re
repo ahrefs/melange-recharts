@@ -11,6 +11,7 @@ external makeProps :
     ~iconType: string=?,
     ~wrapperStyle: 'a=?,
     ~margin: 'b=?,
+    ~content: 'c=?,
     unit
   ) =>
   _ =
@@ -26,6 +27,7 @@ let make =
       ~iconType=?,
       ~wrapperStyle=?,
       ~margin=?,
+      ~content=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -40,6 +42,7 @@ let make =
         ~iconType?,
         ~wrapperStyle?,
         ~margin?,
+        ~content?,
         ()
       ),
     children

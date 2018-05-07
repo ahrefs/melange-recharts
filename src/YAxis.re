@@ -10,6 +10,11 @@ external makeProps :
     ~height: int=?,
     ~domain: 'a=?,
     ~reversed: bool=?,
+    ~label: 'b=?,
+    ~tick: 'c=?,
+    ~ticks: 'd=?,
+    ~tickFormatter: 'e=?,
+    ~tickLine: 'f=?,
     unit
   ) =>
   _ =
@@ -24,6 +29,11 @@ let make =
       ~height=?,
       ~domain=?,
       ~reversed=?,
+      ~label=?,
+      ~tick=?,
+      ~ticks=?,
+      ~tickFormatter=?,
+      ~tickLine=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -37,6 +47,11 @@ let make =
         ~height?,
         ~domain?,
         ~reversed?,
+        ~label?,
+        ~tick?,
+        ~ticks?,
+        ~tickFormatter?,
+        ~tickLine?,
         ()
       ),
     children

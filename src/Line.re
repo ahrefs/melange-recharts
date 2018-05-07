@@ -11,6 +11,7 @@ external makeProps :
     ~stroke: string=?,
     ~strokeWidth: int=?,
     ~dot: bool=?,
+    ~label: 'b=?,
     unit
   ) =>
   _ =
@@ -26,6 +27,7 @@ let make =
       ~stroke=?,
       ~strokeWidth=?,
       ~dot=?,
+      ~label=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -40,6 +42,7 @@ let make =
         ~stroke?,
         ~strokeWidth?,
         ~dot?,
+        ~label?,
         ()
       ),
     children

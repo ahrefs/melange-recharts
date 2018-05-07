@@ -13,6 +13,9 @@ external makeProps :
     ~active: bool=?,
     ~coordinate: 'f=?,
     ~payload: 'g=?,
+    ~content: 'content=?,
+    ~formatter: 'formatter=?,
+    ~labelFormatter: 'labelFormatter=?,
     ~label: string=?,
     unit
   ) =>
@@ -31,6 +34,9 @@ let make =
       ~active=?,
       ~coordinate=?,
       ~payload=?,
+      ~content=?,
+      ~formatter=?,
+      ~labelFormatter=?,
       ~label=?,
       children
     ) =>
@@ -48,6 +54,9 @@ let make =
         ~active?,
         ~coordinate?,
         ~payload?,
+        ~content?,
+        ~formatter?,
+        ~labelFormatter?,
         ~label?,
         ()
       ),
