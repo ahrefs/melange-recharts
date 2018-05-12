@@ -15,6 +15,10 @@ external makeProps :
     ~ticks: 'd=?,
     ~tickFormatter: 'e=?,
     ~tickLine: 'f=?,
+    ~hide: bool=?,
+    ~width: int=?,
+    ~minTickGap: int=?,
+    ~interval: 'interval=?,
     unit
   ) =>
   _ =
@@ -34,6 +38,10 @@ let make =
       ~ticks=?,
       ~tickFormatter=?,
       ~tickLine=?,
+      ~hide=?,
+      ~width=?,
+      ~minTickGap=?,
+      ~interval=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -52,6 +60,10 @@ let make =
         ~ticks?,
         ~tickFormatter?,
         ~tickLine?,
+        ~hide?,
+        ~width?,
+        ~minTickGap?,
+        ~interval?,
         ()
       ),
     children
