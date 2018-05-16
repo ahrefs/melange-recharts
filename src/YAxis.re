@@ -42,7 +42,7 @@ let make =
       ~width=?,
       ~minTickGap=?,
       ~interval=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=yAxis,
@@ -64,7 +64,7 @@ let make =
         ~width?,
         ~minTickGap?,
         ~interval?,
-        ()
+        (),
       ),
-    children
+    children,
   );

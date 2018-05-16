@@ -31,7 +31,7 @@ let make =
       ~verticalPoints=?,
       ~stroke=?,
       ~strokeDasharray=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=cartesianGrid,
@@ -47,7 +47,7 @@ let make =
         ~verticalPoints?,
         ~stroke?,
         ~strokeDasharray?,
-        ()
+        (),
       ),
-    children
+    children,
   );

@@ -38,7 +38,7 @@ let make =
       ~formatter=?,
       ~labelFormatter=?,
       ~label=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=tooltip,
@@ -58,7 +58,7 @@ let make =
         ~formatter?,
         ~labelFormatter?,
         ~label?,
-        ()
+        (),
       ),
-    children
+    children,
   );

@@ -17,5 +17,5 @@ let make = (~fill=?, ~dataKey=?, ~stackId=?, ~name=?, ~maxBarSize=?, children) =
   ReasonReact.wrapJsForReason(
     ~reactClass=bar,
     ~props=makeProps(~fill?, ~dataKey?, ~stackId?, ~name?, ~maxBarSize?, ()),
-    children
+    children,
   );

@@ -28,7 +28,7 @@ let make =
       ~strokeWidth=?,
       ~dot=?,
       ~label=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=line,
@@ -43,7 +43,7 @@ let make =
         ~strokeWidth?,
         ~dot?,
         ~label?,
-        ()
+        (),
       ),
-    children
+    children,
   );

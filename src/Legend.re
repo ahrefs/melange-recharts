@@ -28,7 +28,7 @@ let make =
       ~wrapperStyle=?,
       ~margin=?,
       ~content=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=legend,
@@ -43,7 +43,7 @@ let make =
         ~wrapperStyle?,
         ~margin?,
         ~content?,
-        ()
+        (),
       ),
-    children
+    children,
   );

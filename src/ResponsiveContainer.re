@@ -23,7 +23,7 @@ let make =
       ~minWidth=?,
       ~minHeight=?,
       ~debounce=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=responsiveContainer,
@@ -35,7 +35,7 @@ let make =
         ~minWidth?,
         ~minHeight?,
         ~debounce?,
-        ()
+        (),
       ),
-    children
+    children,
   );

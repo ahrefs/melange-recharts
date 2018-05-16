@@ -25,7 +25,7 @@ let make =
       ~barCategoryGap=?,
       ~margin=?,
       ~maxBarSize=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=barChart,
@@ -38,7 +38,7 @@ let make =
         ~barCategoryGap?,
         ~margin?,
         ~maxBarSize?,
-        ()
+        (),
       ),
-    children
+    children,
   );

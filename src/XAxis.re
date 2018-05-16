@@ -36,7 +36,7 @@ let make =
       ~tickFormatter=?,
       ~hide=?,
       ~interval=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=xAxis,
@@ -55,7 +55,7 @@ let make =
         ~tickFormatter?,
         ~hide?,
         ~interval?,
-        ()
+        (),
       ),
-    children
+    children,
   );

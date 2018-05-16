@@ -29,7 +29,7 @@ let make =
       ~label=?,
       ~tick=?,
       ~stroke=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=cartesianAxis,
@@ -44,7 +44,7 @@ let make =
         ~label?,
         ~tick?,
         ~stroke?,
-        ()
+        (),
       ),
-    children
+    children,
   );
