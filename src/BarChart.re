@@ -1,16 +1,35 @@
+/* http://recharts.org/en-US/api/BarChart */
+open Utils;
+
 [@bs.module "recharts"]
 external barChart : ReasonReact.reactClass = "BarChart";
 
 [@bs.obj]
 external makeProps :
   (
-    ~data: array('a)=?,
+    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
+    ~syncId: string=?,
     ~width: int=?,
     ~height: int=?,
-    ~barGap: int=?,
-    ~barCategoryGap: float=?,
-    ~margin: 'b=?,
+    ~data: array(Js.t({..})),
+    ~margin: Utils.margin=?,
+    ~barCategoryGap: PxOrPrc.t=?,
+    ~barGap: PxOrPrc.t=?,
+    ~barSize: int=?,
     ~maxBarSize: int=?,
+    ~stackOffset: [@bs.string] [
+                    | `expand
+                    | `none
+                    | `wiggle
+                    | `silhouette
+                    | `sign
+                  ]
+                    =?,
+    ~reverseStackOrder: bool=?,
+    /* ~onClick:  */
+    /* ~onMouseEnter:  */
+    /* ~onMouseMove:  */
+    /* ~onMouseLeave:  */
     unit
   ) =>
   _ =
@@ -18,7 +37,7 @@ external makeProps :
 
 let make =
     (
-      ~data=?,
+      ~data,
       ~width=?,
       ~height=?,
       ~barGap=?,
@@ -31,11 +50,11 @@ let make =
     ~reactClass=barChart,
     ~props=
       makeProps(
-        ~data?,
+        ~data,
         ~width?,
         ~height?,
         ~barGap?,
-        ~barCategoryGap?,
+        ~barCategoryGap=?barCategoryGap |> PxOrPrc.encodeOpt,
         ~margin?,
         ~maxBarSize?,
         (),

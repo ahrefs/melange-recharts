@@ -3,7 +3,7 @@
 [@bs.obj]
 external makeProps :
   (
-    ~type_: string=?,
+    ~type_: string=?, /* this doesn't work :( */
     ~dataKey: 'a=?,
     ~xAxisId: string=?,
     ~yAxisId: string=?,
