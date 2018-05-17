@@ -15,10 +15,10 @@ external makeProps :
     ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
     ~margin: Utils.margin=?,
     ~maxBarSize: int=?,
-    ~onClick: 'onClick=?,
-    ~onMouseEnter: 'onMouseEnter=?,
-    ~onMouseLeave: 'onMouseLeave=?,
-    ~onMouseMove: 'onMouseMove=?,
+    ~onClick: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseLeave: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseMove: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
     ~reverseStackOrder: bool=?,
     ~stackOffset: [@bs.string] [
                     | `expand

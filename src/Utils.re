@@ -26,6 +26,12 @@ type paddingVertical = {
   "bottom": int,
 };
 
+type activeCoordinate = {
+  .
+  "x": int,
+  "y": int,
+};
+
 module AxisInterval = {
   type t;
   type arg =
@@ -72,5 +78,5 @@ module StrOrNode = {
     | Str(v) => fromStr(v)
     | Node(v) => fromNode(v)
     };
-  let encodeOpt = Js.Option.map((. b) => encode(b));
+  let encodeOpt = Js.Option.map((. a) => encode(a));
 };
