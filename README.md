@@ -1,6 +1,7 @@
 # bs-recharts
 
-This is [Bucklescript](https://bucklescript.github.io/) bindings for [Recharts](http://recharts.org/). 🚧 It is not completed, we are adding bindings as we go. 🚧
+This is [Bucklescript](https://bucklescript.github.io/) bindings for [Recharts](http://recharts.org/).
+🚧 It is not completed, we are adding bindings as we go. Doesn't follow semver at this point. 🚧
 
 # Install, [npm](https://www.npmjs.com/package/@ahrefs/bs-recharts)
 
