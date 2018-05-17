@@ -8,10 +8,10 @@ external makeProps :
     ~animationDuration: int=?,
     ~animationEasing: [@bs.string] [
                         | `ease
-                        | `easeIn
-                        | [@bs.as "ease-in"] `easeOut
-                        | [@bs.as "ease-out"] `easeInOut
-                        | [@bs.as "ease-in-out"] `linear
+                        | [@bs.as "ease-in"] `easeIn
+                        | [@bs.as "ease-out"] `easeOut
+                        | [@bs.as "ease-in-out"] `easeInOut
+                        | `linear
                       ]
                         =?,
     ~content: 'content=?,
