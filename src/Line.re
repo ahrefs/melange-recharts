@@ -3,7 +3,7 @@
 [@bs.obj]
 external makeProps :
   (
-    ~type_: string=?, /* this doesn't work :( */
+    ~_type: string=?,
     ~dataKey: 'a=?,
     ~xAxisId: string=?,
     ~yAxisId: string=?,
@@ -19,7 +19,7 @@ external makeProps :
 
 let make =
     (
-      ~type_=?,
+      ~_type=?,
       ~dataKey=?,
       ~xAxisId=?,
       ~yAxisId=?,
@@ -34,7 +34,7 @@ let make =
     ~reactClass=line,
     ~props=
       makeProps(
-        ~type_?,
+        ~_type?,
         ~dataKey?,
         ~xAxisId?,
         ~yAxisId?,
