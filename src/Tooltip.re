@@ -3,20 +3,32 @@
 [@bs.obj]
 external makeProps :
   (
-    ~separator: string=?,
-    ~offset: int=?,
-    ~itemStyle: 'a=?,
-    ~wrapperStyle: 'b=?,
-    ~labelStyle: 'c=?,
-    ~cursor: 'd=?,
-    ~viewBox: 'e=?,
     ~active: bool=?,
-    ~coordinate: 'f=?,
-    ~payload: 'g=?,
+    ~animationBegin: int=?,
+    ~animationDuration: int=?,
+    ~animationEasing: [@bs.string] [
+                        | `ease
+                        | [@bs.as "ease-in"] `easeIn
+                        | [@bs.as "ease-out"] `easeOut
+                        | [@bs.as "ease-in-out"] `easeInOut
+                        | `linear
+                      ]
+                        =?,
     ~content: 'content=?,
+    ~coordinate: Js.t({..})=?,
+    ~cursor: 'cursor=?,
     ~formatter: 'formatter=?,
-    ~labelFormatter: 'labelFormatter=?,
+    ~isAnimationActive: bool=?,
+    ~itemSorter: 'itemSorter=?,
+    ~itemStyle: Js.t({..})=?,
     ~label: string=?,
+    ~labelFormatter: 'labelFormatter=?,
+    ~labelStyle: Js.t({..})=?,
+    ~offset: int=?,
+    ~payload: array(Js.t({..}))=?,
+    ~separator: string=?,
+    ~viewBox: Js.t({..})=?,
+    ~wrapperStyle: Js.t({..})=?,
     unit
   ) =>
   _ =
@@ -24,41 +36,51 @@ external makeProps :
 
 let make =
     (
-      ~separator=?,
-      ~offset=?,
-      ~itemStyle=?,
-      ~wrapperStyle=?,
-      ~labelStyle=?,
-      ~cursor=?,
-      ~viewBox=?,
       ~active=?,
-      ~coordinate=?,
-      ~payload=?,
+      ~animationBegin=?,
+      ~animationDuration=?,
+      ~animationEasing=?,
       ~content=?,
+      ~coordinate=?,
+      ~cursor=?,
       ~formatter=?,
-      ~labelFormatter=?,
+      ~isAnimationActive=?,
+      ~itemSorter=?,
+      ~itemStyle=?,
       ~label=?,
-      children
+      ~labelFormatter=?,
+      ~labelStyle=?,
+      ~offset=?,
+      ~payload=?,
+      ~separator=?,
+      ~viewBox=?,
+      ~wrapperStyle=?,
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=tooltip,
     ~props=
       makeProps(
-        ~separator?,
-        ~offset?,
-        ~itemStyle?,
-        ~wrapperStyle?,
-        ~labelStyle?,
-        ~cursor?,
-        ~viewBox?,
         ~active?,
-        ~coordinate?,
-        ~payload?,
+        ~animationBegin?,
+        ~animationDuration?,
+        ~animationEasing?,
         ~content?,
+        ~coordinate?,
+        ~cursor?,
         ~formatter?,
-        ~labelFormatter?,
+        ~isAnimationActive?,
+        ~itemSorter?,
+        ~itemStyle?,
         ~label?,
-        ()
+        ~labelFormatter?,
+        ~labelStyle?,
+        ~offset?,
+        ~payload?,
+        ~separator?,
+        ~viewBox?,
+        ~wrapperStyle?,
+        (),
       ),
-    children
+    children,
   );

@@ -1,19 +1,20 @@
+/* http://recharts.org/en-US/api/CartesianGrid */
 [@bs.module "recharts"]
 external cartesianGrid : ReasonReact.reactClass = "CartesianGrid";
 
 [@bs.obj]
 external makeProps :
   (
-    ~x: int=?,
-    ~y: int=?,
-    ~width: int=?,
     ~height: int=?,
     ~horizontal: bool=?,
-    ~vertical: bool=?,
-    ~horizontalPoints: array('a)=?,
-    ~verticalPoints: array('b)=?,
+    ~horizontalPoints: array('horizontalPoints)=?,
     ~stroke: string=?,
     ~strokeDasharray: string=?,
+    ~vertical: bool=?,
+    ~verticalPoints: array('verticalPoints)=?,
+    ~width: int=?,
+    ~x: int=?,
+    ~y: int=?,
     unit
   ) =>
   _ =
@@ -21,33 +22,33 @@ external makeProps :
 
 let make =
     (
-      ~x=?,
-      ~y=?,
-      ~width=?,
       ~height=?,
       ~horizontal=?,
-      ~vertical=?,
       ~horizontalPoints=?,
-      ~verticalPoints=?,
       ~stroke=?,
       ~strokeDasharray=?,
-      children
+      ~vertical=?,
+      ~verticalPoints=?,
+      ~width=?,
+      ~x=?,
+      ~y=?,
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=cartesianGrid,
     ~props=
       makeProps(
-        ~x?,
-        ~y?,
-        ~width?,
         ~height?,
         ~horizontal?,
-        ~vertical?,
         ~horizontalPoints?,
-        ~verticalPoints?,
         ~stroke?,
         ~strokeDasharray?,
-        ()
+        ~vertical?,
+        ~verticalPoints?,
+        ~width?,
+        ~x?,
+        ~y?,
+        (),
       ),
-    children
+    children,
   );

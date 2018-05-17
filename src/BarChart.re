@@ -1,16 +1,35 @@
+/* http://recharts.org/en-US/api/BarChart */
+open Utils;
+
 [@bs.module "recharts"]
 external barChart : ReasonReact.reactClass = "BarChart";
 
 [@bs.obj]
 external makeProps :
   (
-    ~data: array('a)=?,
-    ~width: int=?,
+    ~data: array(Js.t({..})),
+    ~barCategoryGap: PxOrPrc.t=?,
+    ~barGap: PxOrPrc.t=?,
+    ~barSize: int=?,
     ~height: int=?,
-    ~barGap: int=?,
-    ~barCategoryGap: float=?,
-    ~margin: 'b=?,
+    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
+    ~margin: Utils.margin=?,
     ~maxBarSize: int=?,
+    ~onClick: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseLeave: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseMove: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~reverseStackOrder: bool=?,
+    ~stackOffset: [@bs.string] [
+                    | `expand
+                    | `none
+                    | `wiggle
+                    | `silhouette
+                    | `sign
+                  ]
+                    =?,
+    ~syncId: string=?,
+    ~width: int=?,
     unit
   ) =>
   _ =
@@ -18,27 +37,45 @@ external makeProps :
 
 let make =
     (
-      ~data=?,
-      ~width=?,
-      ~height=?,
-      ~barGap=?,
+      ~data,
       ~barCategoryGap=?,
+      ~barGap=?,
+      ~barSize=?,
+      ~height=?,
+      ~layout=?,
       ~margin=?,
       ~maxBarSize=?,
-      children
+      ~onClick=?,
+      ~onMouseEnter=?,
+      ~onMouseLeave=?,
+      ~onMouseMove=?,
+      ~reverseStackOrder=?,
+      ~stackOffset=?,
+      ~syncId=?,
+      ~width=?,
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=barChart,
     ~props=
       makeProps(
-        ~data?,
-        ~width?,
+        ~data,
+        ~barCategoryGap=?barCategoryGap |> PxOrPrc.encodeOpt,
+        ~barGap=?barGap |> PxOrPrc.encodeOpt,
+        ~barSize?,
         ~height?,
-        ~barGap?,
-        ~barCategoryGap?,
+        ~layout?,
         ~margin?,
         ~maxBarSize?,
-        ()
+        ~onClick?,
+        ~onMouseEnter?,
+        ~onMouseLeave?,
+        ~onMouseMove?,
+        ~reverseStackOrder?,
+        ~stackOffset?,
+        ~syncId?,
+        ~width?,
+        (),
       ),
-    children
+    children,
   );

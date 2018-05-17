@@ -1,0 +1,21 @@
+{
+  "name": "bs-recharts-examples",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "reason-scripts": "0.8.0"
+  },
+  "scripts": {
+    "prestart": "bsb -clean-world",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "bs-platform": "^3.0.0",
+    "reason-react": "^0.3.4",
+    "bs-recharts": "file:../"
+  }
+}

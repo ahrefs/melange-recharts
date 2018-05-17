@@ -9,12 +9,7 @@
   },
   "author": "Rusty Key <iam@stfoo.ru>",
   "license": "MIT",
-  "keywords": [
-    "bucklescript",
-    "recharts",
-    "charts",
-    "binding"
-  ],
+  "keywords": ["bucklescript", "recharts", "charts", "binding"],
   "devDependencies": {
     "bs-platform": "^3.0.0"
   },

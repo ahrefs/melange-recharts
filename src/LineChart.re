@@ -1,14 +1,54 @@
+/* http://recharts.org/en-US/api/LineChart */
 [@bs.module "recharts"]
 external lineChart : ReasonReact.reactClass = "LineChart";
 
 [@bs.obj]
 external makeProps :
-  (~data: array('a)=?, ~width: int=?, ~height: int=?, ~margin: 'b=?, unit) => _ =
+  (
+    ~data: array(Js.t({..})),
+    ~height: int=?,
+    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
+    ~margin: Utils.margin=?,
+    ~onClick: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseLeave: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseMove: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~syncId: string=?,
+    ~width: int=?,
+    unit
+  ) =>
+  _ =
   "";
 
-let make = (~data=?, ~width=?, ~height=?, ~margin=?, children) =>
+let make =
+    (
+      ~data,
+      ~height=?,
+      ~layout=?,
+      ~margin=?,
+      ~onClick=?,
+      ~onMouseEnter=?,
+      ~onMouseLeave=?,
+      ~onMouseMove=?,
+      ~syncId=?,
+      ~width=?,
+      children,
+    ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=lineChart,
-    ~props=makeProps(~data?, ~width?, ~height?, ~margin?, ()),
-    children
+    ~props=
+      makeProps(
+        ~data,
+        ~height?,
+        ~layout?,
+        ~margin?,
+        ~onClick?,
+        ~onMouseEnter?,
+        ~onMouseLeave?,
+        ~onMouseMove?,
+        ~syncId?,
+        ~width?,
+        (),
+      ),
+    children,
   );

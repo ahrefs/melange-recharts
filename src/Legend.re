@@ -1,17 +1,43 @@
+/* http://recharts.org/en-US/api/Legend */
+open Utils;
+
 [@bs.module "recharts"] external legend : ReasonReact.reactClass = "Legend";
 
 [@bs.obj]
 external makeProps :
   (
-    ~layout: string=?,
-    ~width: int=?,
+    ~align: [@bs.string] [ | `left | `center | `right]=?,
+    ~chartHeight: int=?,
+    ~chartWidth: int=?,
+    ~content: 'content=?,
     ~height: int=?,
-    ~align: string=?,
-    ~verticalAlign: string=?,
-    ~iconType: string=?,
-    ~wrapperStyle: 'a=?,
-    ~margin: 'b=?,
-    ~content: 'c=?,
+    ~iconSize: int=?,
+    ~iconType: [@bs.string] [
+                 | `line
+                 | `square
+                 | `rect
+                 | `circle
+                 | `cross
+                 | `diamond
+                 | `star
+                 | `triangle
+                 | `wye
+               ]
+                 =?,
+    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
+    ~margin: margin=?,
+    ~onClick: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseDown: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseLeave: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseMove: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseOut: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseOver: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseUp: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~payload: array(Js.t({..}))=?,
+    ~verticalAlign: [@bs.string] [ | `top | `middle | `bottom]=?,
+    ~width: int=?,
+    ~wrapperStyle: Js.t({..})=?,
     unit
   ) =>
   _ =
@@ -19,31 +45,55 @@ external makeProps :
 
 let make =
     (
-      ~layout=?,
-      ~width=?,
-      ~height=?,
       ~align=?,
-      ~verticalAlign=?,
-      ~iconType=?,
-      ~wrapperStyle=?,
-      ~margin=?,
+      ~chartHeight=?,
+      ~chartWidth=?,
       ~content=?,
-      children
+      ~height=?,
+      ~iconSize=?,
+      ~iconType=?,
+      ~layout=?,
+      ~margin=?,
+      ~onClick=?,
+      ~onMouseDown=?,
+      ~onMouseEnter=?,
+      ~onMouseLeave=?,
+      ~onMouseMove=?,
+      ~onMouseOut=?,
+      ~onMouseOver=?,
+      ~onMouseUp=?,
+      ~payload=?,
+      ~verticalAlign=?,
+      ~width=?,
+      ~wrapperStyle=?,
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=legend,
     ~props=
       makeProps(
-        ~layout?,
-        ~width?,
-        ~height?,
         ~align?,
-        ~verticalAlign?,
-        ~iconType?,
-        ~wrapperStyle?,
-        ~margin?,
+        ~chartHeight?,
+        ~chartWidth?,
         ~content?,
-        ()
+        ~height?,
+        ~iconSize?,
+        ~iconType?,
+        ~layout?,
+        ~margin?,
+        ~onClick?,
+        ~onMouseDown?,
+        ~onMouseEnter?,
+        ~onMouseLeave?,
+        ~onMouseMove?,
+        ~onMouseOut?,
+        ~onMouseOver?,
+        ~onMouseUp?,
+        ~payload?,
+        ~verticalAlign?,
+        ~width?,
+        ~wrapperStyle?,
+        (),
       ),
-    children
+    children,
   );

@@ -1,0 +1,11 @@
+{
+  "name": "bs-recharts-examples",
+  "namespace": true,
+  "sources": ["src"],
+  "bs-dependencies": ["reason-react", "bs-recharts"],
+  "reason": {
+    "react-jsx": 2
+  },
+  "bsc-flags": ["-bs-super-errors"],
+  "refmt": 3
+}
