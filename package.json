@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "description": "Bucklescript bindings for Recharts",
   "homepage": "https://github.com/ahrefs/bs-recharts#readme",
-  "repository": "git@github.com:ahrefs/bs-recharts.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ahrefs/bs-recharts.git"
+  },
   "bugs": {
     "url": "https://github.com/ahrefs/bs-recharts/issues"
   },
