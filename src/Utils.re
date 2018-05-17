@@ -6,6 +6,14 @@ type margin = {
   "left": int,
 };
 
+type viewBox = {
+  .
+  "x": int,
+  "y": int,
+  "width": int,
+  "height": int,
+};
+
 type paddingHorizontal = {
   .
   "right": int,
