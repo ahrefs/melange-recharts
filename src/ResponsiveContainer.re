@@ -27,20 +27,18 @@ let make =
       ~minHeight=?,
       ~debounce=?,
       children,
-    ) => {
-  let props =
-    makeProps(
-      ~width=?width |> PxOrPrc.encodeOpt,
-      ~height=?height |> PxOrPrc.encodeOpt,
-      ~aspect?,
-      ~minWidth?,
-      ~minHeight?,
-      ~debounce?,
-      (),
-    );
+    ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=responsiveContainer,
-    ~props,
+    ~props=
+      makeProps(
+        ~width=?width |> PxOrPrc.encodeOpt,
+        ~height=?height |> PxOrPrc.encodeOpt,
+        ~aspect?,
+        ~minWidth?,
+        ~minHeight?,
+        ~debounce?,
+        (),
+      ),
     children,
   );
-};
