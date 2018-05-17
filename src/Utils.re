@@ -60,21 +60,6 @@ module PxOrPrc = {
   let encodeOpt = Js.Option.map((. a) => encode(a));
 };
 
-module StrOrInt = {
-  type t;
-  type arg =
-    | Str(string)
-    | Int(int);
-  external fromStr : string => t = "%identity";
-  external fromInt : int => t = "%identity";
-  let encode = v =>
-    switch (v) {
-    | Str(v) => fromStr(v)
-    | Int(v) => fromInt(v)
-    };
-  let encodeOpt = Js.Option.map((. a) => encode(a));
-};
-
 module StrOrNode = {
   type t;
   type arg =
