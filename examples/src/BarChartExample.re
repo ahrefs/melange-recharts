@@ -13,7 +13,7 @@ let make = (~data, _children) => {
         <Bar name="Some bar" dataKey="pv" fill="#2078b4" stackId="a" />
         <Bar name="Other bar" dataKey="uv" fill="#ff7f02" stackId="a" />
         <Tooltip />
-        <Legend align="left" iconType="circle" />
+        <Legend align=`left iconType=`circle />
       </BarChart>
     </ResponsiveContainer>,
 };

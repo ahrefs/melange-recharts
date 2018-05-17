@@ -10,7 +10,7 @@ let make = (~data, _children) => {
         <Line name="Some bar" dataKey="pv" stroke="#2078b4" />
         <Line name="Other bar" dataKey="uv" stroke="#ff7f02" />
         <Tooltip />
-        <Legend align="left" iconType="circle" />
+        <Legend align=`left iconType=`circle />
       </LineChart>
     </ResponsiveContainer>,
 };
