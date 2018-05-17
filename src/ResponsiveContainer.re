@@ -8,11 +8,11 @@ external responsiveContainer : ReasonReact.reactClass = "ResponsiveContainer";
 external makeProps :
   (
     ~aspect: float=?,
-    ~width: PxOrPrc.t=?,
-    ~height: PxOrPrc.t=?,
-    ~minWidth: int=?,
-    ~minHeight: int=?,
     ~debounce: int=?,
+    ~height: PxOrPrc.t=?,
+    ~minHeight: int=?,
+    ~minWidth: int=?,
+    ~width: PxOrPrc.t=?,
     unit
   ) =>
   _ =
@@ -20,24 +20,24 @@ external makeProps :
 
 let make =
     (
-      ~width=?,
-      ~height=?,
       ~aspect=?,
-      ~minWidth=?,
-      ~minHeight=?,
       ~debounce=?,
+      ~height=?,
+      ~minHeight=?,
+      ~minWidth=?,
+      ~width=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=responsiveContainer,
     ~props=
       makeProps(
-        ~width=?width |> PxOrPrc.encodeOpt,
-        ~height=?height |> PxOrPrc.encodeOpt,
         ~aspect?,
-        ~minWidth?,
-        ~minHeight?,
         ~debounce?,
+        ~height=?height |> PxOrPrc.encodeOpt,
+        ~minHeight?,
+        ~minWidth?,
+        ~width=?width |> PxOrPrc.encodeOpt,
         (),
       ),
     children,

@@ -7,16 +7,19 @@ external barChart : ReasonReact.reactClass = "BarChart";
 [@bs.obj]
 external makeProps :
   (
-    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
-    ~syncId: string=?,
-    ~width: int=?,
-    ~height: int=?,
     ~data: array(Js.t({..})),
-    ~margin: Utils.margin=?,
     ~barCategoryGap: PxOrPrc.t=?,
     ~barGap: PxOrPrc.t=?,
     ~barSize: int=?,
+    ~height: int=?,
+    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
+    ~margin: Utils.margin=?,
     ~maxBarSize: int=?,
+    ~onClick: 'onClick=?,
+    ~onMouseEnter: 'onMouseEnter=?,
+    ~onMouseLeave: 'onMouseLeave=?,
+    ~onMouseMove: 'onMouseMove=?,
+    ~reverseStackOrder: bool=?,
     ~stackOffset: [@bs.string] [
                     | `expand
                     | `none
@@ -25,11 +28,8 @@ external makeProps :
                     | `sign
                   ]
                     =?,
-    ~reverseStackOrder: bool=?,
-    /* ~onClick:  */
-    /* ~onMouseEnter:  */
-    /* ~onMouseMove:  */
-    /* ~onMouseLeave:  */
+    ~syncId: string=?,
+    ~width: int=?,
     unit
   ) =>
   _ =
@@ -38,12 +38,21 @@ external makeProps :
 let make =
     (
       ~data,
-      ~width=?,
-      ~height=?,
-      ~barGap=?,
       ~barCategoryGap=?,
+      ~barGap=?,
+      ~barSize=?,
+      ~height=?,
+      ~layout=?,
       ~margin=?,
       ~maxBarSize=?,
+      ~onClick=?,
+      ~onMouseEnter=?,
+      ~onMouseLeave=?,
+      ~onMouseMove=?,
+      ~reverseStackOrder=?,
+      ~stackOffset=?,
+      ~syncId=?,
+      ~width=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
@@ -51,12 +60,21 @@ let make =
     ~props=
       makeProps(
         ~data,
-        ~width?,
-        ~height?,
-        ~barGap?,
         ~barCategoryGap=?barCategoryGap |> PxOrPrc.encodeOpt,
+        ~barGap=?barGap |> PxOrPrc.encodeOpt,
+        ~barSize?,
+        ~height?,
+        ~layout?,
         ~margin?,
         ~maxBarSize?,
+        ~onClick?,
+        ~onMouseEnter?,
+        ~onMouseLeave?,
+        ~onMouseMove?,
+        ~reverseStackOrder?,
+        ~stackOffset?,
+        ~syncId?,
+        ~width?,
         (),
       ),
     children,

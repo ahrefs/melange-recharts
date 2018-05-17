@@ -5,26 +5,50 @@ external lineChart : ReasonReact.reactClass = "LineChart";
 [@bs.obj]
 external makeProps :
   (
+    ~data: array(Js.t({..})),
+    ~height: int=?,
     ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
+    ~margin: Utils.margin=?,
+    ~onClick: 'onClick=?,
+    ~onMouseEnter: 'onMouseEnter=?,
+    ~onMouseLeave: 'onMouseLeave=?,
+    ~onMouseMove: 'onMouseMove=?,
     ~syncId: string=?,
     ~width: int=?,
-    ~height: int=?,
-    ~data: array(Js.t({..})),
-    ~margin: Utils.margin=?,
-    /* ~onClick:  */
-    /* ~onMouseEnter:  */
-    /* ~onMouseMove:  */
-    /* ~onMouseLeave:  */
     unit
   ) =>
   _ =
   "";
 
 let make =
-    (~layout=?, ~syncId=?, ~width=?, ~height=?, ~data, ~margin=?, children) =>
+    (
+      ~data,
+      ~height=?,
+      ~layout=?,
+      ~margin=?,
+      ~onClick=?,
+      ~onMouseEnter=?,
+      ~onMouseLeave=?,
+      ~onMouseMove=?,
+      ~syncId=?,
+      ~width=?,
+      children,
+    ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=lineChart,
     ~props=
-      makeProps(~layout?, ~syncId?, ~width?, ~height?, ~data, ~margin?, ()),
+      makeProps(
+        ~data,
+        ~height?,
+        ~layout?,
+        ~margin?,
+        ~onClick?,
+        ~onMouseEnter?,
+        ~onMouseLeave?,
+        ~onMouseMove?,
+        ~syncId?,
+        ~width?,
+        (),
+      ),
     children,
   );
