@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@ahrefs/bs-recharts@file:..":
+  version "0.1.0"
+  dependencies:
+    reason-react "^0.3.4"
+    recharts "^1.0.0-beta.10"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -1247,12 +1253,6 @@ bs-loader@^1.8.0:
 bs-platform@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-3.0.0.tgz#38f200730db52fdea37819376b6ac3dfb20244c0"
-
-"bs-recharts@file:..":
-  version "0.0.3"
-  dependencies:
-    reason-react "^0.3.4"
-    recharts "^1.0.0-beta.10"
 
 bser@1.0.2:
   version "1.0.2"

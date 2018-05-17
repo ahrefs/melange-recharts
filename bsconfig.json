@@ -1,13 +1,12 @@
 {
-  "name": "bs-recharts",
-  "namespace": true,
-  "sources": [{
-    "dir": "src",
-    "subdirs": true
-  }],
-  "bs-dependencies": [
-    "reason-react"
+  "name": "@ahrefs/bs-recharts",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
   ],
+  "bs-dependencies": ["reason-react"],
   "package-specs": {
     "module": "commonjs",
     "in-source": true
@@ -16,8 +15,6 @@
     "react-jsx": 2
   },
   "suffix": ".bs.js",
-  "bsc-flags": [
-    "-bs-super-errors"
-  ],
+  "bsc-flags": ["-bs-super-errors"],
   "refmt": 3
 }

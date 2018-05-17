@@ -1,5 +1,5 @@
 /* http://recharts.org/en-US/api/BarChart */
-open Utils;
+open BsRecharts__Utils;
 
 [@bs.module "recharts"]
 external barChart : ReasonReact.reactClass = "BarChart";
@@ -13,7 +13,7 @@ external makeProps :
     ~barSize: int=?,
     ~height: int=?,
     ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
-    ~margin: Utils.margin=?,
+    ~margin: margin=?,
     ~maxBarSize: int=?,
     ~onClick: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseEnter: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,

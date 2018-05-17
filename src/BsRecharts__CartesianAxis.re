@@ -1,5 +1,5 @@
 /* http://recharts.org/en-US/api/CartesianAxis */
-open Utils;
+open BsRecharts__Utils;
 
 [@bs.module "recharts"]
 external cartesianAxis : ReasonReact.reactClass = "CartesianAxis";
