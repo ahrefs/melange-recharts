@@ -1,5 +1,5 @@
 /* http://recharts.org/en-US/api/Legend */
-open Utils;
+open BsRecharts__Utils;
 
 [@bs.module "recharts"] external legend : ReasonReact.reactClass = "Legend";
 

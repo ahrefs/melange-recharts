@@ -1,3 +1,5 @@
+open BsRecharts__Utils;
+
 /* http://recharts.org/en-US/api/LineChart */
 [@bs.module "recharts"]
 external lineChart : ReasonReact.reactClass = "LineChart";
@@ -8,7 +10,7 @@ external makeProps :
     ~data: array(Js.t({..})),
     ~height: int=?,
     ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
-    ~margin: Utils.margin=?,
+    ~margin: margin=?,
     ~onClick: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseEnter: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseLeave: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,

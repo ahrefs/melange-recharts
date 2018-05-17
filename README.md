@@ -1,11 +1,11 @@
 # bs-recharts
 
-This is Bucklescript bindings for [Recharts](http://recharts.org/). It is not completed, we are adding bindings as we go.
+This is [Bucklescript](https://bucklescript.github.io/) bindings for [Recharts](http://recharts.org/). 🚧 It is not completed, we are adding bindings as we go. 🚧
 
-# Install
+# Install, [npm](https://www.npmjs.com/package/@ahrefs/bs-recharts)
 
 ```
-yarn add bs-recharts
+yarn add @ahrefs/bs-recharts
 ```
 
 # Setup
@@ -16,7 +16,7 @@ Add bs-recharts to bs-depenencies in your bs-config. bs!
 {
   /* ... */
   "bs-dependencies": [
-    "bs-recharts"
+    "@ahrefs/bs-recharts"
   ],
   /* ... */
 }

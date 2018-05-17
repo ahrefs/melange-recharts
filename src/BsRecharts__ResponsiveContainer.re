@@ -1,5 +1,5 @@
 /* http://recharts.org/en-US/api/ResponsiveContainer */
-open Utils;
+open BsRecharts__Utils;
 
 [@bs.module "recharts"]
 external responsiveContainer : ReasonReact.reactClass = "ResponsiveContainer";

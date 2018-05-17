@@ -1,7 +1,7 @@
-/* http://recharts.org/en-US/api/YAxis */
-open Utils;
+/* http://recharts.org/en-US/api/XAxis */
+open BsRecharts__Utils;
 
-[@bs.module "recharts"] external yAxis : ReasonReact.reactClass = "YAxis";
+[@bs.module "recharts"] external xAxis : ReasonReact.reactClass = "XAxis";
 
 [@bs.obj]
 external makeProps :
@@ -28,8 +28,8 @@ external makeProps :
     ~onMouseOut: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseOver: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseUp: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~orientation: [@bs.string] [ | `left | `right]=?,
-    ~padding: paddingVertical=?,
+    ~orientation: [@bs.string] [ | `bottom | `top]=?,
+    ~padding: paddingHorizontal=?,
     ~reversed: bool=?,
     ~scale: [@bs.string] [
               | `auto
@@ -50,6 +50,7 @@ external makeProps :
             ]
               =?,
     ~tick: 'tick=?,
+    ~tickCount: int=?,
     ~tickFormatter: 'tickFormatter=?,
     ~tickLine: 'tickLine=?,
     ~tickMargin: int=?,
@@ -57,7 +58,7 @@ external makeProps :
     ~tickSize: int=?,
     ~unit: string=?,
     ~width: int=?,
-    ~yAxisId: string=?,
+    ~xAxisId: string=?,
     unit
   ) =>
   _ =
@@ -92,6 +93,7 @@ let make =
       ~reversed=?,
       ~scale=?,
       ~tick=?,
+      ~tickCount=?,
       ~tickFormatter=?,
       ~tickLine=?,
       ~tickMargin=?,
@@ -99,11 +101,11 @@ let make =
       ~tickSize=?,
       ~unit=?,
       ~width=?,
-      ~yAxisId=?,
+      ~xAxisId=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
-    ~reactClass=yAxis,
+    ~reactClass=xAxis,
     ~props=
       makeProps(
         ~_type?,
@@ -133,6 +135,7 @@ let make =
         ~reversed?,
         ~scale?,
         ~tick?,
+        ~tickCount?,
         ~tickFormatter?,
         ~tickLine?,
         ~tickMargin?,
@@ -140,7 +143,7 @@ let make =
         ~tickSize?,
         ~unit?,
         ~width?,
-        ~yAxisId?,
+        ~xAxisId?,
         (),
       ),
     children,
