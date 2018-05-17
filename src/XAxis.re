@@ -1,21 +1,64 @@
+/* http://recharts.org/en-US/api/XAxis */
+open Utils;
+
 [@bs.module "recharts"] external xAxis : ReasonReact.reactClass = "XAxis";
 
 [@bs.obj]
 external makeProps :
   (
-    ~_type: string=?,
-    ~xAxisId: string=?,
+    ~_type: [@bs.string] [ | `number | `category]=?,
+    ~allowDataOverflow: bool=?,
+    ~allowDecimals: bool=?,
+    ~allowDuplicatedCategory: bool=?,
+    ~axisLine: 'c=?,
     ~dataKey: string=?,
-    ~orientation: string=?,
+    ~domain: array('a)=?,
     ~height: int=?,
-    ~domain: 'a=?,
-    ~reversed: bool=?,
-    ~label: 'b=?,
-    ~tick: 'c=?,
-    ~ticks: 'd=?,
-    ~tickFormatter: 'e=?,
     ~hide: bool=?,
-    ~interval: 'interval=?,
+    ~interval: 'b=?,
+    ~label: StrOrNode.t=?,
+    ~minTickGap: int=?,
+    ~mirror: bool=?,
+    ~name: string=?,
+    ~onClick: 'h=?,
+    ~onMouseDown: 'j=?,
+    ~onMouseEnter: 'o=?,
+    ~onMouseLeave: 'p=?,
+    ~onMouseMove: 'l=?,
+    ~onMouseOut: 'n=?,
+    ~onMouseOver: 'm=?,
+    ~onMouseUp: 'k=?,
+    ~orientation: [@bs.string] [ | `bottom | `top]=?,
+    ~padding: paddingHorizontal=?,
+    ~reversed: bool=?,
+    ~scale: [@bs.string] [
+              | `auto
+              | `linear
+              | `pow
+              | `sqrt
+              | `log
+              | `identity
+              | `time
+              | `band
+              | `point
+              | `ordinal
+              | `quantile
+              | `quantize
+              | `utcTime
+              | `sequential
+              | `threshold
+            ]
+              =?,
+    ~tick: 'd=?,
+    ~tickCount: int=?,
+    ~tickFormatter: 'e=?,
+    ~tickLine: 'f=?,
+    ~tickMargin: int=?,
+    ~ticks: array('g)=?,
+    ~tickSize: int=?,
+    ~unit: string=?,
+    ~width: int=?,
+    ~xAxisId: string=?,
     unit
   ) =>
   _ =
@@ -24,18 +67,41 @@ external makeProps :
 let make =
     (
       ~_type=?,
-      ~xAxisId=?,
+      ~allowDataOverflow=?,
+      ~allowDecimals=?,
+      ~allowDuplicatedCategory=?,
+      ~axisLine=?,
       ~dataKey=?,
-      ~orientation=?,
-      ~height=?,
       ~domain=?,
-      ~reversed=?,
-      ~label=?,
-      ~tick=?,
-      ~ticks=?,
-      ~tickFormatter=?,
+      ~height=?,
       ~hide=?,
       ~interval=?,
+      ~label=?,
+      ~minTickGap=?,
+      ~mirror=?,
+      ~name=?,
+      ~onClick=?,
+      ~onMouseDown=?,
+      ~onMouseEnter=?,
+      ~onMouseLeave=?,
+      ~onMouseMove=?,
+      ~onMouseOut=?,
+      ~onMouseOver=?,
+      ~onMouseUp=?,
+      ~orientation=?,
+      ~padding=?,
+      ~reversed=?,
+      ~scale=?,
+      ~tick=?,
+      ~tickCount=?,
+      ~tickFormatter=?,
+      ~tickLine=?,
+      ~tickMargin=?,
+      ~ticks=?,
+      ~tickSize=?,
+      ~unit=?,
+      ~width=?,
+      ~xAxisId=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
@@ -43,18 +109,41 @@ let make =
     ~props=
       makeProps(
         ~_type?,
-        ~xAxisId?,
+        ~allowDataOverflow?,
+        ~allowDecimals?,
+        ~allowDuplicatedCategory?,
+        ~axisLine?,
         ~dataKey?,
-        ~orientation?,
-        ~height?,
         ~domain?,
-        ~reversed?,
-        ~label?,
-        ~tick?,
-        ~ticks?,
-        ~tickFormatter?,
+        ~height?,
         ~hide?,
         ~interval?,
+        ~label?,
+        ~minTickGap?,
+        ~mirror?,
+        ~name?,
+        ~onClick?,
+        ~onMouseDown?,
+        ~onMouseEnter?,
+        ~onMouseLeave?,
+        ~onMouseMove?,
+        ~onMouseOut?,
+        ~onMouseOver?,
+        ~onMouseUp?,
+        ~orientation?,
+        ~padding?,
+        ~reversed?,
+        ~scale?,
+        ~tick?,
+        ~tickCount?,
+        ~tickFormatter?,
+        ~tickLine?,
+        ~tickMargin?,
+        ~ticks?,
+        ~tickSize?,
+        ~unit?,
+        ~width?,
+        ~xAxisId?,
         (),
       ),
     children,
