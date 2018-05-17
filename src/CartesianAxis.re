@@ -9,7 +9,7 @@ external makeProps :
   (
     ~axisLine: 'axisLine=?,
     ~height: int=?,
-    ~interval: 'interval=?,
+    ~interval: AxisInterval.t=?,
     ~label: 'label=?,
     ~minTickGap: int=?,
     ~mirror: bool=?,
@@ -52,7 +52,7 @@ let make =
       makeProps(
         ~axisLine?,
         ~height?,
-        ~interval?,
+        ~interval=?interval |> AxisInterval.encodeOpt,
         ~label?,
         ~minTickGap?,
         ~mirror?,

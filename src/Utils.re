@@ -27,18 +27,22 @@ type paddingVertical = {
 };
 
 module AxisInterval = {
-  type t(_) =
-    | PreserveStart: t(string)
-    | PreserveEnd: t(string)
-    | PreserveStartEnd: t(string)
-    | Number(int): t(int);
-  let decode = (type a, interval: t(a)) : a =>
-    switch (interval) {
-    | PreserveStart => "preserveStart"
-    | PreserveEnd => "preserveEnd"
-    | PreserveStartEnd => "preserveStartEnd"
-    | Number(int) => int
+  type t;
+  type arg =
+    | PreserveStart
+    | PreserveEnd
+    | PreserveStartEnd
+    | Num(int);
+  external fromNum : int => t = "%identity";
+  external fromStr : string => t = "%identity";
+  let encode = v =>
+    switch (v) {
+    | PreserveStart => fromStr("preserveStart")
+    | PreserveEnd => fromStr("preserveEnd")
+    | PreserveStartEnd => fromStr("preserveStartEnd")
+    | Num(num) => fromNum(num)
     };
+  let encodeOpt = Js.Option.map((. a) => encode(a));
 };
 
 module PxOrPrc = {
