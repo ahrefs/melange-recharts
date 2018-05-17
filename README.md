@@ -46,4 +46,53 @@ let make = (~data, _children) => {
 };
 ```
 
+# Helpers
+
+Some of polymorphic params are represented as a variant, list below:
+
+```
+module AxisInterval = {
+  ...
+  type arg =
+    | PreserveStart
+    | PreserveEnd
+    | PreserveStartEnd
+    | Num(int);
+  ...
+};
+
+module PxOrPrc = {
+  ...
+  type arg =
+    | Px(int)
+    | Prc(int);
+  ...
+};
+
+module StrOrNode = {
+  ...
+  type arg =
+    | Str(string)
+    | Node(ReasonReact.reactElement);
+  ...
+};
+```
+
+you will use it like this:
+
+```
+<XAxis
+  intervel=PreserveStart
+  label=Str("text")
+/>
+<XAxis
+  intervel=Num(12)
+  label=Node(
+    <span>
+      (ReasonReact.stringToElement("text"))
+    </span>
+  )
+/>
+```
+
 Check [Reacharts documentation](http://recharts.org/en-US/api) for available props.
