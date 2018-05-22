@@ -39,16 +39,13 @@ module AxisInterval = {
     | PreserveEnd
     | PreserveStartEnd
     | Num(int);
-  external fromNum : int => t = "%identity";
-  external fromStr : string => t = "%identity";
-  let encode = v =>
-    switch (v) {
-    | PreserveStart => fromStr("preserveStart")
-    | PreserveEnd => fromStr("preserveEnd")
-    | PreserveStartEnd => fromStr("preserveStartEnd")
-    | Num(num) => fromNum(num)
-    };
-  let encodeOpt = Js.Option.map((. a) => encode(a));
+  let encode: arg => t =
+    fun
+    | PreserveStart => Obj.magic("preserveStart")
+    | PreserveEnd => Obj.magic("preserveEnd")
+    | PreserveStartEnd => Obj.magic("preserveStartEnd")
+    | Num(num) => Obj.magic(num);
+  let encodeOpt = v => Belt.Option.map(v, encode);
 };
 
 module PxOrPrc = {
@@ -56,14 +53,11 @@ module PxOrPrc = {
   type arg =
     | Px(int)
     | Prc(int);
-  external fromPx : int => t = "%identity";
-  external fromPrc : string => t = "%identity";
-  let encode = v =>
-    switch (v) {
-    | Px(v) => fromPx(v)
-    | Prc(v) => fromPrc(string_of_int(v) ++ "%")
-    };
-  let encodeOpt = Js.Option.map((. a) => encode(a));
+  let encode: arg => t =
+    fun
+    | Px(v) => Obj.magic(v)
+    | Prc(v) => Obj.magic(string_of_int(v) ++ "%");
+  let encodeOpt = v => Belt.Option.map(v, encode);
 };
 
 module StrOrNode = {
@@ -71,12 +65,9 @@ module StrOrNode = {
   type arg =
     | Str(string)
     | Node(ReasonReact.reactElement);
-  external fromStr : string => t = "%identity";
-  external fromNode : ReasonReact.reactElement => t = "%identity";
-  let encode = v =>
-    switch (v) {
-    | Str(v) => fromStr(v)
-    | Node(v) => fromNode(v)
-    };
-  let encodeOpt = Js.Option.map((. a) => encode(a));
+  let encode: arg => t =
+    fun
+    | Str(v) => Obj.magic(v)
+    | Node(v) => Obj.magic(v);
+  let encodeOpt = v => Belt.Option.map(v, encode);
 };
