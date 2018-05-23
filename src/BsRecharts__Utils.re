@@ -45,7 +45,7 @@ module AxisInterval = {
     | PreserveEnd => Obj.magic("preserveEnd")
     | PreserveStartEnd => Obj.magic("preserveStartEnd")
     | Num(num) => Obj.magic(num);
-  let encodeOpt = v => Belt.Option.map(v, encode);
+  let encodeOpt = Belt.Option.map(_, encode);
 };
 
 module PxOrPrc = {
@@ -57,7 +57,7 @@ module PxOrPrc = {
     fun
     | Px(v) => Obj.magic(v)
     | Prc(v) => Obj.magic(string_of_int(v) ++ "%");
-  let encodeOpt = v => Belt.Option.map(v, encode);
+  let encodeOpt = Belt.Option.map(_, encode);
 };
 
 module StrOrNode = {
@@ -69,5 +69,5 @@ module StrOrNode = {
     fun
     | Str(v) => Obj.magic(v)
     | Node(v) => Obj.magic(v);
-  let encodeOpt = v => Belt.Option.map(v, encode);
+  let encodeOpt = Belt.Option.map(_, encode);
 };
