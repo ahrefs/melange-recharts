@@ -1,3 +1,7 @@
+module Area = BsRecharts__Area;
+
+module AreaChart = BsRecharts__AreaChart;
+
 module Bar = BsRecharts__Bar;
 
 module BarChart = BsRecharts__BarChart;
