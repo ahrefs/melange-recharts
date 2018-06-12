@@ -1,4 +1,6 @@
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Line";
+/* http://recharts.org/en-US/api/Area */
+
+[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Area";
 
 [@bs.obj]
 external makeProps :
@@ -29,6 +31,7 @@ external makeProps :
                         | `linear
                       ]
                         =?,
+    ~baseLine: 'baseLine=?,
     ~connectNulls: bool=?,
     ~dataKey: string=?,
     ~dot: 'dot=?,
@@ -59,6 +62,7 @@ external makeProps :
     ~onMouseOver: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseUp: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
     ~points: array(Js.t({..}))=?,
+    ~stackId: string=?,
     ~stroke: string=?,
     ~strokeWidth: int=?,
     ~unit: string=?,
@@ -77,6 +81,7 @@ let make =
       ~animationBegin=?,
       ~animationDuration=?,
       ~animationEasing=?,
+      ~baseLine=?,
       ~connectNulls=?,
       ~dataKey=?,
       ~dot=?,
@@ -95,6 +100,7 @@ let make =
       ~onMouseOver=?,
       ~onMouseUp=?,
       ~points=?,
+      ~stackId=?,
       ~stroke=?,
       ~strokeWidth=?,
       ~unit=?,
@@ -111,6 +117,7 @@ let make =
         ~animationBegin?,
         ~animationDuration?,
         ~animationEasing?,
+        ~baseLine?,
         ~connectNulls?,
         ~dataKey?,
         ~dot?,
@@ -129,6 +136,7 @@ let make =
         ~onMouseOver?,
         ~onMouseUp?,
         ~points?,
+        ~stackId?,
         ~stroke?,
         ~strokeWidth?,
         ~unit?,

@@ -2,7 +2,7 @@ open BsRecharts__Utils;
 
 /* http://recharts.org/en-US/api/LineChart */
 [@bs.module "recharts"]
-external lineChart : ReasonReact.reactClass = "LineChart";
+external reactClass : ReasonReact.reactClass = "LineChart";
 
 [@bs.obj]
 external makeProps :
@@ -37,7 +37,7 @@ let make =
       children,
     ) =>
   ReasonReact.wrapJsForReason(
-    ~reactClass=lineChart,
+    ~reactClass,
     ~props=
       makeProps(
         ~data,

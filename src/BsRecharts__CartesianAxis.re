@@ -2,7 +2,7 @@
 open BsRecharts__Utils;
 
 [@bs.module "recharts"]
-external cartesianAxis : ReasonReact.reactClass = "CartesianAxis";
+external reactClass : ReasonReact.reactClass = "CartesianAxis";
 
 [@bs.obj]
 external makeProps :
@@ -47,7 +47,7 @@ let make =
       children,
     ) =>
   ReasonReact.wrapJsForReason(
-    ~reactClass=cartesianAxis,
+    ~reactClass,
     ~props=
       makeProps(
         ~axisLine?,

@@ -1,6 +1,6 @@
 /* http://recharts.org/en-US/api/CartesianGrid */
 [@bs.module "recharts"]
-external cartesianGrid : ReasonReact.reactClass = "CartesianGrid";
+external reactClass : ReasonReact.reactClass = "CartesianGrid";
 
 [@bs.obj]
 external makeProps :
@@ -37,7 +37,7 @@ let make =
       children,
     ) =>
   ReasonReact.wrapJsForReason(
-    ~reactClass=cartesianGrid,
+    ~reactClass,
     ~props=
       makeProps(
         ~height?,

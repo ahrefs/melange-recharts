@@ -1,4 +1,5 @@
-[@bs.module "recharts"] external tooltip : ReasonReact.reactClass = "Tooltip";
+[@bs.module "recharts"]
+external reactClass : ReasonReact.reactClass = "Tooltip";
 
 [@bs.obj]
 external makeProps :
@@ -58,7 +59,7 @@ let make =
       children,
     ) =>
   ReasonReact.wrapJsForReason(
-    ~reactClass=tooltip,
+    ~reactClass,
     ~props=
       makeProps(
         ~active?,

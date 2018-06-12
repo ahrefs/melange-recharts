@@ -2,7 +2,7 @@
 open BsRecharts__Utils;
 
 [@bs.module "recharts"]
-external responsiveContainer : ReasonReact.reactClass = "ResponsiveContainer";
+external reactClass : ReasonReact.reactClass = "ResponsiveContainer";
 
 [@bs.obj]
 external makeProps :
@@ -29,7 +29,7 @@ let make =
       children,
     ) =>
   ReasonReact.wrapJsForReason(
-    ~reactClass=responsiveContainer,
+    ~reactClass,
     ~props=
       makeProps(
         ~aspect?,

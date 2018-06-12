@@ -1,7 +1,8 @@
 /* http://recharts.org/en-US/api/Legend */
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external legend : ReasonReact.reactClass = "Legend";
+[@bs.module "recharts"]
+external reactClass : ReasonReact.reactClass = "Legend";
 
 [@bs.obj]
 external makeProps :
@@ -69,7 +70,7 @@ let make =
       children,
     ) =>
   ReasonReact.wrapJsForReason(
-    ~reactClass=legend,
+    ~reactClass,
     ~props=
       makeProps(
         ~align?,

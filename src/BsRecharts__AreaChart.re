@@ -1,33 +1,23 @@
-/* http://recharts.org/en-US/api/BarChart */
+/* http://recharts.org/en-US/api/AreaChart */
+
 open BsRecharts__Utils;
 
 [@bs.module "recharts"]
-external reactClass : ReasonReact.reactClass = "BarChart";
+external reactClass : ReasonReact.reactClass = "AreaChart";
 
 [@bs.obj]
 external makeProps :
   (
+    ~baseValue: 'baseValue=?,
     ~data: array(Js.t({..})),
-    ~barCategoryGap: PxOrPrc.t=?,
-    ~barGap: PxOrPrc.t=?,
-    ~barSize: int=?,
     ~height: int=?,
     ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
     ~margin: margin=?,
-    ~maxBarSize: int=?,
     ~onClick: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseEnter: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseLeave: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseMove: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~reverseStackOrder: bool=?,
-    ~stackOffset: [@bs.string] [
-                    | `expand
-                    | `none
-                    | `wiggle
-                    | `silhouette
-                    | `sign
-                  ]
-                    =?,
+    ~stackOffset: [@bs.string] [ | `expand | `none | `wiggle | `silhouette]=?,
     ~syncId: string=?,
     ~width: int=?,
     unit
@@ -37,19 +27,15 @@ external makeProps :
 
 let make =
     (
+      ~baseValue,
       ~data,
-      ~barCategoryGap=?,
-      ~barGap=?,
-      ~barSize=?,
       ~height=?,
       ~layout=?,
       ~margin=?,
-      ~maxBarSize=?,
       ~onClick=?,
       ~onMouseEnter=?,
       ~onMouseLeave=?,
       ~onMouseMove=?,
-      ~reverseStackOrder=?,
       ~stackOffset=?,
       ~syncId=?,
       ~width=?,
@@ -59,19 +45,15 @@ let make =
     ~reactClass,
     ~props=
       makeProps(
+        ~baseValue,
         ~data,
-        ~barCategoryGap=?barCategoryGap |> PxOrPrc.encodeOpt,
-        ~barGap=?barGap |> PxOrPrc.encodeOpt,
-        ~barSize?,
         ~height?,
         ~layout?,
         ~margin?,
-        ~maxBarSize?,
         ~onClick?,
         ~onMouseEnter?,
         ~onMouseLeave?,
         ~onMouseMove?,
-        ~reverseStackOrder?,
         ~stackOffset?,
         ~syncId?,
         ~width?,

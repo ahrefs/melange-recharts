@@ -12,6 +12,8 @@ module Line = BsRecharts__Line;
 
 module LineChart = BsRecharts__LineChart;
 
+module ReferenceDot = BsRecharts__ReferenceDot;
+
 module ResponsiveContainer = BsRecharts__ResponsiveContainer;
 
 module Tooltip = BsRecharts__Tooltip;

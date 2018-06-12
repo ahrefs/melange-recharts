@@ -1,7 +1,7 @@
 /* http://recharts.org/en-US/api/XAxis */
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external xAxis : ReasonReact.reactClass = "XAxis";
+[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "XAxis";
 
 [@bs.obj]
 external makeProps :
@@ -105,7 +105,7 @@ let make =
       children,
     ) =>
   ReasonReact.wrapJsForReason(
-    ~reactClass=xAxis,
+    ~reactClass,
     ~props=
       makeProps(
         ~_type?,

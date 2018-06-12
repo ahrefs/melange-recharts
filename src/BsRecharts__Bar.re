@@ -1,4 +1,4 @@
-[@bs.module "recharts"] external bar : ReasonReact.reactClass = "Bar";
+[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Bar";
 
 [@bs.obj]
 external makeProps :
@@ -90,7 +90,7 @@ let make =
       children,
     ) =>
   ReasonReact.wrapJsForReason(
-    ~reactClass=bar,
+    ~reactClass,
     ~props=
       makeProps(
         ~animationBegin?,
