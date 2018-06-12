@@ -27,8 +27,8 @@ external makeProps :
 
 let make =
     (
-      ~baseValue,
       ~data,
+      ~baseValue=?,
       ~height=?,
       ~layout=?,
       ~margin=?,
@@ -45,8 +45,8 @@ let make =
     ~reactClass,
     ~props=
       makeProps(
-        ~baseValue,
         ~data,
+        ~baseValue?,
         ~height?,
         ~layout?,
         ~margin?,
