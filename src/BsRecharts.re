@@ -10,11 +10,17 @@ module CartesianAxis = BsRecharts__CartesianAxis;
 
 module CartesianGrid = BsRecharts__CartesianGrid;
 
+module Cell = BsRecharts__Cell;
+
 module Legend = BsRecharts__Legend;
 
 module Line = BsRecharts__Line;
 
 module LineChart = BsRecharts__LineChart;
+
+module Pie = BsRecharts__Pie;
+
+module PieChart = BsRecharts__PieChart;
 
 module ReferenceDot = BsRecharts__ReferenceDot;
 
