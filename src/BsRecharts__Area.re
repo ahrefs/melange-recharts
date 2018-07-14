@@ -1,5 +1,4 @@
 /* http://recharts.org/en-US/api/Area */
-
 [@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Area";
 
 [@bs.obj]
@@ -55,14 +54,14 @@ external makeProps :
                  ]
                    =?,
     ~name: string=?,
-    ~onClick: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseDown: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseEnter: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onClick: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseLeave: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseMove: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseOut: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseOver: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseUp: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseOut: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
     ~points: array(Js.t({..}))=?,
     ~stackId: string=?,
     ~stroke: string=?,

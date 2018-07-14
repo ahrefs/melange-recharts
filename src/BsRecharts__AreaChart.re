@@ -1,9 +1,7 @@
 /* http://recharts.org/en-US/api/AreaChart */
-
 open BsRecharts__Utils;
 
-[@bs.module "recharts"]
-external reactClass : ReasonReact.reactClass = "AreaChart";
+[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "AreaChart";
 
 [@bs.obj]
 external makeProps :
@@ -13,10 +11,10 @@ external makeProps :
     ~height: int=?,
     ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
     ~margin: margin=?,
-    ~onClick: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseEnter: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onClick: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseLeave: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseMove: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
     ~stackOffset: [@bs.string] [ | `expand | `none | `wiggle | `silhouette]=?,
     ~syncId: string=?,
     ~width: int=?,
