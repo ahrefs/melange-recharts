@@ -1,8 +1,7 @@
 open BsRecharts__Utils;
 
 /* http://recharts.org/en-US/api/LineChart */
-[@bs.module "recharts"]
-external reactClass : ReasonReact.reactClass = "LineChart";
+[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "LineChart";
 
 [@bs.obj]
 external makeProps :
@@ -11,10 +10,10 @@ external makeProps :
     ~height: int=?,
     ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
     ~margin: margin=?,
-    ~onClick: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseEnter: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onClick: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseLeave: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseMove: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
     ~syncId: string=?,
     ~width: int=?,
     unit

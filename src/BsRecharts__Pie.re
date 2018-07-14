@@ -1,24 +1,13 @@
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Line";
+/* http://recharts.org/en-US/api/Pie */
+open BsRecharts__Utils;
+
+[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Pie";
 
 [@bs.obj]
 external makeProps :
   (
-    ~_type: [@bs.string] [
-              | `basis
-              | `basisClosed
-              | `basisOpen
-              | `linear
-              | `linearClosed
-              | `natural
-              | `monotoneX
-              | `monotoneY
-              | `monotone
-              | `step
-              | `stepBefore
-              | `stepAfter
-            ]
-              =?,
-    ~activeDot: 'activeDot=?,
+    ~activeIndex: array(Js.t({..}))=?,
+    ~activeShape: 'activeShape=?,
     ~animationBegin: int=?,
     ~animationDuration: int=?,
     ~animationEasing: [@bs.string] [
@@ -29,13 +18,16 @@ external makeProps :
                         | `linear
                       ]
                         =?,
-    ~connectNulls: bool=?,
+    ~cx: PxOrPrc.t=?,
+    ~cy: PxOrPrc.t=?,
+    ~data: array(Js.t({..})),
     ~dataKey: string=?,
-    ~dot: 'dot=?,
+    ~endAngle: int=?,
     ~id: string=?,
+    ~innerRadius: PxOrPrc.t=?,
     ~isAnimationActive: bool=?,
     ~label: 'label=?,
-    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
+    ~labelLine: 'labelLine=?,
     ~legendType: [@bs.string] [
                    | `line
                    | `square
@@ -49,7 +41,8 @@ external makeProps :
                    | `wye
                  ]
                    =?,
-    ~name: string=?,
+    ~minAngle: int=?,
+    ~nameKey: string=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
@@ -58,12 +51,9 @@ external makeProps :
     ~onMouseOut: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~points: array(Js.t({..}))=?,
-    ~stroke: string=?,
-    ~strokeWidth: int=?,
-    ~unit: string=?,
-    ~xAxisId: string=?,
-    ~yAxisId: string=?,
+    ~outerRadius: PxOrPrc.t=?,
+    ~paddingAngle: int=?,
+    ~startAngle: int=?,
     unit
   ) =>
   _ =
@@ -71,21 +61,24 @@ external makeProps :
 
 let make =
     (
-      ~_type=?,
-      ~_type=?,
-      ~activeDot=?,
+      ~activeIndex=?,
+      ~activeShape=?,
       ~animationBegin=?,
       ~animationDuration=?,
       ~animationEasing=?,
-      ~connectNulls=?,
+      ~cx=?,
+      ~cy=?,
+      ~data,
       ~dataKey=?,
-      ~dot=?,
+      ~endAngle=?,
       ~id=?,
+      ~innerRadius=?,
       ~isAnimationActive=?,
       ~label=?,
-      ~layout=?,
+      ~labelLine=?,
       ~legendType=?,
-      ~name=?,
+      ~minAngle=?,
+      ~nameKey=?,
       ~onClick=?,
       ~onMouseDown=?,
       ~onMouseEnter=?,
@@ -94,32 +87,33 @@ let make =
       ~onMouseOut=?,
       ~onMouseOver=?,
       ~onMouseUp=?,
-      ~points=?,
-      ~stroke=?,
-      ~strokeWidth=?,
-      ~unit=?,
-      ~xAxisId=?,
-      ~yAxisId=?,
+      ~outerRadius=?,
+      ~paddingAngle=?,
+      ~startAngle=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
       makeProps(
-        ~_type?,
-        ~activeDot?,
+        ~activeIndex?,
+        ~activeShape?,
         ~animationBegin?,
         ~animationDuration?,
         ~animationEasing?,
-        ~connectNulls?,
+        ~cx?,
+        ~cy?,
+        ~data,
         ~dataKey?,
-        ~dot?,
+        ~endAngle?,
         ~id?,
+        ~innerRadius?,
         ~isAnimationActive?,
         ~label?,
-        ~layout?,
+        ~labelLine?,
         ~legendType?,
-        ~name?,
+        ~minAngle?,
+        ~nameKey?,
         ~onClick?,
         ~onMouseDown?,
         ~onMouseEnter?,
@@ -128,12 +122,9 @@ let make =
         ~onMouseOut?,
         ~onMouseOver?,
         ~onMouseUp?,
-        ~points?,
-        ~stroke?,
-        ~strokeWidth?,
-        ~unit?,
-        ~xAxisId?,
-        ~yAxisId?,
+        ~outerRadius?,
+        ~paddingAngle?,
+        ~startAngle?,
         (),
       ),
     children,

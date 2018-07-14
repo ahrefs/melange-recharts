@@ -1,8 +1,7 @@
 /* http://recharts.org/en-US/api/BarChart */
 open BsRecharts__Utils;
 
-[@bs.module "recharts"]
-external reactClass : ReasonReact.reactClass = "BarChart";
+[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "BarChart";
 
 [@bs.obj]
 external makeProps :
@@ -15,19 +14,12 @@ external makeProps :
     ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
     ~margin: margin=?,
     ~maxBarSize: int=?,
-    ~onClick: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseEnter: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onClick: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
     ~onMouseLeave: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseMove: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
     ~reverseStackOrder: bool=?,
-    ~stackOffset: [@bs.string] [
-                    | `expand
-                    | `none
-                    | `wiggle
-                    | `silhouette
-                    | `sign
-                  ]
-                    =?,
+    ~stackOffset: [@bs.string] [ | `expand | `none | `wiggle | `silhouette | `sign]=?,
     ~syncId: string=?,
     ~width: int=?,
     unit
