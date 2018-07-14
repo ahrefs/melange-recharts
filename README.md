@@ -11,7 +11,7 @@ yarn add @ahrefs/bs-recharts
 
 # Setup
 
-Add bs-recharts to bs-depenencies in your bs-config. bs!
+Add bs-recharts to `bs-depenencies` in your `bsconfig.json`!
 
 ```js
 {
@@ -83,11 +83,11 @@ you will use it like this:
 
 ```
 <XAxis
-  intervel=PreserveStart
+  interval=PreserveStart
   label=Str("text")
 />
 <XAxis
-  intervel=Num(12)
+  interval=Num(12)
   label=Node(
     <span>
       (ReasonReact.stringToElement("text"))
