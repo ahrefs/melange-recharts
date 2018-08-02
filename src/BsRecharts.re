@@ -24,6 +24,8 @@ module PieChart = BsRecharts__PieChart;
 
 module ReferenceDot = BsRecharts__ReferenceDot;
 
+module ReferenceLine = BsRecharts__ReferenceLine;
+
 module ResponsiveContainer = BsRecharts__ResponsiveContainer;
 
 module Tooltip = BsRecharts__Tooltip;
