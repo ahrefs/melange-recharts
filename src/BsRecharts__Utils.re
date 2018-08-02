@@ -51,12 +51,12 @@ module AxisInterval = {
 module PxOrPrc = {
   type t;
   type arg =
-    | Px(int)
-    | Prc(int);
+    | Px(float)
+    | Prc(float);
   let encode: arg => t =
     fun
     | Px(v) => Obj.magic(v)
-    | Prc(v) => Obj.magic(string_of_int(v) ++ "%");
+    | Prc(v) => Obj.magic(string_of_float(v) ++ "%");
   let encodeOpt = Belt.Option.map(_, encode);
 };
 
