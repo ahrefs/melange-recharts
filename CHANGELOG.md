@@ -1,3 +1,7 @@
+# v0.1.8 (2.08.2018)
+
+- Use floats for measurement
+
 # v0.1.7 (2.08.2018)
 
 - Reference line bindings
