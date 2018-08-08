@@ -1,3 +1,7 @@
+# v0.1.9 (9.08.2018)
+
+- Move ReasonReact to peer dependencies
+
 # v0.1.8 (2.08.2018)
 
 - Use floats for measurement
