@@ -1,3 +1,7 @@
+# v0.1.10 (9.08.2018)
+
+- Add bindings to Brush component
+
 # v0.1.9 (9.08.2018)
 
 - Move ReasonReact to peer dependencies
