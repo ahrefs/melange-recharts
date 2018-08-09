@@ -14,6 +14,14 @@ type viewBox = {
   "height": int,
 };
 
+type padding = {
+  .
+  "top": int,
+  "right": int,
+  "bottom": int,
+  "left": int
+};
+
 type paddingHorizontal = {
   .
   "right": int,
