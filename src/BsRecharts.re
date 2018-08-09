@@ -5,7 +5,7 @@ module AreaChart = BsRecharts__AreaChart;
 module Bar = BsRecharts__Bar;
 
 module BarChart = BsRecharts__BarChart;
-
+module Brush = BsRecharts__Brush;
 module CartesianAxis = BsRecharts__CartesianAxis;
 
 module CartesianGrid = BsRecharts__CartesianGrid;
