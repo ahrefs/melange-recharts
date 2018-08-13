@@ -1,7 +1,6 @@
 # v0.2.0 (13.08.2018)
 
 - Upgrade Reason React and bs-platform
-— Rename `_type` to `type_` to follow the convention
 
 # v0.1.10 (9.08.2018)
 
