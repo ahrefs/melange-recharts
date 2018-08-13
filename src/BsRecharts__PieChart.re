@@ -8,9 +8,9 @@ external makeProps :
   (
     ~height: int=?,
     ~margin: margin=?,
-    ~onClick: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseLeave: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
+    ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
     ~width: int=?,
     unit
   ) =>
