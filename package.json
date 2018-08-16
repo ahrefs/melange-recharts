@@ -1,6 +1,6 @@
 {
   "name": "@ahrefs/bs-recharts",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Bucklescript bindings for Recharts",
   "homepage": "https://github.com/ahrefs/bs-recharts#readme",
   "repository": {

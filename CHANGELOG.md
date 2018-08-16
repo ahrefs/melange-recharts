@@ -1,3 +1,8 @@
+# v0.2.1 (16.08.2018)
+
+- change data type form `array(Js.t({..}))` to `array('dataItem)`, so we can accept `Json.t` too
+- add reason-react to devDeps
+
 # v0.2.0 (13.08.2018)
 
 - Upgrade Reason React and bs-platform
