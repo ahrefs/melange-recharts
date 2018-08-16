@@ -1,12 +1,13 @@
 /* http://recharts.org/en-US/api/BarChart */
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "BarChart";
+[@bs.module "recharts"]
+external reactClass : ReasonReact.reactClass = "BarChart";
 
 [@bs.obj]
 external makeProps :
   (
-    ~data: array(Js.t({..})),
+    ~data: array('dataItem),
     ~barCategoryGap: PxOrPrc.t=?,
     ~barGap: PxOrPrc.t=?,
     ~barSize: int=?,
@@ -19,7 +20,14 @@ external makeProps :
     ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~reverseStackOrder: bool=?,
-    ~stackOffset: [@bs.string] [ | `expand | `none | `wiggle | `silhouette | `sign]=?,
+    ~stackOffset: [@bs.string] [
+                    | `expand
+                    | `none
+                    | `wiggle
+                    | `silhouette
+                    | `sign
+                  ]
+                    =?,
     ~syncId: string=?,
     ~width: int=?,
     unit

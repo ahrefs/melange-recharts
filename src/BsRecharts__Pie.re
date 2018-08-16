@@ -20,7 +20,7 @@ external makeProps :
                         =?,
     ~cx: PxOrPrc.t=?,
     ~cy: PxOrPrc.t=?,
-    ~data: array(Js.t({..})),
+    ~data: array('dataItem),
     ~dataKey: string=?,
     ~endAngle: int=?,
     ~id: string=?,

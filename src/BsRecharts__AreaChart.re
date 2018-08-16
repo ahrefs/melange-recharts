@@ -1,13 +1,14 @@
 /* http://recharts.org/en-US/api/AreaChart */
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "AreaChart";
+[@bs.module "recharts"]
+external reactClass : ReasonReact.reactClass = "AreaChart";
 
 [@bs.obj]
 external makeProps :
   (
     ~baseValue: 'baseValue=?,
-    ~data: array(Js.t({..})),
+    ~data: array('dataItem),
     ~height: int=?,
     ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
     ~margin: margin=?,
