@@ -1,5 +1,5 @@
 /* http://recharts.org/en-US/api/Brush */
-open BsRecharts__Utils
+open BsRecharts__Utils;
 
 [@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Brush";
 
@@ -13,10 +13,13 @@ external makeProps :
     ~fill: string=?,
     ~gap: int=?,
     ~height: int=?,
-    ~onChange: ({..
-      "startIndex": int,
-      "endIndex": int
-    } => unit)=?,
+    ~onChange: {
+                 ..
+                 "startIndex": int,
+                 "endIndex": int,
+               } =>
+               unit
+                 =?,
     ~padding: padding=?,
     ~startIndex: int=?,
     ~stroke: string=?,

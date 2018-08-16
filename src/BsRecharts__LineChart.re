@@ -1,7 +1,8 @@
 open BsRecharts__Utils;
 
 /* http://recharts.org/en-US/api/LineChart */
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "LineChart";
+[@bs.module "recharts"]
+external reactClass : ReasonReact.reactClass = "LineChart";
 
 [@bs.obj]
 external makeProps :
