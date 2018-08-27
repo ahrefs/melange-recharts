@@ -30,6 +30,10 @@ module ReferenceLine = BsRecharts__ReferenceLine;
 
 module ResponsiveContainer = BsRecharts__ResponsiveContainer;
 
+module Scatter = BsRecharts__Scatter;
+
+module ScatterChart = BsRecharts__ScatterChart;
+
 module Tooltip = BsRecharts__Tooltip;
 
 module Utils = BsRecharts__Utils;
