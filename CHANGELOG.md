@@ -1,3 +1,10 @@
+# v0.2.2 (17.09.2018)
+
+- refmt
+- Pie chart updates:
+  - add fill
+  - encode PxOrPrc
+
 # v0.2.1 (16.08.2018)
 
 - change data type form `array(Js.t({..}))` to `array('dataItem)`, so we can accept `Json.t` too
