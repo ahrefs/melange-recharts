@@ -55,6 +55,7 @@ external makeProps:
     ~outerRadius: PxOrPrc.t=?,
     ~paddingAngle: int=?,
     ~startAngle: int=?,
+    ~stroke: string=?,
     unit
   ) =>
   _ =
@@ -92,6 +93,7 @@ let make =
       ~outerRadius=?,
       ~paddingAngle=?,
       ~startAngle=?,
+      ~stroke=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
@@ -128,6 +130,7 @@ let make =
         ~outerRadius=?outerRadius |> PxOrPrc.encodeOpt,
         ~paddingAngle?,
         ~startAngle?,
+        ~stroke?,
         (),
       ),
     children,
