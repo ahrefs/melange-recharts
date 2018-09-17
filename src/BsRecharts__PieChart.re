@@ -1,10 +1,11 @@
 open BsRecharts__Utils;
 
 /* http://recharts.org/en-US/api/PieChart */
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "PieChart";
+[@bs.module "recharts"]
+external reactClass: ReasonReact.reactClass = "PieChart";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~height: int=?,
     ~margin: margin=?,
@@ -17,9 +18,27 @@ external makeProps :
   _ =
   "";
 
-let make = (~height=?, ~margin=?, ~onClick=?, ~onMouseEnter=?, ~onMouseLeave=?, ~width=?, children) =>
+let make =
+    (
+      ~height=?,
+      ~margin=?,
+      ~onClick=?,
+      ~onMouseEnter=?,
+      ~onMouseLeave=?,
+      ~width=?,
+      children,
+    ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
-    ~props=makeProps(~height?, ~margin?, ~onClick?, ~onMouseEnter?, ~onMouseLeave?, ~width?, ()),
+    ~props=
+      makeProps(
+        ~height?,
+        ~margin?,
+        ~onClick?,
+        ~onMouseEnter?,
+        ~onMouseLeave?,
+        ~width?,
+        (),
+      ),
     children,
   );

@@ -1,9 +1,9 @@
 /* http://recharts.org/en-US/api/CartesianGrid */
 [@bs.module "recharts"]
-external reactClass : ReasonReact.reactClass = "CartesianGrid";
+external reactClass: ReasonReact.reactClass = "CartesianGrid";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~height: int=?,
     ~horizontal: bool=?,

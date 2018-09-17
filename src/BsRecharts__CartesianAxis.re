@@ -2,10 +2,10 @@
 open BsRecharts__Utils;
 
 [@bs.module "recharts"]
-external reactClass : ReasonReact.reactClass = "CartesianAxis";
+external reactClass: ReasonReact.reactClass = "CartesianAxis";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~axisLine: 'axisLine=?,
     ~height: int=?,

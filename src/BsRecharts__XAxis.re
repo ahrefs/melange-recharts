@@ -1,10 +1,10 @@
 /* http://recharts.org/en-US/api/XAxis */
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "XAxis";
+[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "XAxis";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~_type: [@bs.string] [ | `number | `category]=?,
     ~allowDataOverflow: bool=?,

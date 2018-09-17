@@ -1,10 +1,10 @@
 /* http://recharts.org/en-US/api/Legend */
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Legend";
+[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Legend";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~align: [@bs.string] [ | `left | `center | `right]=?,
     ~chartHeight: int=?,
@@ -12,7 +12,18 @@ external makeProps :
     ~content: 'content=?,
     ~height: int=?,
     ~iconSize: int=?,
-    ~iconType: [@bs.string] [ | `line | `square | `rect | `circle | `cross | `diamond | `star | `triangle | `wye]=?,
+    ~iconType: [@bs.string] [
+                 | `line
+                 | `square
+                 | `rect
+                 | `circle
+                 | `cross
+                 | `diamond
+                 | `star
+                 | `triangle
+                 | `wye
+               ]
+                 =?,
     ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
     ~margin: margin=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,

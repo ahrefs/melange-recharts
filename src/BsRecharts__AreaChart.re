@@ -2,10 +2,10 @@
 open BsRecharts__Utils;
 
 [@bs.module "recharts"]
-external reactClass : ReasonReact.reactClass = "AreaChart";
+external reactClass: ReasonReact.reactClass = "AreaChart";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~baseValue: 'baseValue=?,
     ~data: array('dataItem),

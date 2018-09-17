@@ -1,7 +1,7 @@
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Line";
+[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Line";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~_type: [@bs.string] [
               | `basis

@@ -1,8 +1,8 @@
 [@bs.module "recharts"]
-external reactClass : ReasonReact.reactClass = "Tooltip";
+external reactClass: ReasonReact.reactClass = "Tooltip";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~active: bool=?,
     ~animationBegin: int=?,

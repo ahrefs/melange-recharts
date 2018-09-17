@@ -2,10 +2,10 @@
 open BsRecharts__Utils;
 
 [@bs.module "recharts"]
-external reactClass : ReasonReact.reactClass = "BarChart";
+external reactClass: ReasonReact.reactClass = "BarChart";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~data: array('dataItem),
     ~barCategoryGap: PxOrPrc.t=?,

@@ -1,10 +1,10 @@
 /* http://recharts.org/en-US/api/YAxis */
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "YAxis";
+[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "YAxis";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~_type: [@bs.string] [ | `number | `category]=?,
     ~allowDataOverflow: bool=?,

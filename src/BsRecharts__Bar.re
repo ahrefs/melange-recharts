@@ -1,7 +1,7 @@
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Bar";
+[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Bar";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~animationBegin: int=?,
     ~animationDuration: int=?,

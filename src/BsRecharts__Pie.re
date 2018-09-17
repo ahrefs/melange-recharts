@@ -1,10 +1,10 @@
 /* http://recharts.org/en-US/api/Pie */
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Pie";
+[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Pie";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~activeIndex: array(Js.t({..}))=?,
     ~activeShape: 'activeShape=?,
@@ -23,6 +23,7 @@ external makeProps :
     ~data: array('dataItem),
     ~dataKey: string=?,
     ~endAngle: int=?,
+    ~fill: string=?,
     ~id: string=?,
     ~innerRadius: PxOrPrc.t=?,
     ~isAnimationActive: bool=?,
@@ -71,6 +72,7 @@ let make =
       ~data,
       ~dataKey=?,
       ~endAngle=?,
+      ~fill=?,
       ~id=?,
       ~innerRadius=?,
       ~isAnimationActive=?,
@@ -101,13 +103,14 @@ let make =
         ~animationBegin?,
         ~animationDuration?,
         ~animationEasing?,
-        ~cx?,
-        ~cy?,
+        ~cx=?cx |> PxOrPrc.encodeOpt,
+        ~cy=?cy |> PxOrPrc.encodeOpt,
         ~data,
         ~dataKey?,
         ~endAngle?,
+        ~fill?,
         ~id?,
-        ~innerRadius?,
+        ~innerRadius=?innerRadius |> PxOrPrc.encodeOpt,
         ~isAnimationActive?,
         ~label?,
         ~labelLine?,
@@ -122,7 +125,7 @@ let make =
         ~onMouseOut?,
         ~onMouseOver?,
         ~onMouseUp?,
-        ~outerRadius?,
+        ~outerRadius=?outerRadius |> PxOrPrc.encodeOpt,
         ~paddingAngle?,
         ~startAngle?,
         (),

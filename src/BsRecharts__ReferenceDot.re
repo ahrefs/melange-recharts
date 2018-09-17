@@ -1,7 +1,8 @@
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "ReferenceDot";
+[@bs.module "recharts"]
+external reactClass: ReasonReact.reactClass = "ReferenceDot";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~alwaysShow: bool=?,
     ~fill: string=?,
