@@ -1,3 +1,8 @@
+# v0.2.4 (18.09.2018)
+
+- `dataKey` is required in `Pie`, `Brush`, `Bar` and `Area`
+- `tickMargin` is required in `CartesianAxis`
+
 # v0.2.3 (17.09.2018)
 
 - add 'stroke' to Pie
