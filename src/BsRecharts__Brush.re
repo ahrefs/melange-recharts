@@ -8,7 +8,7 @@ external makeProps:
   (
     ~className: string=?,
     ~data: array('data)=?,
-    ~dataKey: string=?,
+    ~dataKey: string,
     ~endIndex: int=?,
     ~fill: string=?,
     ~gap: int=?,
@@ -37,7 +37,7 @@ let make =
     (
       ~className=?,
       ~data=?,
-      ~dataKey=?,
+      ~dataKey,
       ~endIndex=?,
       ~fill=?,
       ~gap=?,
@@ -59,7 +59,7 @@ let make =
       makeProps(
         ~className?,
         ~data?,
-        ~dataKey?,
+        ~dataKey,
         ~endIndex?,
         ~fill?,
         ~gap?,
