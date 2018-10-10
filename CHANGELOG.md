@@ -1,3 +1,7 @@
+# v0.2.6 (10.10.2018)
+
+- Add `ComposedChart`
+
 # v0.2.5 (10.10.2018)
 
 - fix `type_` in `Area`, `Line`
