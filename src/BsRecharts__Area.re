@@ -77,7 +77,6 @@ external makeProps:
 let make =
     (
       ~_type=?,
-      ~_type=?,
       ~activeDot=?,
       ~animationBegin=?,
       ~animationDuration=?,
