@@ -1,3 +1,7 @@
+# v0.2.5 (10.10.2018)
+
+- fix `type_` in `Area`, `Line`
+
 # v0.2.4 (18.09.2018)
 
 - `dataKey` is required in `Pie`, `Brush`, `Bar` and `Area`
