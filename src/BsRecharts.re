@@ -12,6 +12,8 @@ module CartesianAxis = BsRecharts__CartesianAxis;
 
 module CartesianGrid = BsRecharts__CartesianGrid;
 
+module ComposedChart = BsRecharts__ComposedChart;
+
 module Cell = BsRecharts__Cell;
 
 module Legend = BsRecharts__Legend;
