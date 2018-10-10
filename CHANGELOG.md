@@ -1,3 +1,7 @@
+# v0.2.8 (10.10.2018)
+
+- unwrap `barCategoryGap` and `barGap` in `ComposedChar`
+
 # v0.2.7 (10.10.2018)
 
 - export `ComposedChart`
