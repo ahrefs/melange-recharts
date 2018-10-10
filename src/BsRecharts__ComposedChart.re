@@ -49,8 +49,8 @@ let make =
     ~props=
       makeProps(
         ~data,
-        ~barCategoryGap?,
-        ~barGap?,
+        ~barCategoryGap=?barCategoryGap |> PxOrPrc.encodeOpt,
+        ~barGap=?barGap |> PxOrPrc.encodeOpt,
         ~barSize?,
         ~height?,
         ~layout?,
