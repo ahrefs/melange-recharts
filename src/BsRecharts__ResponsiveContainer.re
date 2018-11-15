@@ -2,10 +2,10 @@
 open BsRecharts__Utils;
 
 [@bs.module "recharts"]
-external reactClass : ReasonReact.reactClass = "ResponsiveContainer";
+external reactClass: ReasonReact.reactClass = "ResponsiveContainer";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~aspect: float=?,
     ~debounce: int=?,

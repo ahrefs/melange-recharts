@@ -2,10 +2,10 @@
 open BsRecharts__Utils;
 
 [@bs.module "recharts"]
-external reactClass : ReasonReact.reactClass = "CartesianAxis";
+external reactClass: ReasonReact.reactClass = "CartesianAxis";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~axisLine: 'axisLine=?,
     ~height: int=?,
@@ -16,7 +16,7 @@ external makeProps :
     ~orientation: [@bs.string] [ | `top | `bottom | `left | `right]=?,
     ~tick: 'tick=?,
     ~tickLine: 'tickLine=?,
-    ~tickMargin: int=?,
+    ~tickMargin: int,
     ~tickSize: int=?,
     ~viewBox: viewBox=?,
     ~width: int=?,
@@ -38,7 +38,7 @@ let make =
       ~orientation=?,
       ~tick=?,
       ~tickLine=?,
-      ~tickMargin=?,
+      ~tickMargin,
       ~tickSize=?,
       ~viewBox=?,
       ~width=?,
@@ -59,7 +59,7 @@ let make =
         ~orientation?,
         ~tick?,
         ~tickLine?,
-        ~tickMargin?,
+        ~tickMargin,
         ~tickSize?,
         ~viewBox?,
         ~width?,

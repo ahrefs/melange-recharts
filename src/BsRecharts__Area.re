@@ -1,8 +1,8 @@
 /* http://recharts.org/en-US/api/Area */
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Area";
+[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Area";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~_type: [@bs.string] [
               | `basis
@@ -32,7 +32,7 @@ external makeProps :
                         =?,
     ~baseLine: 'baseLine=?,
     ~connectNulls: bool=?,
-    ~dataKey: string=?,
+    ~dataKey: string,
     ~dot: 'dot=?,
     ~fill: string=?,
     ~fillOpacity: float=?,
@@ -54,14 +54,14 @@ external makeProps :
                  ]
                    =?,
     ~name: string=?,
-    ~onClick: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseLeave: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseOut: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
+    ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseOut: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~points: array(Js.t({..}))=?,
     ~stackId: string=?,
     ~stroke: string=?,
@@ -77,14 +77,13 @@ external makeProps :
 let make =
     (
       ~_type=?,
-      ~_type=?,
       ~activeDot=?,
       ~animationBegin=?,
       ~animationDuration=?,
       ~animationEasing=?,
       ~baseLine=?,
       ~connectNulls=?,
-      ~dataKey=?,
+      ~dataKey,
       ~dot=?,
       ~fill=?,
       ~fillOpacity=?,
@@ -122,7 +121,7 @@ let make =
         ~animationEasing?,
         ~baseLine?,
         ~connectNulls?,
-        ~dataKey?,
+        ~dataKey,
         ~dot?,
         ~fill?,
         ~fillOpacity?,

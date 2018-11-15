@@ -1,6 +1,6 @@
 {
   "name": "@ahrefs/bs-recharts",
-  "version": "0.1.10",
+  "version": "0.2.8",
   "description": "Bucklescript bindings for Recharts",
   "homepage": "https://github.com/ahrefs/bs-recharts#readme",
   "repository": {
@@ -22,10 +22,11 @@
     "binding"
   ],
   "devDependencies": {
-    "bs-platform": "^3.0.0"
+    "bs-platform": "^4.0.3",
+    "reason-react": "^0.5.3"
   },
   "peerDependencies": {
-    "reason-react": "^0.4.2"
+    "reason-react": "^0.5.3"
   },
   "dependencies": {
     "recharts": "^1.0.0-beta.10"

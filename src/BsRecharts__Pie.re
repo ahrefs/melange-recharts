@@ -1,10 +1,10 @@
 /* http://recharts.org/en-US/api/Pie */
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Pie";
+[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Pie";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~activeIndex: array(Js.t({..}))=?,
     ~activeShape: 'activeShape=?,
@@ -20,9 +20,10 @@ external makeProps :
                         =?,
     ~cx: PxOrPrc.t=?,
     ~cy: PxOrPrc.t=?,
-    ~data: array(Js.t({..})),
-    ~dataKey: string=?,
+    ~data: array('dataItem),
+    ~dataKey: string,
     ~endAngle: int=?,
+    ~fill: string=?,
     ~id: string=?,
     ~innerRadius: PxOrPrc.t=?,
     ~isAnimationActive: bool=?,
@@ -43,17 +44,18 @@ external makeProps :
                    =?,
     ~minAngle: int=?,
     ~nameKey: string=?,
-    ~onClick: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseLeave: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseOut: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
+    ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseOut: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~outerRadius: PxOrPrc.t=?,
     ~paddingAngle: int=?,
     ~startAngle: int=?,
+    ~stroke: string=?,
     unit
   ) =>
   _ =
@@ -69,8 +71,9 @@ let make =
       ~cx=?,
       ~cy=?,
       ~data,
-      ~dataKey=?,
+      ~dataKey,
       ~endAngle=?,
+      ~fill=?,
       ~id=?,
       ~innerRadius=?,
       ~isAnimationActive=?,
@@ -90,6 +93,7 @@ let make =
       ~outerRadius=?,
       ~paddingAngle=?,
       ~startAngle=?,
+      ~stroke=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
@@ -101,13 +105,14 @@ let make =
         ~animationBegin?,
         ~animationDuration?,
         ~animationEasing?,
-        ~cx?,
-        ~cy?,
+        ~cx=?cx |> PxOrPrc.encodeOpt,
+        ~cy=?cy |> PxOrPrc.encodeOpt,
         ~data,
-        ~dataKey?,
+        ~dataKey,
         ~endAngle?,
+        ~fill?,
         ~id?,
-        ~innerRadius?,
+        ~innerRadius=?innerRadius |> PxOrPrc.encodeOpt,
         ~isAnimationActive?,
         ~label?,
         ~labelLine?,
@@ -122,9 +127,10 @@ let make =
         ~onMouseOut?,
         ~onMouseOver?,
         ~onMouseUp?,
-        ~outerRadius?,
+        ~outerRadius=?outerRadius |> PxOrPrc.encodeOpt,
         ~paddingAngle?,
         ~startAngle?,
+        ~stroke?,
         (),
       ),
     children,

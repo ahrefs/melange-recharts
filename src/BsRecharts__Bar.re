@@ -1,7 +1,7 @@
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Bar";
+[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Bar";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~animationBegin: int=?,
     ~animationDuration: int=?,
@@ -16,7 +16,7 @@ external makeProps :
     ~background: 'background=?,
     ~barSize: int=?,
     ~data: array('data)=?,
-    ~dataKey: string=?,
+    ~dataKey: string,
     ~fill: string=?,
     ~id: string=?,
     ~isAnimationActive: bool=?,
@@ -38,14 +38,14 @@ external makeProps :
     ~maxBarSize: int=?,
     ~minPointSize: int=?,
     ~name: string=?,
-    ~onClick: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseLeave: (Js.t({..}), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseOut: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
-    ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEventRe.Mouse.t) => unit=?,
+    ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseOut: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~shape: 'shape=?,
     ~stackId: string=?,
     ~unit: string=?,
@@ -64,7 +64,7 @@ let make =
       ~background=?,
       ~barSize=?,
       ~data=?,
-      ~dataKey=?,
+      ~dataKey,
       ~fill=?,
       ~id=?,
       ~isAnimationActive=?,
@@ -99,7 +99,7 @@ let make =
         ~background?,
         ~barSize?,
         ~data?,
-        ~dataKey?,
+        ~dataKey,
         ~fill?,
         ~id?,
         ~isAnimationActive?,

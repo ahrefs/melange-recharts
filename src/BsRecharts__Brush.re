@@ -1,22 +1,25 @@
 /* http://recharts.org/en-US/api/Brush */
-open BsRecharts__Utils
+open BsRecharts__Utils;
 
-[@bs.module "recharts"] external reactClass : ReasonReact.reactClass = "Brush";
+[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Brush";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~className: string=?,
     ~data: array('data)=?,
-    ~dataKey: string=?,
+    ~dataKey: string,
     ~endIndex: int=?,
     ~fill: string=?,
     ~gap: int=?,
     ~height: int=?,
-    ~onChange: ({..
-      "startIndex": int,
-      "endIndex": int
-    } => unit)=?,
+    ~onChange: {
+                 ..
+                 "startIndex": int,
+                 "endIndex": int,
+               } =>
+               unit
+                 =?,
     ~padding: padding=?,
     ~startIndex: int=?,
     ~stroke: string=?,
@@ -34,7 +37,7 @@ let make =
     (
       ~className=?,
       ~data=?,
-      ~dataKey=?,
+      ~dataKey,
       ~endIndex=?,
       ~fill=?,
       ~gap=?,
@@ -56,7 +59,7 @@ let make =
       makeProps(
         ~className?,
         ~data?,
-        ~dataKey?,
+        ~dataKey,
         ~endIndex?,
         ~fill?,
         ~gap?,

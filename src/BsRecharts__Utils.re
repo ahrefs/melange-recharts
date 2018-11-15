@@ -19,7 +19,7 @@ type padding = {
   "top": int,
   "right": int,
   "bottom": int,
-  "left": int
+  "left": int,
 };
 
 type paddingHorizontal = {
