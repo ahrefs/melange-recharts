@@ -1,3 +1,8 @@
+# v0.2.9 (15.11.2018)
+
+- add `Scatter`
+- add `ScatterChart`
+
 # v0.2.8 (10.10.2018)
 
 - unwrap `barCategoryGap` and `barGap` in `ComposedChar`
