@@ -23,7 +23,7 @@ external makeProps:
     ~yAxisId: string=?,
     ~zAxisId: string=?,
     ~data: array(Js.t({..})),
-    ~dataKey: _ => string,
+    ~dataKey: 'dataKey,
     ~line: 'line=?,
     ~shape: 'shape=?,
     ~lineType: 'lineType=?,

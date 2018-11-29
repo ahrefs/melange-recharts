@@ -8,7 +8,7 @@ external makeProps:
   (
     ~className: string=?,
     ~data: array('data)=?,
-    ~dataKey: _ => string,
+    ~dataKey: 'dataKey,
     ~endIndex: int=?,
     ~fill: string=?,
     ~gap: int=?,

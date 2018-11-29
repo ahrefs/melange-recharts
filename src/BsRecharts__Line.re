@@ -30,7 +30,7 @@ external makeProps:
                       ]
                         =?,
     ~connectNulls: bool=?,
-    ~dataKey: _ => string,
+    ~dataKey: 'dataKey,
     ~dot: 'dot=?,
     ~id: string=?,
     ~isAnimationActive: bool=?,
