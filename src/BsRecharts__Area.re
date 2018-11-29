@@ -32,7 +32,7 @@ external makeProps:
                         =?,
     ~baseLine: 'baseLine=?,
     ~connectNulls: bool=?,
-    ~dataKey: string,
+    ~dataKey: 'dataKey,
     ~dot: 'dot=?,
     ~fill: string=?,
     ~fillOpacity: float=?,

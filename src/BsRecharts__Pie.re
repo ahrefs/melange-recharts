@@ -21,7 +21,7 @@ external makeProps:
     ~cx: PxOrPrc.t=?,
     ~cy: PxOrPrc.t=?,
     ~data: array('dataItem),
-    ~dataKey: string,
+    ~dataKey: 'dataKey,
     ~endAngle: int=?,
     ~fill: string=?,
     ~id: string=?,

@@ -16,7 +16,7 @@ external makeProps:
     ~background: 'background=?,
     ~barSize: int=?,
     ~data: array('data)=?,
-    ~dataKey: string,
+    ~dataKey: 'dataKey,
     ~fill: string=?,
     ~id: string=?,
     ~isAnimationActive: bool=?,
