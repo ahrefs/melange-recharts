@@ -1,3 +1,7 @@
+# v0.2.10 (29.11.2018)
+
+- untype `dataKey` param
+
 # v0.2.9 (15.11.2018)
 
 - add `Scatter`
