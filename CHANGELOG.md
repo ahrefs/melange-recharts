@@ -1,6 +1,10 @@
+# v0.2.11 (26.12.2018)
+
+- add `stackOffset` prop to `ComposedChart`
+
 # v0.2.10 (29.11.2018)
 
-- untype `dataKey` param
+- untype `dataKey` prop
 
 # v0.2.9 (15.11.2018)
 
