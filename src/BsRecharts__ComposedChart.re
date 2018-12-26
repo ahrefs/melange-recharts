@@ -19,6 +19,14 @@ external makeProps:
     ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~reverseStackOrder: bool=?,
+    ~stackOffset: [@bs.string] [
+                    | `expand
+                    | `none
+                    | `wiggle
+                    | `silhouette
+                    | `sign
+                  ]
+                    =?,
     ~syncId: string=?,
     ~width: int=?,
     unit
@@ -40,6 +48,7 @@ let make =
       ~onMouseLeave=?,
       ~onMouseMove=?,
       ~reverseStackOrder=?,
+      ~stackOffset=?,
       ~syncId=?,
       ~width=?,
       children,
@@ -60,6 +69,7 @@ let make =
         ~onMouseLeave?,
         ~onMouseMove?,
         ~reverseStackOrder?,
+        ~stackOffset?,
         ~syncId?,
         ~width?,
         (),
