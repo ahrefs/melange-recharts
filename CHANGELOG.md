@@ -1,3 +1,7 @@
+# v0.2.12gst (26.12.2018)
+
+- add `strokeWidth` prop to `Cell`
+
 # v0.2.11 (26.12.2018)
 
 - add `stackOffset` prop to `ComposedChart`
