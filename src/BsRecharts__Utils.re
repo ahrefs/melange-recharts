@@ -64,7 +64,7 @@ module PxOrPrc = {
   let encode: arg => t =
     fun
     | Px(v) => Obj.magic(v)
-    | Prc(v) => Obj.magic(string_of_float(v) ++ "%");
+    | Prc(v) => Obj.magic(Js.Float.toString(v) ++ "%");
   let encodeOpt = Belt.Option.map(_, encode);
 };
 
