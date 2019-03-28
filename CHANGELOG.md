@@ -1,4 +1,8 @@
-# v0.2.12gst (26.12.2018)
+# v0.2.13 (28.03.2019)
+
+- remove deprecated `string_of_float`
+
+# v0.2.12 (26.12.2018)
 
 - add `strokeWidth` prop to `Cell`
 
