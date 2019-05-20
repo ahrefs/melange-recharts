@@ -1,3 +1,7 @@
+# v0.2.14 (20.05.2019)
+
+- move recharts to peerDependencies (#17)
+
 # v0.2.13 (28.03.2019)
 
 - remove deprecated `string_of_float`
