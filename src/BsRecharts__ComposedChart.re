@@ -7,6 +7,7 @@ external reactClass: ReasonReact.reactClass = "ComposedChart";
 [@bs.obj]
 external makeProps:
   (
+    ~className: string=?,
     ~data: array('dataItem),
     ~barCategoryGap: PxOrPrc.t=?,
     ~barGap: PxOrPrc.t=?,
@@ -36,6 +37,7 @@ external makeProps:
 
 let make =
     (
+      ~className=?,
       ~data,
       ~barCategoryGap=?,
       ~barGap=?,
@@ -57,6 +59,7 @@ let make =
     ~reactClass,
     ~props=
       makeProps(
+        ~className?,
         ~data,
         ~barCategoryGap=?barCategoryGap |> PxOrPrc.encodeOpt,
         ~barGap=?barGap |> PxOrPrc.encodeOpt,

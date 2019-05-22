@@ -29,6 +29,7 @@ external makeProps:
                         | `linear
                       ]
                         =?,
+    ~className: string=?,
     ~connectNulls: bool=?,
     ~dataKey: 'dataKey,
     ~dot: 'dot=?,
@@ -76,6 +77,7 @@ let make =
       ~animationBegin=?,
       ~animationDuration=?,
       ~animationEasing=?,
+      ~className=?,
       ~connectNulls=?,
       ~dataKey,
       ~dot=?,
@@ -110,6 +112,7 @@ let make =
         ~animationBegin?,
         ~animationDuration?,
         ~animationEasing?,
+        ~className?,
         ~connectNulls?,
         ~dataKey,
         ~dot?,

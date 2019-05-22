@@ -7,6 +7,7 @@ external reactClass: ReasonReact.reactClass = "LineChart";
 [@bs.obj]
 external makeProps:
   (
+    ~className: string=?,
     ~data: array('dataItem),
     ~height: int=?,
     ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
@@ -24,6 +25,7 @@ external makeProps:
 
 let make =
     (
+      ~className=?,
       ~data,
       ~height=?,
       ~layout=?,
@@ -40,6 +42,7 @@ let make =
     ~reactClass,
     ~props=
       makeProps(
+        ~className?,
         ~data,
         ~height?,
         ~layout?,

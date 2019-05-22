@@ -5,6 +5,7 @@ external reactClass: ReasonReact.reactClass = "CartesianGrid";
 [@bs.obj]
 external makeProps:
   (
+    ~className: string=?,
     ~height: int=?,
     ~horizontal: bool=?,
     ~horizontalPoints: array('horizontalPoints)=?,
@@ -23,6 +24,7 @@ external makeProps:
 
 let make =
     (
+      ~className=?,
       ~height=?,
       ~horizontal=?,
       ~horizontalPoints=?,
@@ -40,6 +42,7 @@ let make =
     ~reactClass,
     ~props=
       makeProps(
+        ~className?,
         ~height?,
         ~horizontal?,
         ~horizontalPoints?,

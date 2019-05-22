@@ -8,6 +8,7 @@ external reactClass: ReasonReact.reactClass = "CartesianAxis";
 external makeProps:
   (
     ~axisLine: 'axisLine=?,
+    ~className: string=?,
     ~height: int=?,
     ~interval: AxisInterval.t=?,
     ~label: 'label=?,
@@ -30,6 +31,7 @@ external makeProps:
 let make =
     (
       ~axisLine=?,
+      ~className=?,
       ~height=?,
       ~interval=?,
       ~label=?,
@@ -51,6 +53,7 @@ let make =
     ~props=
       makeProps(
         ~axisLine?,
+        ~className?,
         ~height?,
         ~interval=?interval |> AxisInterval.encodeOpt,
         ~label?,
