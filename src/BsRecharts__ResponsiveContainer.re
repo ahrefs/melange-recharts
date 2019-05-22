@@ -8,6 +8,7 @@ external reactClass: ReasonReact.reactClass = "ResponsiveContainer";
 external makeProps:
   (
     ~aspect: float=?,
+    ~className: string=?,
     ~debounce: int=?,
     ~height: PxOrPrc.t=?,
     ~minHeight: int=?,
@@ -21,6 +22,7 @@ external makeProps:
 let make =
     (
       ~aspect=?,
+      ~className=?,
       ~debounce=?,
       ~height=?,
       ~minHeight=?,
@@ -33,6 +35,7 @@ let make =
     ~props=
       makeProps(
         ~aspect?,
+        ~className?,
         ~debounce?,
         ~height=?height |> PxOrPrc.encodeOpt,
         ~minHeight?,

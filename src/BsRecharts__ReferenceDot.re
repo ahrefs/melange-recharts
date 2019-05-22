@@ -5,6 +5,7 @@ external reactClass: ReasonReact.reactClass = "ReferenceDot";
 external makeProps:
   (
     ~alwaysShow: bool=?,
+    ~className: string=?,
     ~fill: string=?,
     ~isFront: bool=?,
     ~label: 'label=?,
@@ -32,6 +33,7 @@ external makeProps:
 let make =
     (
       ~alwaysShow=?,
+      ~className=?,
       ~fill=?,
       ~isFront=?,
       ~label=?,
@@ -58,6 +60,7 @@ let make =
     ~props=
       makeProps(
         ~alwaysShow?,
+        ~className?,
         ~fill?,
         ~isFront?,
         ~label?,

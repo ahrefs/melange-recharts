@@ -18,6 +18,7 @@ external makeProps:
                         | `linear
                       ]
                         =?,
+    ~className: string=?,
     ~cx: PxOrPrc.t=?,
     ~cy: PxOrPrc.t=?,
     ~data: array('dataItem),
@@ -68,6 +69,7 @@ let make =
       ~animationBegin=?,
       ~animationDuration=?,
       ~animationEasing=?,
+      ~className=?,
       ~cx=?,
       ~cy=?,
       ~data,
@@ -105,6 +107,7 @@ let make =
         ~animationBegin?,
         ~animationDuration?,
         ~animationEasing?,
+        ~className?,
         ~cx=?cx |> PxOrPrc.encodeOpt,
         ~cy=?cy |> PxOrPrc.encodeOpt,
         ~data,

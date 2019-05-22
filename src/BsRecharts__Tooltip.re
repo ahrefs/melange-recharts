@@ -15,6 +15,7 @@ external makeProps:
                         | `linear
                       ]
                         =?,
+    ~className: string=?,
     ~content: 'content=?,
     ~coordinate: Js.t({..})=?,
     ~cursor: 'cursor=?,
@@ -41,6 +42,7 @@ let make =
       ~animationBegin=?,
       ~animationDuration=?,
       ~animationEasing=?,
+      ~className=?,
       ~content=?,
       ~coordinate=?,
       ~cursor=?,
@@ -66,6 +68,7 @@ let make =
         ~animationBegin?,
         ~animationDuration?,
         ~animationEasing?,
+        ~className?,
         ~content?,
         ~coordinate?,
         ~cursor?,

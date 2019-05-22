@@ -8,6 +8,7 @@ external reactClass: ReasonReact.reactClass = "AreaChart";
 external makeProps:
   (
     ~baseValue: 'baseValue=?,
+    ~className: string=?,
     ~data: array('dataItem),
     ~height: int=?,
     ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
@@ -28,6 +29,7 @@ let make =
     (
       ~data,
       ~baseValue=?,
+      ~className=?,
       ~height=?,
       ~layout=?,
       ~margin=?,
@@ -46,6 +48,7 @@ let make =
       makeProps(
         ~data,
         ~baseValue?,
+        ~className?,
         ~height?,
         ~layout?,
         ~margin?,

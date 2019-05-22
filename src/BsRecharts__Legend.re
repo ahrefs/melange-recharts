@@ -10,6 +10,7 @@ external makeProps:
     ~chartHeight: int=?,
     ~chartWidth: int=?,
     ~content: 'content=?,
+    ~className: string=?,
     ~height: int=?,
     ~iconSize: int=?,
     ~iconType: [@bs.string] [
@@ -49,6 +50,7 @@ let make =
       ~chartHeight=?,
       ~chartWidth=?,
       ~content=?,
+      ~className=?,
       ~height=?,
       ~iconSize=?,
       ~iconType=?,
@@ -76,6 +78,7 @@ let make =
         ~chartHeight?,
         ~chartWidth?,
         ~content?,
+        ~className?,
         ~height?,
         ~iconSize?,
         ~iconType?,
