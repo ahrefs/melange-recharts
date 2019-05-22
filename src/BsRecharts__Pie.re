@@ -107,7 +107,7 @@ let make =
         ~animationBegin?,
         ~animationDuration?,
         ~animationEasing?,
-        ~className=?,
+        ~className?,
         ~cx=?cx |> PxOrPrc.encodeOpt,
         ~cy=?cy |> PxOrPrc.encodeOpt,
         ~data,
