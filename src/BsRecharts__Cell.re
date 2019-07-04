@@ -1,21 +1,12 @@
-/* http://recharts.org/en-US/api/Cell */
-[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Cell";
+// http://recharts.org/en-US/api/Cell
 
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~className: string=?,
     ~fill: string=?,
     ~stroke: string=?,
-    ~strokeWidth: int=?,
-    unit
+    ~strokeWidth: int=?
   ) =>
-  _ =
-  "";
-
-let make = (~className=?, ~fill=?, ~stroke=?, ~strokeWidth=?, children) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=makeProps(~className?, ~fill?, ~stroke?, ~strokeWidth?, ()),
-    children,
-  );
+  React.element =
+  "Cell";

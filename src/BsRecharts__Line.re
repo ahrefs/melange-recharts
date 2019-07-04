@@ -1,7 +1,7 @@
-[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Line";
+// http://recharts.org/en-US/api/Line
 
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~_type: [@bs.string] [
               | `basis
@@ -64,79 +64,7 @@ external makeProps:
     ~strokeWidth: int=?,
     ~unit: string=?,
     ~xAxisId: string=?,
-    ~yAxisId: string=?,
-    unit
+    ~yAxisId: string=?
   ) =>
-  _ =
-  "";
-
-let make =
-    (
-      ~_type=?,
-      ~activeDot=?,
-      ~animationBegin=?,
-      ~animationDuration=?,
-      ~animationEasing=?,
-      ~className=?,
-      ~connectNulls=?,
-      ~dataKey,
-      ~dot=?,
-      ~id=?,
-      ~isAnimationActive=?,
-      ~label=?,
-      ~layout=?,
-      ~legendType=?,
-      ~name=?,
-      ~onClick=?,
-      ~onMouseDown=?,
-      ~onMouseEnter=?,
-      ~onMouseLeave=?,
-      ~onMouseMove=?,
-      ~onMouseOut=?,
-      ~onMouseOver=?,
-      ~onMouseUp=?,
-      ~points=?,
-      ~stroke=?,
-      ~strokeWidth=?,
-      ~unit=?,
-      ~xAxisId=?,
-      ~yAxisId=?,
-      children,
-    ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~_type?,
-        ~activeDot?,
-        ~animationBegin?,
-        ~animationDuration?,
-        ~animationEasing?,
-        ~className?,
-        ~connectNulls?,
-        ~dataKey,
-        ~dot?,
-        ~id?,
-        ~isAnimationActive?,
-        ~label?,
-        ~layout?,
-        ~legendType?,
-        ~name?,
-        ~onClick?,
-        ~onMouseDown?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~onMouseOut?,
-        ~onMouseOver?,
-        ~onMouseUp?,
-        ~points?,
-        ~stroke?,
-        ~strokeWidth?,
-        ~unit?,
-        ~xAxisId?,
-        ~yAxisId?,
-        (),
-      ),
-    children,
-  );
+  React.element =
+  "Line";

@@ -1,10 +1,8 @@
-/* http://recharts.org/en-US/api/Pie */
+// http://recharts.org/en-US/api/Pie
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Pie";
-
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~activeIndex: array(Js.t({..}))=?,
     ~activeShape: 'activeShape=?,
@@ -56,13 +54,12 @@ external makeProps:
     ~outerRadius: PxOrPrc.t=?,
     ~paddingAngle: int=?,
     ~startAngle: int=?,
-    ~stroke: string=?,
-    unit
+    ~stroke: string=?
   ) =>
-  _ =
-  "";
+  React.element =
+  "Pie";
 
-let make =
+let makeProps =
     (
       ~activeIndex=?,
       ~activeShape=?,
@@ -96,45 +93,48 @@ let make =
       ~paddingAngle=?,
       ~startAngle=?,
       ~stroke=?,
-      children,
+      (),
     ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~activeIndex?,
-        ~activeShape?,
-        ~animationBegin?,
-        ~animationDuration?,
-        ~animationEasing?,
-        ~className?,
-        ~cx=?cx |> PxOrPrc.encodeOpt,
-        ~cy=?cy |> PxOrPrc.encodeOpt,
-        ~data,
-        ~dataKey,
-        ~endAngle?,
-        ~fill?,
-        ~id?,
-        ~innerRadius=?innerRadius |> PxOrPrc.encodeOpt,
-        ~isAnimationActive?,
-        ~label?,
-        ~labelLine?,
-        ~legendType?,
-        ~minAngle?,
-        ~nameKey?,
-        ~onClick?,
-        ~onMouseDown?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~onMouseOut?,
-        ~onMouseOver?,
-        ~onMouseUp?,
-        ~outerRadius=?outerRadius |> PxOrPrc.encodeOpt,
-        ~paddingAngle?,
-        ~startAngle?,
-        ~stroke?,
-        (),
-      ),
-    children,
+  makeProps(
+    ~activeIndex?,
+    ~activeShape?,
+    ~animationBegin?,
+    ~animationDuration?,
+    ~animationEasing?,
+    ~className?,
+    ~cx=?{
+      cx->PxOrPrc.encodeOpt;
+    },
+    ~cy=?{
+      cy->PxOrPrc.encodeOpt;
+    },
+    ~data,
+    ~dataKey,
+    ~endAngle?,
+    ~fill?,
+    ~id?,
+    ~innerRadius=?{
+      innerRadius->PxOrPrc.encodeOpt;
+    },
+    ~isAnimationActive?,
+    ~label?,
+    ~labelLine?,
+    ~legendType?,
+    ~minAngle?,
+    ~nameKey?,
+    ~onClick?,
+    ~onMouseDown?,
+    ~onMouseEnter?,
+    ~onMouseLeave?,
+    ~onMouseMove?,
+    ~onMouseOut?,
+    ~onMouseOver?,
+    ~onMouseUp?,
+    ~outerRadius=?{
+      outerRadius->PxOrPrc.encodeOpt;
+    },
+    ~paddingAngle?,
+    ~startAngle?,
+    ~stroke?,
+    (),
   );

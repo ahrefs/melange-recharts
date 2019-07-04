@@ -1,11 +1,9 @@
-/* http://recharts.org/en-US/api/AreaChart */
+// http://recharts.org/en-US/api/AreaChart
+
 open BsRecharts__Utils;
 
-[@bs.module "recharts"]
-external reactClass: ReasonReact.reactClass = "AreaChart";
-
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~baseValue: 'baseValue=?,
     ~className: string=?,
@@ -20,46 +18,7 @@ external makeProps:
     ~stackOffset: [@bs.string] [ | `expand | `none | `wiggle | `silhouette]=?,
     ~syncId: string=?,
     ~width: int=?,
-    unit
+    ~children: React.element
   ) =>
-  _ =
-  "";
-
-let make =
-    (
-      ~data,
-      ~baseValue=?,
-      ~className=?,
-      ~height=?,
-      ~layout=?,
-      ~margin=?,
-      ~onClick=?,
-      ~onMouseEnter=?,
-      ~onMouseLeave=?,
-      ~onMouseMove=?,
-      ~stackOffset=?,
-      ~syncId=?,
-      ~width=?,
-      children,
-    ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~data,
-        ~baseValue?,
-        ~className?,
-        ~height?,
-        ~layout?,
-        ~margin?,
-        ~onClick?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~stackOffset?,
-        ~syncId?,
-        ~width?,
-        (),
-      ),
-    children,
-  );
+  React.element =
+  "AreaChart";

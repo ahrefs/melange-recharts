@@ -1,11 +1,8 @@
+// http://recharts.org/en-US/api/LineChart
 open BsRecharts__Utils;
 
-/* http://recharts.org/en-US/api/LineChart */
-[@bs.module "recharts"]
-external reactClass: ReasonReact.reactClass = "LineChart";
-
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~className: string=?,
     ~data: array('dataItem),
@@ -18,42 +15,7 @@ external makeProps:
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~syncId: string=?,
     ~width: int=?,
-    unit
+    ~children: React.element
   ) =>
-  _ =
-  "";
-
-let make =
-    (
-      ~className=?,
-      ~data,
-      ~height=?,
-      ~layout=?,
-      ~margin=?,
-      ~onClick=?,
-      ~onMouseEnter=?,
-      ~onMouseLeave=?,
-      ~onMouseMove=?,
-      ~syncId=?,
-      ~width=?,
-      children,
-    ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~className?,
-        ~data,
-        ~height?,
-        ~layout?,
-        ~margin?,
-        ~onClick?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~syncId?,
-        ~width?,
-        (),
-      ),
-    children,
-  );
+  React.element =
+  "LineChart";

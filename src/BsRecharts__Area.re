@@ -1,8 +1,7 @@
-/* http://recharts.org/en-US/api/Area */
-[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Area";
+// http://recharts.org/en-US/api/Area
 
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~_type: [@bs.string] [
               | `basis
@@ -69,87 +68,7 @@ external makeProps:
     ~strokeWidth: int=?,
     ~unit: string=?,
     ~xAxisId: string=?,
-    ~yAxisId: string=?,
-    unit
+    ~yAxisId: string=?
   ) =>
-  _ =
-  "";
-
-let make =
-    (
-      ~_type=?,
-      ~activeDot=?,
-      ~animationBegin=?,
-      ~animationDuration=?,
-      ~animationEasing=?,
-      ~baseLine=?,
-      ~connectNulls=?,
-      ~className=?,
-      ~dataKey,
-      ~dot=?,
-      ~fill=?,
-      ~fillOpacity=?,
-      ~id=?,
-      ~isAnimationActive=?,
-      ~label=?,
-      ~layout=?,
-      ~legendType=?,
-      ~name=?,
-      ~onClick=?,
-      ~onMouseDown=?,
-      ~onMouseEnter=?,
-      ~onMouseLeave=?,
-      ~onMouseMove=?,
-      ~onMouseOut=?,
-      ~onMouseOver=?,
-      ~onMouseUp=?,
-      ~points=?,
-      ~stackId=?,
-      ~stroke=?,
-      ~strokeWidth=?,
-      ~unit=?,
-      ~xAxisId=?,
-      ~yAxisId=?,
-      children,
-    ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~_type?,
-        ~activeDot?,
-        ~animationBegin?,
-        ~animationDuration?,
-        ~animationEasing?,
-        ~baseLine?,
-        ~connectNulls?,
-        ~className?,
-        ~dataKey,
-        ~dot?,
-        ~fill?,
-        ~fillOpacity?,
-        ~id?,
-        ~isAnimationActive?,
-        ~label?,
-        ~layout?,
-        ~legendType?,
-        ~name?,
-        ~onClick?,
-        ~onMouseDown?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~onMouseOut?,
-        ~onMouseOver?,
-        ~onMouseUp?,
-        ~points?,
-        ~stackId?,
-        ~stroke?,
-        ~strokeWidth?,
-        ~unit?,
-        ~xAxisId?,
-        ~yAxisId?,
-        (),
-      ),
-    children,
-  );
+  React.element =
+  "Area";

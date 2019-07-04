@@ -1,9 +1,7 @@
-/* http://recharts.org/en-US/api/CartesianGrid */
-[@bs.module "recharts"]
-external reactClass: ReasonReact.reactClass = "CartesianGrid";
+// http://recharts.org/en-US/api/CartesianGrid
 
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~className: string=?,
     ~height: int=?,
@@ -16,45 +14,7 @@ external makeProps:
     ~verticalPoints: array('verticalPoints)=?,
     ~width: int=?,
     ~x: int=?,
-    ~y: int=?,
-    unit
+    ~y: int=?
   ) =>
-  _ =
-  "";
-
-let make =
-    (
-      ~className=?,
-      ~height=?,
-      ~horizontal=?,
-      ~horizontalPoints=?,
-      ~stroke=?,
-      ~strokeDasharray=?,
-      ~strokeWidth=?,
-      ~vertical=?,
-      ~verticalPoints=?,
-      ~width=?,
-      ~x=?,
-      ~y=?,
-      children,
-    ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~className?,
-        ~height?,
-        ~horizontal?,
-        ~horizontalPoints?,
-        ~stroke?,
-        ~strokeDasharray?,
-        ~strokeWidth?,
-        ~vertical?,
-        ~verticalPoints?,
-        ~width?,
-        ~x?,
-        ~y?,
-        (),
-      ),
-    children,
-  );
+  React.element =
+  "CartesianGrid";

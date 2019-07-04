@@ -1,10 +1,8 @@
-/* http://recharts.org/en-US/api/Brush */
+// http://recharts.org/en-US/api/Brush
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Brush";
-
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~className: string=?,
     ~data: array('data)=?,
@@ -27,53 +25,7 @@ external makeProps:
     ~travellerWidth: int=?,
     ~width: int=?,
     ~x: int=?,
-    ~y: int=?,
-    unit
+    ~y: int=?
   ) =>
-  _ =
-  "";
-
-let make =
-    (
-      ~className=?,
-      ~data=?,
-      ~dataKey,
-      ~endIndex=?,
-      ~fill=?,
-      ~gap=?,
-      ~height=?,
-      ~onChange=?,
-      ~padding=?,
-      ~startIndex=?,
-      ~stroke=?,
-      ~tickFormatter=?,
-      ~travellerWidth=?,
-      ~width=?,
-      ~x=?,
-      ~y=?,
-      children,
-    ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~className?,
-        ~data?,
-        ~dataKey,
-        ~endIndex?,
-        ~fill?,
-        ~gap?,
-        ~height?,
-        ~onChange?,
-        ~padding?,
-        ~startIndex?,
-        ~stroke?,
-        ~tickFormatter?,
-        ~travellerWidth?,
-        ~width?,
-        ~x?,
-        ~y?,
-        (),
-      ),
-    children,
-  );
+  React.element =
+  "Brush";

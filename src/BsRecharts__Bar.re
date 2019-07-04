@@ -1,7 +1,7 @@
-[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Bar";
+// http://recharts.org/en-US/api/Bar
 
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~animationBegin: int=?,
     ~animationDuration: int=?,
@@ -51,81 +51,7 @@ external makeProps:
     ~stackId: string=?,
     ~unit: string=?,
     ~xAxisId: string=?,
-    ~yAxisId: string=?,
-    unit
+    ~yAxisId: string=?
   ) =>
-  _ =
-  "";
-
-let make =
-    (
-      ~animationBegin=?,
-      ~animationDuration=?,
-      ~animationEasing=?,
-      ~background=?,
-      ~barSize=?,
-      ~className=?,
-      ~data=?,
-      ~dataKey,
-      ~fill=?,
-      ~id=?,
-      ~isAnimationActive=?,
-      ~label=?,
-      ~layout=?,
-      ~legendType=?,
-      ~maxBarSize=?,
-      ~minPointSize=?,
-      ~name=?,
-      ~onClick=?,
-      ~onMouseDown=?,
-      ~onMouseEnter=?,
-      ~onMouseLeave=?,
-      ~onMouseMove=?,
-      ~onMouseOut=?,
-      ~onMouseOver=?,
-      ~onMouseUp=?,
-      ~shape=?,
-      ~stackId=?,
-      ~unit=?,
-      ~xAxisId=?,
-      ~yAxisId=?,
-      children,
-    ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~animationBegin?,
-        ~animationDuration?,
-        ~animationEasing?,
-        ~background?,
-        ~barSize?,
-        ~className?,
-        ~data?,
-        ~dataKey,
-        ~fill?,
-        ~id?,
-        ~isAnimationActive?,
-        ~label?,
-        ~layout?,
-        ~legendType?,
-        ~maxBarSize?,
-        ~minPointSize?,
-        ~name?,
-        ~onClick?,
-        ~onMouseDown?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~onMouseOut?,
-        ~onMouseOver?,
-        ~onMouseUp?,
-        ~shape?,
-        ~stackId?,
-        ~unit?,
-        ~xAxisId?,
-        ~yAxisId?,
-        (),
-      ),
-    children,
-  );
+  React.element =
+  "Bar";
