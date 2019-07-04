@@ -66,8 +66,7 @@ module Binding = {
       ~strokeWidth: int=?,
       ~unit: string=?,
       ~xAxisId: string=?,
-      ~yAxisId: string=?,
-      ~children: React.element=?
+      ~yAxisId: string=?
     ) =>
     React.element =
     "Line";
@@ -105,40 +104,35 @@ let make =
       ~unit=?,
       ~xAxisId=?,
       ~yAxisId=?,
-      ~children=?,
     ) =>
-  Binding.make(
-    Binding.makeProps(
-      ~_type?,
-      ~activeDot?,
-      ~animationBegin?,
-      ~animationDuration?,
-      ~animationEasing?,
-      ~className?,
-      ~connectNulls?,
-      ~dataKey,
-      ~dot?,
-      ~id?,
-      ~isAnimationActive?,
-      ~label?,
-      ~layout?,
-      ~legendType?,
-      ~name?,
-      ~onClick?,
-      ~onMouseDown?,
-      ~onMouseEnter?,
-      ~onMouseLeave?,
-      ~onMouseMove?,
-      ~onMouseOut?,
-      ~onMouseOver?,
-      ~onMouseUp?,
-      ~points?,
-      ~stroke?,
-      ~strokeWidth?,
-      ~unit?,
-      ~xAxisId?,
-      ~yAxisId?,
-      ~children?,
-      (),
-    ),
-  );
+  <Binding
+    ?_type
+    ?activeDot
+    ?animationBegin
+    ?animationDuration
+    ?animationEasing
+    ?className
+    ?connectNulls
+    dataKey
+    ?dot
+    ?id
+    ?isAnimationActive
+    ?label
+    ?layout
+    ?legendType
+    ?name
+    ?onClick
+    ?onMouseDown
+    ?onMouseEnter
+    ?onMouseLeave
+    ?onMouseMove
+    ?onMouseOut
+    ?onMouseOver
+    ?onMouseUp
+    ?points
+    ?stroke
+    ?strokeWidth
+    ?unit
+    ?xAxisId
+    ?yAxisId
+  />;

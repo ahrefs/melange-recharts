@@ -30,8 +30,7 @@ module Binding = {
       ~payload: array(Js.t({..}))=?,
       ~separator: string=?,
       ~viewBox: Js.t({..})=?,
-      ~wrapperStyle: Js.t({..})=?,
-      ~children: React.element=?
+      ~wrapperStyle: Js.t({..})=?
     ) =>
     React.element =
     "Tooltip";
@@ -60,7 +59,6 @@ let make =
       ~separator=?,
       ~viewBox=?,
       ~wrapperStyle=?,
-      ~children=?,
     ) =>
   Binding.make(
     Binding.makeProps(
@@ -84,7 +82,6 @@ let make =
       ~separator?,
       ~viewBox?,
       ~wrapperStyle?,
-      ~children?,
       (),
     ),
   );

@@ -53,8 +53,7 @@ module Binding = {
       ~stackId: string=?,
       ~unit: string=?,
       ~xAxisId: string=?,
-      ~yAxisId: string=?,
-      ~children: React.element=?
+      ~yAxisId: string=?
     ) =>
     React.element =
     "Bar";
@@ -93,41 +92,36 @@ let make =
       ~unit=?,
       ~xAxisId=?,
       ~yAxisId=?,
-      ~children=?,
     ) =>
-  Binding.make(
-    Binding.makeProps(
-      ~animationBegin?,
-      ~animationDuration?,
-      ~animationEasing?,
-      ~background?,
-      ~barSize?,
-      ~className?,
-      ~data?,
-      ~dataKey,
-      ~fill?,
-      ~id?,
-      ~isAnimationActive?,
-      ~label?,
-      ~layout?,
-      ~legendType?,
-      ~maxBarSize?,
-      ~minPointSize?,
-      ~name?,
-      ~onClick?,
-      ~onMouseDown?,
-      ~onMouseEnter?,
-      ~onMouseLeave?,
-      ~onMouseMove?,
-      ~onMouseOut?,
-      ~onMouseOver?,
-      ~onMouseUp?,
-      ~shape?,
-      ~stackId?,
-      ~unit?,
-      ~xAxisId?,
-      ~yAxisId?,
-      ~children?,
-      (),
-    ),
-  );
+  <Binding
+    ?animationBegin
+    ?animationDuration
+    ?animationEasing
+    ?background
+    ?barSize
+    ?className
+    ?data
+    dataKey
+    ?fill
+    ?id
+    ?isAnimationActive
+    ?label
+    ?layout
+    ?legendType
+    ?maxBarSize
+    ?minPointSize
+    ?name
+    ?onClick
+    ?onMouseDown
+    ?onMouseEnter
+    ?onMouseLeave
+    ?onMouseMove
+    ?onMouseOut
+    ?onMouseOver
+    ?onMouseUp
+    ?shape
+    ?stackId
+    ?unit
+    ?xAxisId
+    ?yAxisId
+  />;

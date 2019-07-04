@@ -26,8 +26,7 @@ module Binding = {
       ~xAxisId: string=?,
       ~y: string=?,
       ~yAxis: Js.t({..})=?,
-      ~yAxisId: string=?,
-      ~children: React.element=?
+      ~yAxisId: string=?
     ) =>
     React.element =
     "ReferenceLine";
@@ -58,7 +57,6 @@ let make =
       ~y=?,
       ~yAxis=?,
       ~yAxisId=?,
-      ~children=?,
     ) =>
   Binding.make(
     Binding.makeProps(
@@ -84,7 +82,6 @@ let make =
       ~y?,
       ~yAxis?,
       ~yAxisId?,
-      ~children?,
       (),
     ),
   );

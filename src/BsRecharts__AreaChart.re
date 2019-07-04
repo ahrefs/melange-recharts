@@ -20,7 +20,7 @@ module Binding = {
       ~stackOffset: [@bs.string] [ | `expand | `none | `wiggle | `silhouette]=?,
       ~syncId: string=?,
       ~width: int=?,
-      ~children: React.element=?
+      ~children: React.element
     ) =>
     React.element =
     "AreaChart";
@@ -42,7 +42,7 @@ let make =
       ~stackOffset=?,
       ~syncId=?,
       ~width=?,
-      ~children=?,
+      ~children,
     ) =>
   Binding.make(
     Binding.makeProps(
@@ -59,7 +59,7 @@ let make =
       ~stackOffset?,
       ~syncId?,
       ~width?,
-      ~children?,
+      ~children,
       (),
     ),
   );

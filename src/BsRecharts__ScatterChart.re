@@ -18,7 +18,7 @@ module Binding = {
       ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
       ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
       ~width: int=?,
-      ~children: React.element=?
+      ~children: React.element
     ) =>
     React.element =
     "ScatterChart";
@@ -38,7 +38,7 @@ let make =
       ~onMouseDown=?,
       ~onMouseMove=?,
       ~width=?,
-      ~children=?,
+      ~children,
     ) =>
   Binding.make(
     Binding.makeProps(
@@ -53,7 +53,7 @@ let make =
       ~onMouseDown?,
       ~onMouseMove?,
       ~width?,
-      ~children?,
+      ~children,
       (),
     ),
   );

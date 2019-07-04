@@ -29,7 +29,7 @@ module Binding = {
                       =?,
       ~syncId: string=?,
       ~width: int=?,
-      ~children: React.element=?
+      ~children: React.element
     ) =>
     React.element =
     "ComposedChart";
@@ -54,7 +54,7 @@ let make =
       ~stackOffset=?,
       ~syncId=?,
       ~width=?,
-      ~children=?,
+      ~children,
     ) =>
   Binding.make(
     Binding.makeProps(
@@ -74,7 +74,7 @@ let make =
       ~stackOffset?,
       ~syncId?,
       ~width?,
-      ~children?,
+      ~children,
       (),
     ),
   );

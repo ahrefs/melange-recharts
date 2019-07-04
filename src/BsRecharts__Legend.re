@@ -38,8 +38,7 @@ module Binding = {
       ~payload: array(Js.t({..}))=?,
       ~verticalAlign: [@bs.string] [ | `top | `middle | `bottom]=?,
       ~width: int=?,
-      ~wrapperStyle: Js.t({..})=?,
-      ~children: React.element=?
+      ~wrapperStyle: Js.t({..})=?
     ) =>
     React.element =
     "Legend";
@@ -70,7 +69,6 @@ let make =
       ~verticalAlign=?,
       ~width=?,
       ~wrapperStyle=?,
-      ~children=?,
     ) =>
   Binding.make(
     Binding.makeProps(
@@ -96,7 +94,6 @@ let make =
       ~verticalAlign?,
       ~width?,
       ~wrapperStyle?,
-      ~children?,
       (),
     ),
   );

@@ -14,8 +14,7 @@ module Binding = {
       ~verticalPoints: array('verticalPoints)=?,
       ~width: int=?,
       ~x: int=?,
-      ~y: int=?,
-      ~children: React.element=?
+      ~y: int=?
     ) =>
     React.element =
     "CartesianGrid";
@@ -36,7 +35,6 @@ let make =
       ~width=?,
       ~x=?,
       ~y=?,
-      ~children=?,
     ) =>
   Binding.make(
     Binding.makeProps(
@@ -52,7 +50,6 @@ let make =
       ~width?,
       ~x?,
       ~y?,
-      ~children?,
       (),
     ),
   );

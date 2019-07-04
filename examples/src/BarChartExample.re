@@ -3,7 +3,7 @@ open BsRecharts;
 [@react.component]
 let make = (~data) =>
   <ResponsiveContainer
-    height={Utils.PxOrPrc.Px(200.)} width={Utils.PxOrPrc.Px(300.)}>
+    height={Utils.PxOrPrc.Px(200.)} width={Utils.PxOrPrc.Prc(100.)}>
     <BarChart
       barCategoryGap={Utils.PxOrPrc.Px(1.)}
       margin={"top": 0, "right": 0, "bottom": 0, "left": 0}

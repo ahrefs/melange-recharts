@@ -17,7 +17,7 @@ module Binding = {
       ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
       ~syncId: string=?,
       ~width: int=?,
-      ~children: React.element=?
+      ~children: React.element
     ) =>
     React.element =
     "LineChart";
@@ -37,22 +37,22 @@ let make =
       ~onMouseMove=?,
       ~syncId=?,
       ~width=?,
-      ~children=?,
-    ) =>
-  Binding.make(
-    Binding.makeProps(
-      ~className?,
-      ~data,
-      ~height?,
-      ~layout?,
-      ~margin?,
-      ~onClick?,
-      ~onMouseEnter?,
-      ~onMouseLeave?,
-      ~onMouseMove?,
-      ~syncId?,
-      ~width?,
-      ~children?,
-      (),
-    ),
-  );
+      ~children,
+    ) => {
+  Js.log2("data", data);
+  Js.log2("children", children);
+  <Binding
+    ?className
+    data
+    ?height
+    ?layout
+    ?margin
+    ?onClick
+    ?onMouseEnter
+    ?onMouseLeave
+    ?onMouseMove
+    ?syncId
+    ?width>
+    children
+  </Binding>;
+};

@@ -7,22 +7,14 @@ module Binding = {
       ~className: string=?,
       ~fill: string=?,
       ~stroke: string=?,
-      ~strokeWidth: int=?,
-      ~children: React.element=?
+      ~strokeWidth: int=?
     ) =>
     React.element =
     "Cell";
 };
 
 [@react.component]
-let make = (~className=?, ~fill=?, ~stroke=?, ~strokeWidth=?, ~children) =>
+let make = (~className=?, ~fill=?, ~stroke=?, ~strokeWidth=?) =>
   Binding.make(
-    Binding.makeProps(
-      ~className?,
-      ~fill?,
-      ~stroke?,
-      ~strokeWidth?,
-      ~children?,
-      (),
-    ),
+    Binding.makeProps(~className?, ~fill?, ~stroke?, ~strokeWidth?, ()),
   );

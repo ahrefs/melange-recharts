@@ -46,8 +46,7 @@ module Binding = {
       ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
       ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
       ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-      ~id: string=?,
-      ~children: React.element=?
+      ~id: string=?
     ) =>
     React.element =
     "Scatter";
@@ -79,7 +78,6 @@ let make =
       ~onMouseDown=?,
       ~onMouseMove=?,
       ~id=?,
-      ~children=?,
     ) =>
   Binding.make(
     Binding.makeProps(
@@ -106,7 +104,6 @@ let make =
       ~onMouseDown?,
       ~onMouseMove?,
       ~id?,
-      ~children?,
       (),
     ),
   );

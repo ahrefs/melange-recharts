@@ -57,7 +57,7 @@ module Binding = {
       ~paddingAngle: int=?,
       ~startAngle: int=?,
       ~stroke: string=?,
-      ~children: React.element=?
+      ~children: React.element
     ) =>
     React.element =
     "Pie";
@@ -98,7 +98,7 @@ let make =
       ~paddingAngle=?,
       ~startAngle=?,
       ~stroke=?,
-      ~children=?,
+      ~children,
     ) =>
   Binding.make(
     Binding.makeProps(
@@ -134,7 +134,7 @@ let make =
       ~paddingAngle?,
       ~startAngle?,
       ~stroke?,
-      ~children?,
+      ~children,
       (),
     ),
   );

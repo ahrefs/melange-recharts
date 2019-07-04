@@ -14,7 +14,7 @@ module Binding = {
                        =?,
       ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
       ~width: int=?,
-      ~children: React.element=?
+      ~children: React.element
     ) =>
     React.element =
     "PieChart";
@@ -30,7 +30,7 @@ let make =
       ~onMouseEnter=?,
       ~onMouseLeave=?,
       ~width=?,
-      ~children=?,
+      ~children,
     ) =>
   Binding.make(
     Binding.makeProps(
@@ -41,7 +41,7 @@ let make =
       ~onMouseEnter?,
       ~onMouseLeave?,
       ~width?,
-      ~children?,
+      ~children,
       (),
     ),
   );

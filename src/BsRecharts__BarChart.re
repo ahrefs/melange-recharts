@@ -30,7 +30,7 @@ module Binding = {
                       =?,
       ~syncId: string=?,
       ~width: int=?,
-      ~children: React.element=?
+      ~children: React.element
     ) =>
     React.element =
     "BarChart";
@@ -56,28 +56,25 @@ let make =
       ~stackOffset=?,
       ~syncId=?,
       ~width=?,
-      ~children=?,
+      ~children,
     ) =>
-  Binding.make(
-    Binding.makeProps(
-      ~data,
-      ~barCategoryGap=?barCategoryGap->PxOrPrc.encodeOpt,
-      ~barGap=?barGap->PxOrPrc.encodeOpt,
-      ~barSize?,
-      ~className?,
-      ~height?,
-      ~layout?,
-      ~margin?,
-      ~maxBarSize?,
-      ~onClick?,
-      ~onMouseEnter?,
-      ~onMouseLeave?,
-      ~onMouseMove?,
-      ~reverseStackOrder?,
-      ~stackOffset?,
-      ~syncId?,
-      ~width?,
-      ~children?,
-      (),
-    ),
-  );
+  <Binding
+    data
+    barCategoryGap=?{barCategoryGap->PxOrPrc.encodeOpt}
+    barGap=?{barGap->PxOrPrc.encodeOpt}
+    ?barSize
+    ?className
+    ?height
+    ?layout
+    ?margin
+    ?maxBarSize
+    ?onClick
+    ?onMouseEnter
+    ?onMouseLeave
+    ?onMouseMove
+    ?reverseStackOrder
+    ?stackOffset
+    ?syncId
+    ?width>
+    children
+  </Binding>;

@@ -70,8 +70,7 @@ module Binding = {
       ~strokeWidth: int=?,
       ~unit: string=?,
       ~xAxisId: string=?,
-      ~yAxisId: string=?,
-      ~children: React.element=?
+      ~yAxisId: string=?
     ) =>
     React.element =
     "Area";
@@ -113,7 +112,6 @@ let make =
       ~unit=?,
       ~xAxisId=?,
       ~yAxisId=?,
-      ~children=?,
     ) =>
   Binding.make(
     Binding.makeProps(
@@ -150,7 +148,6 @@ let make =
       ~unit?,
       ~xAxisId?,
       ~yAxisId?,
-      ~children?,
       (),
     ),
   );

@@ -59,8 +59,7 @@ module Binding = {
       ~tickSize: int=?,
       ~unit: string=?,
       ~width: int=?,
-      ~xAxisId: string=?,
-      ~children: React.element=?
+      ~xAxisId: string=?
     ) =>
     React.element =
     "XAxis";
@@ -106,7 +105,6 @@ let make =
       ~unit=?,
       ~width=?,
       ~xAxisId=?,
-      ~children=?,
     ) =>
   Binding.make(
     Binding.makeProps(
@@ -147,7 +145,6 @@ let make =
       ~unit?,
       ~width?,
       ~xAxisId?,
-      ~children?,
       (),
     ),
   );
