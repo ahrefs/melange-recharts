@@ -1,6 +1,6 @@
 open BsRecharts__Utils;
 
-/* http://recharts.org/en-US/api/ScatterChart */
+// http://recharts.org/en-US/api/ScatterChart
 [@bs.module "recharts"]
 external reactClass: ReasonReact.reactClass = "ScatterChart";
 

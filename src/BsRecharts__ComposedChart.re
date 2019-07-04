@@ -1,4 +1,4 @@
-/* http://recharts.org/en-US/api/ComposedChart */
+// http://recharts.org/en-US/api/ComposedChart
 open BsRecharts__Utils;
 
 [@bs.module "recharts"]

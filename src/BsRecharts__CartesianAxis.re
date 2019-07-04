@@ -1,4 +1,4 @@
-/* http://recharts.org/en-US/api/CartesianAxis */
+// http://recharts.org/en-US/api/CartesianAxis
 open BsRecharts__Utils;
 
 [@bs.module "recharts"]

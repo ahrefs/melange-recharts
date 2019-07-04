@@ -1,4 +1,4 @@
-/* http://recharts.org/en-US/api/Area */
+// http://recharts.org/en-US/api/Area
 [@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Area";
 
 [@bs.obj]

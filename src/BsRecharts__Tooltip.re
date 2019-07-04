@@ -1,8 +1,5 @@
-[@bs.module "recharts"]
-external reactClass: ReasonReact.reactClass = "Tooltip";
-
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~active: bool=?,
     ~animationBegin: int=?,
@@ -30,61 +27,7 @@ external makeProps:
     ~payload: array(Js.t({..}))=?,
     ~separator: string=?,
     ~viewBox: Js.t({..})=?,
-    ~wrapperStyle: Js.t({..})=?,
-    unit
+    ~wrapperStyle: Js.t({..})=?
   ) =>
-  _ =
-  "";
-
-let make =
-    (
-      ~active=?,
-      ~animationBegin=?,
-      ~animationDuration=?,
-      ~animationEasing=?,
-      ~className=?,
-      ~content=?,
-      ~coordinate=?,
-      ~cursor=?,
-      ~formatter=?,
-      ~isAnimationActive=?,
-      ~itemSorter=?,
-      ~itemStyle=?,
-      ~label=?,
-      ~labelFormatter=?,
-      ~labelStyle=?,
-      ~offset=?,
-      ~payload=?,
-      ~separator=?,
-      ~viewBox=?,
-      ~wrapperStyle=?,
-      children,
-    ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~active?,
-        ~animationBegin?,
-        ~animationDuration?,
-        ~animationEasing?,
-        ~className?,
-        ~content?,
-        ~coordinate?,
-        ~cursor?,
-        ~formatter?,
-        ~isAnimationActive?,
-        ~itemSorter?,
-        ~itemStyle?,
-        ~label?,
-        ~labelFormatter?,
-        ~labelStyle?,
-        ~offset?,
-        ~payload?,
-        ~separator?,
-        ~viewBox?,
-        ~wrapperStyle?,
-        (),
-      ),
-    children,
-  );
+  React.element =
+  "Tooltip";

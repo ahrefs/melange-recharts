@@ -1,4 +1,5 @@
-/* http://recharts.org/en-US/api/AreaChart */
+// http://recharts.org/en-US/api/AreaChart
+
 open BsRecharts__Utils;
 
 [@bs.module "recharts"]

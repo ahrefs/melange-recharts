@@ -10,10 +10,8 @@ let data = [|
 
 ReactDOMRe.renderToElementWithId(
   <div>
-    <h2> (ReasonReact.stringToElement("Line Chart")) </h2>
+    <h2> {React.string("Line Chart")} </h2>
     <LineChartExample data />
-    <h2> (ReasonReact.stringToElement("Bar Chart")) </h2>
-    <BarChartExample data />
   </div>,
   "root",
 );

@@ -1,4 +1,4 @@
-/* http://recharts.org/en-US/api/Cell */
+// http://recharts.org/en-US/api/Cell
 [@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Cell";
 
 [@bs.obj]

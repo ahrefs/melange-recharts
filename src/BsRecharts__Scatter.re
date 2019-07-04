@@ -1,4 +1,4 @@
-/* http://recharts.org/en-US/api/Scatter */
+// http://recharts.org/en-US/api/Scatter
 
 [@bs.module "recharts"]
 external reactClass: ReasonReact.reactClass = "Scatter";

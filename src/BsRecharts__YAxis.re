@@ -1,4 +1,4 @@
-/* http://recharts.org/en-US/api/YAxis */
+// http://recharts.org/en-US/api/YAxis 
 open BsRecharts__Utils;
 
 [@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "YAxis";

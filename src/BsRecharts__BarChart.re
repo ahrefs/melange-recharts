@@ -1,4 +1,4 @@
-/* http://recharts.org/en-US/api/BarChart */
+// http://recharts.org/en-US/api/BarChart
 open BsRecharts__Utils;
 
 [@bs.module "recharts"]

@@ -1,4 +1,4 @@
-/* http://recharts.org/en-US/api/Brush */
+// http://recharts.org/en-US/api/Brush
 open BsRecharts__Utils;
 
 [@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Brush";

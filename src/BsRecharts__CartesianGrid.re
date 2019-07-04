@@ -1,4 +1,4 @@
-/* http://recharts.org/en-US/api/CartesianGrid */
+// http://recharts.org/en-US/api/CartesianGrid 
 [@bs.module "recharts"]
 external reactClass: ReasonReact.reactClass = "CartesianGrid";
 

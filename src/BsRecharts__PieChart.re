@@ -1,6 +1,6 @@
 open BsRecharts__Utils;
 
-/* http://recharts.org/en-US/api/PieChart */
+// http://recharts.org/en-US/api/PieChart
 [@bs.module "recharts"]
 external reactClass: ReasonReact.reactClass = "PieChart";
 
