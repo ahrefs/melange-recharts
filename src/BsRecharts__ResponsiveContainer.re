@@ -13,7 +13,7 @@ module Binding = {
       ~minHeight: int=?,
       ~minWidth: int=?,
       ~width: PxOrPrc.t=?,
-      ~children: React.element
+      ~children: React.element=?
     ) =>
     React.element =
     "ResponsiveContainer";
@@ -28,14 +28,21 @@ let make =
       ~minHeight=?,
       ~minWidth=?,
       ~width=?,
-      ~children,
+      ~children=?,
     ) =>
-  <Binding
-    ?className
-    ?debounce
-    height=?{height->PxOrPrc.encodeOpt}
-    ?minHeight
-    ?minWidth
-    width=?{width->PxOrPrc.encodeOpt}>
-    children
-  </Binding>;
+  Binding.make(
+    Binding.makeProps(
+      ~className?,
+      ~debounce?,
+      ~height=?{
+        height->PxOrPrc.encodeOpt;
+      },
+      ~minHeight?,
+      ~minWidth?,
+      ~width=?{
+        width->PxOrPrc.encodeOpt;
+      },
+      ~children?,
+      (),
+    ),
+  );

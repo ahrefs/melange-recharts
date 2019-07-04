@@ -1,38 +1,39 @@
 // http://recharts.org/en-US/api/Brush
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Brush";
+module Binding = {
+  [@bs.module "recharts"] [@react.component]
+  external make:
+    (
+      ~className: string=?,
+      ~data: array('data)=?,
+      ~dataKey: 'dataKey,
+      ~endIndex: int=?,
+      ~fill: string=?,
+      ~gap: int=?,
+      ~height: int=?,
+      ~onChange: {
+                   ..
+                   "startIndex": int,
+                   "endIndex": int,
+                 } =>
+                 unit
+                   =?,
+      ~padding: padding=?,
+      ~startIndex: int=?,
+      ~stroke: string=?,
+      ~tickFormatter: 'tickFormatter=?,
+      ~travellerWidth: int=?,
+      ~width: int=?,
+      ~x: int=?,
+      ~y: int=?,
+      ~children: React.element=?
+    ) =>
+    React.element =
+    "Brush";
+};
 
-[@bs.obj]
-external makeProps:
-  (
-    ~className: string=?,
-    ~data: array('data)=?,
-    ~dataKey: 'dataKey,
-    ~endIndex: int=?,
-    ~fill: string=?,
-    ~gap: int=?,
-    ~height: int=?,
-    ~onChange: {
-                 ..
-                 "startIndex": int,
-                 "endIndex": int,
-               } =>
-               unit
-                 =?,
-    ~padding: padding=?,
-    ~startIndex: int=?,
-    ~stroke: string=?,
-    ~tickFormatter: 'tickFormatter=?,
-    ~travellerWidth: int=?,
-    ~width: int=?,
-    ~x: int=?,
-    ~y: int=?,
-    unit
-  ) =>
-  _ =
-  "";
-
+[@react.component]
 let make =
     (
       ~className=?,
@@ -51,29 +52,27 @@ let make =
       ~width=?,
       ~x=?,
       ~y=?,
-      children,
+      ~children=?,
     ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~className?,
-        ~data?,
-        ~dataKey,
-        ~endIndex?,
-        ~fill?,
-        ~gap?,
-        ~height?,
-        ~onChange?,
-        ~padding?,
-        ~startIndex?,
-        ~stroke?,
-        ~tickFormatter?,
-        ~travellerWidth?,
-        ~width?,
-        ~x?,
-        ~y?,
-        (),
-      ),
-    children,
+  Binding.make(
+    Binding.makeProps(
+      ~className?,
+      ~data?,
+      ~dataKey,
+      ~endIndex?,
+      ~fill?,
+      ~gap?,
+      ~height?,
+      ~onChange?,
+      ~padding?,
+      ~startIndex?,
+      ~stroke?,
+      ~tickFormatter?,
+      ~travellerWidth?,
+      ~width?,
+      ~x?,
+      ~y?,
+      ~children?,
+      (),
+    ),
   );

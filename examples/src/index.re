@@ -12,6 +12,8 @@ ReactDOMRe.renderToElementWithId(
   <div>
     <h2> {React.string("Line Chart")} </h2>
     <LineChartExample data />
+    <h2> {React.string("Bar Chart")} </h2>
+    <BarChartExample data />
   </div>,
   "root",
 );
