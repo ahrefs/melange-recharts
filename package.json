@@ -33,7 +33,8 @@
     "build": "bsb -make-world",
     "watch": "bsb -make-world -w",
     "clean": "bsb -clean-world",
-    "test": "exit 0"
+    "test": "exit 0",
+    "refmt": "find ./src ./examples -type f -name \"*.re\" | xargs bsrefmt --in-place"
   },
   "dependencies": {
     "recharts": "^1.6.2"
