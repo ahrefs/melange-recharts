@@ -1,4 +1,4 @@
-// http://recharts.org/en-US/api/Area
+// http://recharts.org/en-US/api/Line
 
 module Binding = {
   [@bs.module "recharts"] [@react.component]
@@ -30,13 +30,10 @@ module Binding = {
                           | `linear
                         ]
                           =?,
-      ~baseLine: 'baseLine=?,
-      ~connectNulls: bool=?,
       ~className: string=?,
+      ~connectNulls: bool=?,
       ~dataKey: 'dataKey,
       ~dot: 'dot=?,
-      ~fill: string=?,
-      ~fillOpacity: float=?,
       ~id: string=?,
       ~isAnimationActive: bool=?,
       ~label: 'label=?,
@@ -65,7 +62,6 @@ module Binding = {
       ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
       ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
       ~points: array(Js.t({..}))=?,
-      ~stackId: string=?,
       ~stroke: string=?,
       ~strokeWidth: int=?,
       ~unit: string=?,
@@ -73,7 +69,7 @@ module Binding = {
       ~yAxisId: string=?
     ) =>
     React.element =
-    "Area";
+    "Line";
 };
 
 [@react.component]
@@ -84,13 +80,10 @@ let make =
       ~animationBegin=?,
       ~animationDuration=?,
       ~animationEasing=?,
-      ~baseLine=?,
-      ~connectNulls=?,
       ~className=?,
+      ~connectNulls=?,
       ~dataKey,
       ~dot=?,
-      ~fill=?,
-      ~fillOpacity=?,
       ~id=?,
       ~isAnimationActive=?,
       ~label=?,
@@ -106,48 +99,42 @@ let make =
       ~onMouseOver=?,
       ~onMouseUp=?,
       ~points=?,
-      ~stackId=?,
       ~stroke=?,
       ~strokeWidth=?,
       ~unit=?,
       ~xAxisId=?,
       ~yAxisId=?,
-    ) =>
-  Binding.make(
-    Binding.makeProps(
-      ~_type?,
-      ~activeDot?,
-      ~animationBegin?,
-      ~animationDuration?,
-      ~animationEasing?,
-      ~baseLine?,
-      ~connectNulls?,
-      ~className?,
-      ~dataKey,
-      ~dot?,
-      ~fill?,
-      ~fillOpacity?,
-      ~id?,
-      ~isAnimationActive?,
-      ~label?,
-      ~layout?,
-      ~legendType?,
-      ~name?,
-      ~onClick?,
-      ~onMouseDown?,
-      ~onMouseEnter?,
-      ~onMouseLeave?,
-      ~onMouseMove?,
-      ~onMouseOut?,
-      ~onMouseOver?,
-      ~onMouseUp?,
-      ~points?,
-      ~stackId?,
-      ~stroke?,
-      ~strokeWidth?,
-      ~unit?,
-      ~xAxisId?,
-      ~yAxisId?,
-      (),
-    ),
-  );
+    ) => {
+  Js.log2("name", name);
+  <Binding
+    ?_type
+    ?activeDot
+    ?animationBegin
+    ?animationDuration
+    ?animationEasing
+    ?className
+    ?connectNulls
+    dataKey
+    ?dot
+    ?id
+    ?isAnimationActive
+    ?label
+    ?layout
+    ?legendType
+    ?name
+    ?onClick
+    ?onMouseDown
+    ?onMouseEnter
+    ?onMouseLeave
+    ?onMouseMove
+    ?onMouseOut
+    ?onMouseOver
+    ?onMouseUp
+    ?points
+    ?stroke
+    ?strokeWidth
+    ?unit
+    ?xAxisId
+    ?yAxisId
+  />;
+};

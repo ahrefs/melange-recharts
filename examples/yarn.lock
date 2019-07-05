@@ -4,6 +4,8 @@
 
 "@ahrefs/bs-recharts@file:..":
   version "0.2.15"
+  dependencies:
+    recharts "^1.6.2"
 
 "@babel/runtime@^7.1.2":
   version "7.5.0"

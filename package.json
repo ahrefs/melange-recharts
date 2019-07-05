@@ -34,5 +34,8 @@
     "watch": "bsb -make-world -w",
     "clean": "bsb -clean-world",
     "test": "exit 0"
+  },
+  "dependencies": {
+    "recharts": "^1.6.2"
   }
 }

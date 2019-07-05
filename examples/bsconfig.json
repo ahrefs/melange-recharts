@@ -6,14 +6,13 @@
       "subdirs": true
     }
   ],
-  "bs-dependencies": [
-    "@ahrefs/bs-recharts",
-    "reason-react"
+  "bs-dependencies": ["reason-react"],
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
   ],
-  "package-specs": [{
-    "module": "commonjs",
-    "in-source": true
-  }],
   "reason": {
     "react-jsx": 3
   },
