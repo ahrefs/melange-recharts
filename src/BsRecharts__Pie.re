@@ -54,7 +54,8 @@ external make:
     ~outerRadius: PxOrPrc.t=?,
     ~paddingAngle: int=?,
     ~startAngle: int=?,
-    ~stroke: string=?
+    ~stroke: string=?,
+    ~children: React.element=?
   ) =>
   React.element =
   "Pie";
@@ -93,6 +94,7 @@ let makeProps =
       ~paddingAngle=?,
       ~startAngle=?,
       ~stroke=?,
+      ~children=?,
       (),
     ) =>
   makeProps(
@@ -136,5 +138,6 @@ let makeProps =
     ~paddingAngle?,
     ~startAngle?,
     ~stroke?,
+    ~children?,
     (),
   );
