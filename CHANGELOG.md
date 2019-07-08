@@ -1,3 +1,7 @@
+# v0.3.0 (08.07.2019)
+
+- migrate to jsx3 (#20)
+
 # v0.2.14 (20.05.2019)
 
 - move recharts to peerDependencies (#17)
