@@ -1,11 +1,8 @@
-/* http://recharts.org/en-US/api/CartesianAxis */
+// http://recharts.org/en-US/api/CartesianAxis
 open BsRecharts__Utils;
 
-[@bs.module "recharts"]
-external reactClass: ReasonReact.reactClass = "CartesianAxis";
-
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~axisLine: 'axisLine=?,
     ~className: string=?,
@@ -22,13 +19,12 @@ external makeProps:
     ~viewBox: viewBox=?,
     ~width: int=?,
     ~x: int=?,
-    ~y: int=?,
-    unit
+    ~y: int=?
   ) =>
-  _ =
-  "";
+  React.element =
+  "CartesianAxis";
 
-let make =
+let makeProps =
     (
       ~axisLine=?,
       ~className=?,
@@ -46,29 +42,26 @@ let make =
       ~width=?,
       ~x=?,
       ~y=?,
-      children,
+      (),
     ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~axisLine?,
-        ~className?,
-        ~height?,
-        ~interval=?interval |> AxisInterval.encodeOpt,
-        ~label?,
-        ~minTickGap?,
-        ~mirror?,
-        ~orientation?,
-        ~tick?,
-        ~tickLine?,
-        ~tickMargin,
-        ~tickSize?,
-        ~viewBox?,
-        ~width?,
-        ~x?,
-        ~y?,
-        (),
-      ),
-    children,
+  makeProps(
+    ~axisLine?,
+    ~className?,
+    ~height?,
+    ~interval=?{
+      interval->AxisInterval.encodeOpt;
+    },
+    ~label?,
+    ~minTickGap?,
+    ~mirror?,
+    ~orientation?,
+    ~tick?,
+    ~tickLine?,
+    ~tickMargin,
+    ~tickSize?,
+    ~viewBox?,
+    ~width?,
+    ~x?,
+    ~y?,
+    (),
   );

@@ -1,10 +1,8 @@
-/* http://recharts.org/en-US/api/XAxis */
+// http://recharts.org/en-US/api/XAxis
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "XAxis";
-
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~_type: [@bs.string] [ | `number | `category]=?,
     ~allowDataOverflow: bool=?,
@@ -59,13 +57,12 @@ external makeProps:
     ~tickSize: int=?,
     ~unit: string=?,
     ~width: int=?,
-    ~xAxisId: string=?,
-    unit
+    ~xAxisId: string=?
   ) =>
-  _ =
-  "";
+  React.element =
+  "XAxis";
 
-let make =
+let makeProps =
     (
       ~_type=?,
       ~allowDataOverflow=?,
@@ -104,50 +101,45 @@ let make =
       ~unit=?,
       ~width=?,
       ~xAxisId=?,
-      children,
+      (),
     ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~_type?,
-        ~allowDataOverflow?,
-        ~allowDecimals?,
-        ~allowDuplicatedCategory?,
-        ~axisLine?,
-        ~className?,
-        ~dataKey?,
-        ~domain?,
-        ~height?,
-        ~hide?,
-        ~interval=?interval |> AxisInterval.encodeOpt,
-        ~label=?label |> StrOrNode.encodeOpt,
-        ~minTickGap?,
-        ~mirror?,
-        ~name?,
-        ~onClick?,
-        ~onMouseDown?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~onMouseOut?,
-        ~onMouseOver?,
-        ~onMouseUp?,
-        ~orientation?,
-        ~padding?,
-        ~reversed?,
-        ~scale?,
-        ~tick?,
-        ~tickCount?,
-        ~tickFormatter?,
-        ~tickLine?,
-        ~tickMargin?,
-        ~ticks?,
-        ~tickSize?,
-        ~unit?,
-        ~width?,
-        ~xAxisId?,
-        (),
-      ),
-    children,
+  makeProps(
+    ~_type?,
+    ~allowDataOverflow?,
+    ~allowDecimals?,
+    ~allowDuplicatedCategory?,
+    ~axisLine?,
+    ~className?,
+    ~dataKey?,
+    ~domain?,
+    ~height?,
+    ~hide?,
+    ~interval=?interval->AxisInterval.encodeOpt,
+    ~label=?label->StrOrNode.encodeOpt,
+    ~minTickGap?,
+    ~mirror?,
+    ~name?,
+    ~onClick?,
+    ~onMouseDown?,
+    ~onMouseEnter?,
+    ~onMouseLeave?,
+    ~onMouseMove?,
+    ~onMouseOut?,
+    ~onMouseOver?,
+    ~onMouseUp?,
+    ~orientation?,
+    ~padding?,
+    ~reversed?,
+    ~scale?,
+    ~tick?,
+    ~tickCount?,
+    ~tickFormatter?,
+    ~tickLine?,
+    ~tickMargin?,
+    ~ticks?,
+    ~tickSize?,
+    ~unit?,
+    ~width?,
+    ~xAxisId?,
+    (),
   );

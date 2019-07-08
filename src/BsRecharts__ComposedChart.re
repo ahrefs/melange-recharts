@@ -1,11 +1,8 @@
-/* http://recharts.org/en-US/api/ComposedChart */
+// http://recharts.org/en-US/api/ComposedChart
 open BsRecharts__Utils;
 
-[@bs.module "recharts"]
-external reactClass: ReasonReact.reactClass = "ComposedChart";
-
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~className: string=?,
     ~data: array('dataItem),
@@ -30,12 +27,12 @@ external makeProps:
                     =?,
     ~syncId: string=?,
     ~width: int=?,
-    unit
+    ~children: React.element
   ) =>
-  _ =
-  "";
+  React.element =
+  "ComposedChart";
 
-let make =
+let makeProps =
     (
       ~className=?,
       ~data,
@@ -53,29 +50,30 @@ let make =
       ~stackOffset=?,
       ~syncId=?,
       ~width=?,
-      children,
+      ~children,
+      (),
     ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~className?,
-        ~data,
-        ~barCategoryGap=?barCategoryGap |> PxOrPrc.encodeOpt,
-        ~barGap=?barGap |> PxOrPrc.encodeOpt,
-        ~barSize?,
-        ~height?,
-        ~layout?,
-        ~margin?,
-        ~onClick?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~reverseStackOrder?,
-        ~stackOffset?,
-        ~syncId?,
-        ~width?,
-        (),
-      ),
-    children,
+  makeProps(
+    ~className?,
+    ~data,
+    ~barCategoryGap=?{
+      barCategoryGap->PxOrPrc.encodeOpt;
+    },
+    ~barGap=?{
+      barGap->PxOrPrc.encodeOpt;
+    },
+    ~barSize?,
+    ~height?,
+    ~layout?,
+    ~margin?,
+    ~onClick?,
+    ~onMouseEnter?,
+    ~onMouseLeave?,
+    ~onMouseMove?,
+    ~reverseStackOrder?,
+    ~stackOffset?,
+    ~syncId?,
+    ~width?,
+    ~children,
+    (),
   );

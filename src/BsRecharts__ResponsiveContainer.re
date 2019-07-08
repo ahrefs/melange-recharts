@@ -1,11 +1,9 @@
-/* http://recharts.org/en-US/api/ResponsiveContainer */
+// http://recharts.org/en-US/api/ResponsiveContainer
+
 open BsRecharts__Utils;
 
-[@bs.module "recharts"]
-external reactClass: ReasonReact.reactClass = "ResponsiveContainer";
-
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~aspect: float=?,
     ~className: string=?,
@@ -14,34 +12,33 @@ external makeProps:
     ~minHeight: int=?,
     ~minWidth: int=?,
     ~width: PxOrPrc.t=?,
-    unit
+    ~children: React.element
   ) =>
-  _ =
-  "";
+  React.element =
+  "ResponsiveContainer";
 
-let make =
+let makeProps =
     (
-      ~aspect=?,
       ~className=?,
       ~debounce=?,
       ~height=?,
       ~minHeight=?,
       ~minWidth=?,
       ~width=?,
-      children,
+      ~children,
+      (),
     ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~aspect?,
-        ~className?,
-        ~debounce?,
-        ~height=?height |> PxOrPrc.encodeOpt,
-        ~minHeight?,
-        ~minWidth?,
-        ~width=?width |> PxOrPrc.encodeOpt,
-        (),
-      ),
-    children,
+  makeProps(
+    ~className?,
+    ~debounce?,
+    ~height=?{
+      height->PxOrPrc.encodeOpt;
+    },
+    ~minHeight?,
+    ~minWidth?,
+    ~width=?{
+      width->PxOrPrc.encodeOpt;
+    },
+    ~children,
+    (),
   );

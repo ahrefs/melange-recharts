@@ -1,8 +1,7 @@
-[@bs.module "recharts"]
-external reactClass: ReasonReact.reactClass = "ReferenceDot";
+// http://recharts.org/en-US/api/ReferenceDot
 
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~alwaysShow: bool=?,
     ~className: string=?,
@@ -24,63 +23,7 @@ external makeProps:
     ~xAxisId: string=?,
     ~y: string=?,
     ~yAxis: Js.t({..})=?,
-    ~yAxisId: string=?,
-    unit
+    ~yAxisId: string=?
   ) =>
-  _ =
-  "";
-
-let make =
-    (
-      ~alwaysShow=?,
-      ~className=?,
-      ~fill=?,
-      ~isFront=?,
-      ~label=?,
-      ~onClick=?,
-      ~onMouseDown=?,
-      ~onMouseEnter=?,
-      ~onMouseLeave=?,
-      ~onMouseMove=?,
-      ~onMouseOut=?,
-      ~onMouseOver=?,
-      ~onMouseUp=?,
-      ~r=?,
-      ~stroke=?,
-      ~x=?,
-      ~xAxis=?,
-      ~xAxisId=?,
-      ~y=?,
-      ~yAxis=?,
-      ~yAxisId=?,
-      children,
-    ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~alwaysShow?,
-        ~className?,
-        ~fill?,
-        ~isFront?,
-        ~label?,
-        ~onClick?,
-        ~onMouseDown?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~onMouseOut?,
-        ~onMouseOver?,
-        ~onMouseUp?,
-        ~r?,
-        ~stroke?,
-        ~x?,
-        ~xAxis?,
-        ~xAxisId?,
-        ~y?,
-        ~yAxis?,
-        ~yAxisId?,
-        (),
-      ),
-    children,
-  );
+  React.element =
+  "ReferenceDot";

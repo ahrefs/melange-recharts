@@ -8,12 +8,4 @@ let data = [|
   {"name": "Page G", "uv": 3490, "pv": 4300, "amt": 2100},
 |];
 
-ReactDOMRe.renderToElementWithId(
-  <div>
-    <h2> (ReasonReact.stringToElement("Line Chart")) </h2>
-    <LineChartExample data />
-    <h2> (ReasonReact.stringToElement("Bar Chart")) </h2>
-    <BarChartExample data />
-  </div>,
-  "root",
-);
+ReactDOMRe.renderToElementWithId(<Demo data />, "root");

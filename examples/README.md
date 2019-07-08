@@ -1,15 +1,10 @@
-Example App
-
-## Development
-
-```
-$ yarn link
-$ cd examples && yarn link bs-recharts
-```
-
-## Run
+## Run Project
 
 ```sh
-$ yarn install
-$ yarn start
+yarn
+yarn start
+# in another tab
+yarn run server
 ```
+
+Open http://localhost:3000 in the browser.

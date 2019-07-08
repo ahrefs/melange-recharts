@@ -1,10 +1,7 @@
-/* http://recharts.org/en-US/api/Scatter */
+// http://recharts.org/en-US/api/Scatter
 
-[@bs.module "recharts"]
-external reactClass: ReasonReact.reactClass = "Scatter";
-
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~legendType: [@bs.string] [
                    | `line
@@ -23,8 +20,9 @@ external makeProps:
     ~yAxisId: string=?,
     ~zAxisId: string=?,
     ~className: string=?,
+    ~name: string=?,
     ~data: array(Js.t({..})),
-    ~dataKey: 'dataKey,
+    ~fill: string=?,
     ~line: 'line=?,
     ~shape: 'shape=?,
     ~lineType: 'lineType=?,
@@ -48,66 +46,7 @@ external makeProps:
     ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~id: string=?,
-    unit
+    ~children: React.element=?
   ) =>
-  _ =
-  "";
-
-let make =
-    (
-      ~legendType=?,
-      ~xAxisId=?,
-      ~yAxisId=?,
-      ~zAxisId=?,
-      ~className=?,
-      ~data,
-      ~dataKey,
-      ~line=?,
-      ~shape=?,
-      ~lineType=?,
-      ~points=?,
-      ~isAnimationActive=?,
-      ~animationBegin=?,
-      ~animationDuration=?,
-      ~animationEasing=?,
-      ~onClick=?,
-      ~onMouseEnter=?,
-      ~onMouseLeave=?,
-      ~onMouseOut=?,
-      ~onMouseUp=?,
-      ~onMouseDown=?,
-      ~onMouseMove=?,
-      ~id=?,
-      children,
-    ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~legendType?,
-        ~xAxisId?,
-        ~yAxisId?,
-        ~zAxisId?,
-        ~className?,
-        ~data,
-        ~dataKey,
-        ~line?,
-        ~shape?,
-        ~lineType?,
-        ~points?,
-        ~isAnimationActive?,
-        ~animationBegin?,
-        ~animationDuration?,
-        ~animationEasing?,
-        ~onClick?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseOut?,
-        ~onMouseUp?,
-        ~onMouseDown?,
-        ~onMouseMove?,
-        ~id?,
-        (),
-      ),
-    children,
-  );
+  React.element =
+  "Scatter";

@@ -1,10 +1,8 @@
-/* http://recharts.org/en-US/api/Legend */
+// http://recharts.org/en-US/api/Legend
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "Legend";
-
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~align: [@bs.string] [ | `left | `center | `right]=?,
     ~chartHeight: int=?,
@@ -38,65 +36,7 @@ external makeProps:
     ~payload: array(Js.t({..}))=?,
     ~verticalAlign: [@bs.string] [ | `top | `middle | `bottom]=?,
     ~width: int=?,
-    ~wrapperStyle: Js.t({..})=?,
-    unit
+    ~wrapperStyle: Js.t({..})=?
   ) =>
-  _ =
-  "";
-
-let make =
-    (
-      ~align=?,
-      ~chartHeight=?,
-      ~chartWidth=?,
-      ~content=?,
-      ~className=?,
-      ~height=?,
-      ~iconSize=?,
-      ~iconType=?,
-      ~layout=?,
-      ~margin=?,
-      ~onClick=?,
-      ~onMouseDown=?,
-      ~onMouseEnter=?,
-      ~onMouseLeave=?,
-      ~onMouseMove=?,
-      ~onMouseOut=?,
-      ~onMouseOver=?,
-      ~onMouseUp=?,
-      ~payload=?,
-      ~verticalAlign=?,
-      ~width=?,
-      ~wrapperStyle=?,
-      children,
-    ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~align?,
-        ~chartHeight?,
-        ~chartWidth?,
-        ~content?,
-        ~className?,
-        ~height?,
-        ~iconSize?,
-        ~iconType?,
-        ~layout?,
-        ~margin?,
-        ~onClick?,
-        ~onMouseDown?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~onMouseOut?,
-        ~onMouseOver?,
-        ~onMouseUp?,
-        ~payload?,
-        ~verticalAlign?,
-        ~width?,
-        ~wrapperStyle?,
-        (),
-      ),
-    children,
-  );
+  React.element =
+  "Legend";

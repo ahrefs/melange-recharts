@@ -1,11 +1,9 @@
+// http://recharts.org/en-US/api/ScatterChart
+
 open BsRecharts__Utils;
 
-/* http://recharts.org/en-US/api/ScatterChart */
-[@bs.module "recharts"]
-external reactClass: ReasonReact.reactClass = "ScatterChart";
-
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~className: string=?,
     ~height: int=?,
@@ -18,42 +16,7 @@ external makeProps:
     ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~width: int=?,
-    unit
+    ~children: React.element
   ) =>
-  _ =
-  "";
-
-let make =
-    (
-      ~className=?,
-      ~height=?,
-      ~margin=?,
-      ~onClick=?,
-      ~onMouseEnter=?,
-      ~onMouseLeave=?,
-      ~onMouseOut=?,
-      ~onMouseUp=?,
-      ~onMouseDown=?,
-      ~onMouseMove=?,
-      ~width=?,
-      children,
-    ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~className?,
-        ~height?,
-        ~margin?,
-        ~onClick?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseOut?,
-        ~onMouseUp?,
-        ~onMouseDown?,
-        ~onMouseMove?,
-        ~width?,
-        (),
-      ),
-    children,
-  );
+  React.element =
+  "ScatterChart";

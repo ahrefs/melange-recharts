@@ -1,10 +1,8 @@
-/* http://recharts.org/en-US/api/YAxis */
+// http://recharts.org/en-US/api/YAxis
 open BsRecharts__Utils;
 
-[@bs.module "recharts"] external reactClass: ReasonReact.reactClass = "YAxis";
-
-[@bs.obj]
-external makeProps:
+[@bs.module "recharts"] [@react.component]
+external make:
   (
     ~_type: [@bs.string] [ | `number | `category]=?,
     ~allowDataOverflow: bool=?,
@@ -58,13 +56,12 @@ external makeProps:
     ~tickSize: int=?,
     ~unit: string=?,
     ~width: int=?,
-    ~yAxisId: string=?,
-    unit
+    ~yAxisId: string=?
   ) =>
-  _ =
-  "";
+  React.element =
+  "YAxis";
 
-let make =
+let makeProps =
     (
       ~_type=?,
       ~allowDataOverflow=?,
@@ -102,49 +99,48 @@ let make =
       ~unit=?,
       ~width=?,
       ~yAxisId=?,
-      children,
+      (),
     ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      makeProps(
-        ~_type?,
-        ~allowDataOverflow?,
-        ~allowDecimals?,
-        ~allowDuplicatedCategory?,
-        ~axisLine?,
-        ~className?,
-        ~dataKey?,
-        ~domain?,
-        ~height?,
-        ~hide?,
-        ~interval=?interval |> AxisInterval.encodeOpt,
-        ~label=?label |> StrOrNode.encodeOpt,
-        ~minTickGap?,
-        ~mirror?,
-        ~name?,
-        ~onClick?,
-        ~onMouseDown?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~onMouseOut?,
-        ~onMouseOver?,
-        ~onMouseUp?,
-        ~orientation?,
-        ~padding?,
-        ~reversed?,
-        ~scale?,
-        ~tick?,
-        ~tickFormatter?,
-        ~tickLine?,
-        ~tickMargin?,
-        ~ticks?,
-        ~tickSize?,
-        ~unit?,
-        ~width?,
-        ~yAxisId?,
-        (),
-      ),
-    children,
+  makeProps(
+    ~_type?,
+    ~allowDataOverflow?,
+    ~allowDecimals?,
+    ~allowDuplicatedCategory?,
+    ~axisLine?,
+    ~className?,
+    ~dataKey?,
+    ~domain?,
+    ~height?,
+    ~hide?,
+    ~interval=?{
+      interval->AxisInterval.encodeOpt;
+    },
+    ~label=?{
+      label->StrOrNode.encodeOpt;
+    },
+    ~minTickGap?,
+    ~mirror?,
+    ~name?,
+    ~onClick?,
+    ~onMouseDown?,
+    ~onMouseEnter?,
+    ~onMouseLeave?,
+    ~onMouseMove?,
+    ~onMouseOut?,
+    ~onMouseOver?,
+    ~onMouseUp?,
+    ~orientation?,
+    ~padding?,
+    ~reversed?,
+    ~scale?,
+    ~tick?,
+    ~tickFormatter?,
+    ~tickLine?,
+    ~tickMargin?,
+    ~ticks?,
+    ~tickSize?,
+    ~unit?,
+    ~width?,
+    ~yAxisId?,
+    (),
   );
