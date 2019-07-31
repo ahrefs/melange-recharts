@@ -51,7 +51,8 @@ external make:
     ~stackId: string=?,
     ~unit: string=?,
     ~xAxisId: string=?,
-    ~yAxisId: string=?
+    ~yAxisId: string=?,
+    ~children: React.element=?
   ) =>
   React.element =
   "Bar";
