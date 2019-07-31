@@ -1,3 +1,7 @@
+# v0.3.0 (31.07.2019)
+
+- add `children` prop to `Bar` cmponent
+
 # v0.3.0 (08.07.2019)
 
 - migrate to jsx3 (#20)
