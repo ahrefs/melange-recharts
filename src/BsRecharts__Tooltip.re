@@ -33,3 +33,59 @@ external make:
   ) =>
   React.element =
   "Tooltip";
+
+module Jsx2 = {
+  let component = ReasonReact.statelessComponent(__MODULE__);
+
+  let make =
+      (
+        ~active=?,
+        ~animationBegin=?,
+        ~animationDuration=?,
+        ~animationEasing=?,
+        ~className=?,
+        ~content=?,
+        ~coordinate=?,
+        ~cursor=?,
+        ~formatter=?,
+        ~isAnimationActive=?,
+        ~itemSorter=?,
+        ~itemStyle=?,
+        ~label=?,
+        ~labelFormatter=?,
+        ~labelStyle=?,
+        ~offset=?,
+        ~payload=?,
+        ~separator=?,
+        ~viewBox=?,
+        ~wrapperStyle=?,
+        children,
+      ) =>
+    ReasonReactCompat.wrapReactForReasonReact(
+      make,
+      makeProps(
+        ~active?,
+        ~animationBegin?,
+        ~animationDuration?,
+        ~animationEasing?,
+        ~className?,
+        ~content?,
+        ~coordinate?,
+        ~cursor?,
+        ~formatter?,
+        ~isAnimationActive?,
+        ~itemSorter?,
+        ~itemStyle?,
+        ~label?,
+        ~labelFormatter?,
+        ~labelStyle?,
+        ~offset?,
+        ~payload?,
+        ~separator?,
+        ~viewBox?,
+        ~wrapperStyle?,
+        (),
+      ),
+      children,
+    );
+};

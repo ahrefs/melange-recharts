@@ -40,3 +40,63 @@ external make:
   ) =>
   React.element =
   "Legend";
+
+module Jsx2 = {
+  let component = ReasonReact.statelessComponent(__MODULE__);
+
+  let make =
+      (
+        ~align=?,
+        ~chartHeight=?,
+        ~chartWidth=?,
+        ~content=?,
+        ~className=?,
+        ~height=?,
+        ~iconSize=?,
+        ~iconType=?,
+        ~layout=?,
+        ~margin=?,
+        ~onClick=?,
+        ~onMouseDown=?,
+        ~onMouseEnter=?,
+        ~onMouseLeave=?,
+        ~onMouseMove=?,
+        ~onMouseOut=?,
+        ~onMouseOver=?,
+        ~onMouseUp=?,
+        ~payload=?,
+        ~verticalAlign=?,
+        ~width=?,
+        ~wrapperStyle=?,
+        children,
+      ) =>
+    ReasonReactCompat.wrapReactForReasonReact(
+      make,
+      makeProps(
+        ~align?,
+        ~chartHeight?,
+        ~chartWidth?,
+        ~content?,
+        ~className?,
+        ~height?,
+        ~iconSize?,
+        ~iconType?,
+        ~layout?,
+        ~margin?,
+        ~onClick?,
+        ~onMouseDown?,
+        ~onMouseEnter?,
+        ~onMouseLeave?,
+        ~onMouseMove?,
+        ~onMouseOut?,
+        ~onMouseOver?,
+        ~onMouseUp?,
+        ~payload?,
+        ~verticalAlign?,
+        ~width?,
+        ~wrapperStyle?,
+        (),
+      ),
+      children,
+    );
+};

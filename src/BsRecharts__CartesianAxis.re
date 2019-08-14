@@ -65,3 +65,51 @@ let makeProps =
     ~y?,
     (),
   );
+
+module Jsx2 = {
+  let component = ReasonReact.statelessComponent(__MODULE__);
+
+  let make =
+      (
+        ~axisLine=?,
+        ~className=?,
+        ~height=?,
+        ~interval=?,
+        ~label=?,
+        ~minTickGap=?,
+        ~mirror=?,
+        ~orientation=?,
+        ~tick=?,
+        ~tickLine=?,
+        ~tickMargin,
+        ~tickSize=?,
+        ~viewBox=?,
+        ~width=?,
+        ~x=?,
+        ~y=?,
+        children,
+      ) =>
+    ReasonReactCompat.wrapReactForReasonReact(
+      make,
+      makeProps(
+        ~axisLine?,
+        ~className?,
+        ~height?,
+        ~interval?,
+        ~label?,
+        ~minTickGap?,
+        ~mirror?,
+        ~orientation?,
+        ~tick?,
+        ~tickLine?,
+        ~tickMargin,
+        ~tickSize?,
+        ~viewBox?,
+        ~width?,
+        ~x?,
+        ~y?,
+        (),
+      ),
+      children,
+    );
+};

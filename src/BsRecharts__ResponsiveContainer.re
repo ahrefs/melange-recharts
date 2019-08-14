@@ -42,3 +42,32 @@ let makeProps =
     ~children,
     (),
   );
+
+module Jsx2 = {
+  let component = ReasonReact.statelessComponent(__MODULE__);
+
+  let make =
+      (
+        ~className=?,
+        ~debounce=?,
+        ~height=?,
+        ~minHeight=?,
+        ~minWidth=?,
+        ~width=?,
+        children,
+      ) =>
+    ReasonReactCompat.wrapReactForReasonReact(
+      make,
+      makeProps(
+        ~className?,
+        ~debounce?,
+        ~height?,
+        ~minHeight?,
+        ~minWidth?,
+        ~width?,
+        ~children={React.array(children)},
+        (),
+      ),
+      children,
+    );
+};

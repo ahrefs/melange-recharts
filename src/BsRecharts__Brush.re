@@ -29,3 +29,51 @@ external make:
   ) =>
   React.element =
   "Brush";
+
+module Jsx2 = {
+  let component = ReasonReact.statelessComponent(__MODULE__);
+
+  let make =
+      (
+        ~className=?,
+        ~data=?,
+        ~dataKey,
+        ~endIndex=?,
+        ~fill=?,
+        ~gap=?,
+        ~height=?,
+        ~onChange=?,
+        ~padding=?,
+        ~startIndex=?,
+        ~stroke=?,
+        ~tickFormatter=?,
+        ~travellerWidth=?,
+        ~width=?,
+        ~x=?,
+        ~y=?,
+        children,
+      ) =>
+    ReasonReactCompat.wrapReactForReasonReact(
+      make,
+      makeProps(
+        ~className?,
+        ~data?,
+        ~dataKey,
+        ~endIndex?,
+        ~fill?,
+        ~gap?,
+        ~height?,
+        ~onChange?,
+        ~padding?,
+        ~startIndex?,
+        ~stroke?,
+        ~tickFormatter?,
+        ~travellerWidth?,
+        ~width?,
+        ~x?,
+        ~y?,
+        (),
+      ),
+      children,
+    );
+};

@@ -10,3 +10,14 @@ external make:
   ) =>
   React.element =
   "Cell";
+
+module Jsx2 = {
+  let component = ReasonReact.statelessComponent(__MODULE__);
+
+  let make = (~className=?, ~fill=?, ~stroke=?, ~strokeWidth=?, children) =>
+    ReasonReactCompat.wrapReactForReasonReact(
+      make,
+      makeProps(~className?, ~fill?, ~stroke?, ~strokeWidth?, ()),
+      children,
+    );
+};

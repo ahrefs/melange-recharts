@@ -22,3 +22,46 @@ external make:
   ) =>
   React.element =
   "AreaChart";
+
+module Jsx2 = {
+  let component = ReasonReact.statelessComponent(__MODULE__);
+
+  let make =
+      (
+        ~baseValue=?,
+        ~className=?,
+        ~data,
+        ~height=?,
+        ~layout=?,
+        ~margin=?,
+        ~onClick=?,
+        ~onMouseEnter=?,
+        ~onMouseLeave=?,
+        ~onMouseMove=?,
+        ~stackOffset=?,
+        ~syncId=?,
+        ~width=?,
+        children,
+      ) =>
+    ReasonReactCompat.wrapReactForReasonReact(
+      make,
+      makeProps(
+        ~baseValue?,
+        ~className?,
+        ~data,
+        ~height?,
+        ~layout?,
+        ~margin?,
+        ~onClick?,
+        ~onMouseEnter?,
+        ~onMouseLeave?,
+        ~onMouseMove?,
+        ~stackOffset?,
+        ~syncId?,
+        ~width?,
+        ~children={React.array(children)},
+        (),
+      ),
+      children,
+    );
+};

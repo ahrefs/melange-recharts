@@ -18,3 +18,43 @@ external make:
   ) =>
   React.element =
   "CartesianGrid";
+
+module Jsx2 = {
+  let component = ReasonReact.statelessComponent(__MODULE__);
+
+  let make =
+      (
+        ~className=?,
+        ~height=?,
+        ~horizontal=?,
+        ~horizontalPoints=?,
+        ~stroke=?,
+        ~strokeDasharray=?,
+        ~strokeWidth=?,
+        ~vertical=?,
+        ~verticalPoints=?,
+        ~width=?,
+        ~x=?,
+        ~y=?,
+        children,
+      ) =>
+    ReasonReactCompat.wrapReactForReasonReact(
+      make,
+      makeProps(
+        ~className?,
+        ~height?,
+        ~horizontal?,
+        ~horizontalPoints?,
+        ~stroke?,
+        ~strokeDasharray?,
+        ~strokeWidth?,
+        ~vertical?,
+        ~verticalPoints?,
+        ~width?,
+        ~x?,
+        ~y?,
+        (),
+      ),
+      children,
+    );
+};
