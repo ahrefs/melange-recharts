@@ -1,4 +1,8 @@
-# v0.3.0 (31.07.2019)
+# v0.3.2 (31.07.2019)
+
+- Add `jsx2` wrappers
+
+# v0.3.1 (31.07.2019)
 
 - add `children` prop to `Bar` cmponent
 
