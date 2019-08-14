@@ -27,3 +27,61 @@ external make:
   ) =>
   React.element =
   "ReferenceDot";
+
+module Jsx2 = {
+  let component = ReasonReact.statelessComponent(__MODULE__);
+
+  let make =
+      (
+        ~alwaysShow=?,
+        ~className=?,
+        ~fill=?,
+        ~isFront=?,
+        ~label=?,
+        ~onClick=?,
+        ~onMouseDown=?,
+        ~onMouseEnter=?,
+        ~onMouseLeave=?,
+        ~onMouseMove=?,
+        ~onMouseOut=?,
+        ~onMouseOver=?,
+        ~onMouseUp=?,
+        ~r=?,
+        ~stroke=?,
+        ~x=?,
+        ~xAxis=?,
+        ~xAxisId=?,
+        ~y=?,
+        ~yAxis=?,
+        ~yAxisId=?,
+        children,
+      ) =>
+    ReasonReactCompat.wrapReactForReasonReact(
+      make,
+      makeProps(
+        ~alwaysShow?,
+        ~className?,
+        ~fill?,
+        ~isFront?,
+        ~label?,
+        ~onClick?,
+        ~onMouseDown?,
+        ~onMouseEnter?,
+        ~onMouseLeave?,
+        ~onMouseMove?,
+        ~onMouseOut?,
+        ~onMouseOver?,
+        ~onMouseUp?,
+        ~r?,
+        ~stroke?,
+        ~x?,
+        ~xAxis?,
+        ~xAxisId?,
+        ~y?,
+        ~yAxis?,
+        ~yAxisId?,
+        (),
+      ),
+      children,
+    );
+};

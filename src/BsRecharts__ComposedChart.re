@@ -77,3 +77,52 @@ let makeProps =
     ~children,
     (),
   );
+
+module Jsx2 = {
+  let component = ReasonReact.statelessComponent(__MODULE__);
+
+  let make =
+      (
+        ~className=?,
+        ~data,
+        ~barCategoryGap=?,
+        ~barGap=?,
+        ~barSize=?,
+        ~height=?,
+        ~layout=?,
+        ~margin=?,
+        ~onClick=?,
+        ~onMouseEnter=?,
+        ~onMouseLeave=?,
+        ~onMouseMove=?,
+        ~reverseStackOrder=?,
+        ~stackOffset=?,
+        ~syncId=?,
+        ~width=?,
+        children,
+      ) =>
+    ReasonReactCompat.wrapReactForReasonReact(
+      make,
+      makeProps(
+        ~className?,
+        ~data,
+        ~barCategoryGap?,
+        ~barGap?,
+        ~barSize?,
+        ~height?,
+        ~layout?,
+        ~margin?,
+        ~onClick?,
+        ~onMouseEnter?,
+        ~onMouseLeave?,
+        ~onMouseMove?,
+        ~reverseStackOrder?,
+        ~stackOffset?,
+        ~syncId?,
+        ~width?,
+        ~children={React.array(children)},
+        (),
+      ),
+      children,
+    );
+};

@@ -68,3 +68,77 @@ external make:
   ) =>
   React.element =
   "Line";
+
+module Jsx2 = {
+  let component = ReasonReact.statelessComponent(__MODULE__);
+
+  let make =
+      (
+        ~_type=?,
+        ~activeDot=?,
+        ~animationBegin=?,
+        ~animationDuration=?,
+        ~animationEasing=?,
+        ~className=?,
+        ~connectNulls=?,
+        ~dataKey,
+        ~dot=?,
+        ~id=?,
+        ~isAnimationActive=?,
+        ~label=?,
+        ~layout=?,
+        ~legendType=?,
+        ~name=?,
+        ~onClick=?,
+        ~onMouseDown=?,
+        ~onMouseEnter=?,
+        ~onMouseLeave=?,
+        ~onMouseMove=?,
+        ~onMouseOut=?,
+        ~onMouseOver=?,
+        ~onMouseUp=?,
+        ~points=?,
+        ~stroke=?,
+        ~strokeWidth=?,
+        ~unit=?,
+        ~xAxisId=?,
+        ~yAxisId=?,
+        children,
+      ) =>
+    ReasonReactCompat.wrapReactForReasonReact(
+      make,
+      makeProps(
+        ~_type?,
+        ~activeDot?,
+        ~animationBegin?,
+        ~animationDuration?,
+        ~animationEasing?,
+        ~className?,
+        ~connectNulls?,
+        ~dataKey,
+        ~dot?,
+        ~id?,
+        ~isAnimationActive?,
+        ~label?,
+        ~layout?,
+        ~legendType?,
+        ~name?,
+        ~onClick?,
+        ~onMouseDown?,
+        ~onMouseEnter?,
+        ~onMouseLeave?,
+        ~onMouseMove?,
+        ~onMouseOut?,
+        ~onMouseOver?,
+        ~onMouseUp?,
+        ~points?,
+        ~stroke?,
+        ~strokeWidth?,
+        ~unit?,
+        ~xAxisId?,
+        ~yAxisId?,
+        (),
+      ),
+      children,
+    );
+};
