@@ -26,6 +26,8 @@ module Pie = BsRecharts__Pie;
 
 module PieChart = BsRecharts__PieChart;
 
+module ReferenceArea = BsRecharts__ReferenceArea;
+
 module ReferenceDot = BsRecharts__ReferenceDot;
 
 module ReferenceLine = BsRecharts__ReferenceLine;
