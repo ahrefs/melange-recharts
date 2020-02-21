@@ -1,3 +1,8 @@
+# v0.3.3 (21.02.2020)
+
+- Bump lodash from 4.17.11 to 4.17.15 (#26)
+- Add bindings for ReferenceArea (#25)
+
 # v0.3.2 (31.07.2019)
 
 - Add `jsx2` wrappers
