@@ -9,13 +9,13 @@ external make:
     ~className: string=?,
     ~data: array('dataItem),
     ~height: int=?,
-    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
+    ~layout: [ | `horizontal | `vertical]=?,
     ~margin: margin=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~stackOffset: [@bs.string] [ | `expand | `none | `wiggle | `silhouette]=?,
+    ~stackOffset: [ | `expand | `none | `wiggle | `silhouette]=?,
     ~syncId: string=?,
     ~width: int=?,
     ~children: React.element
@@ -59,7 +59,9 @@ module Jsx2 = {
         ~stackOffset?,
         ~syncId?,
         ~width?,
-        ~children={React.array(children)},
+        ~children={
+          React.array(children);
+        },
         (),
       ),
       children,

@@ -53,7 +53,9 @@ module Jsx2 = {
         ~onMouseDown?,
         ~onMouseMove?,
         ~width?,
-        ~children={React.array(children)},
+        ~children={
+          React.array(children);
+        },
         (),
       ),
       children,

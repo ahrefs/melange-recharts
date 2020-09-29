@@ -28,7 +28,7 @@ external make:
     ~isAnimationActive: bool=?,
     ~label: 'label=?,
     ~labelLine: 'labelLine=?,
-    ~legendType: [@bs.string] [
+    ~legendType: [
                    | `line
                    | `square
                    | `rect
@@ -216,7 +216,9 @@ module Jsx2 = {
         ~paddingAngle?,
         ~startAngle?,
         ~stroke?,
-        ~children={React.array(children)},
+        ~children={
+          React.array(children);
+        },
         (),
       ),
       children,

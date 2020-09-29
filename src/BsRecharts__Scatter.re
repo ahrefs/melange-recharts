@@ -3,7 +3,7 @@
 [@bs.module "recharts"] [@react.component]
 external make:
   (
-    ~legendType: [@bs.string] [
+    ~legendType: [
                    | `line
                    | `square
                    | `rect
@@ -109,7 +109,9 @@ module Jsx2 = {
         ~onMouseDown?,
         ~onMouseMove?,
         ~id?,
-        ~children={React.array(children)},
+        ~children={
+          React.array(children);
+        },
         (),
       ),
       children,

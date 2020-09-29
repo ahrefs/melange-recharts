@@ -65,7 +65,9 @@ module Jsx2 = {
         ~minHeight?,
         ~minWidth?,
         ~width?,
-        ~children={React.array(children)},
+        ~children={
+          React.array(children);
+        },
         (),
       ),
       children,

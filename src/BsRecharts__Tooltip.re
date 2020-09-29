@@ -4,6 +4,7 @@
 external make:
   (
     ~active: bool=?,
+    ~allowEscapeViewBox: Js.t({..})=?,
     ~animationBegin: int=?,
     ~animationDuration: int=?,
     ~animationEasing: [@bs.string] [
@@ -16,7 +17,7 @@ external make:
                         =?,
     ~className: string=?,
     ~content: 'content=?,
-    ~coordinate: Js.t({..})=?,
+    ~position: Js.t({..})=?,
     ~cursor: 'cursor=?,
     ~formatter: 'formatter=?,
     ~isAnimationActive: bool=?,
@@ -40,12 +41,13 @@ module Jsx2 = {
   let make =
       (
         ~active=?,
+        ~allowEscapeViewBox=?,
         ~animationBegin=?,
         ~animationDuration=?,
         ~animationEasing=?,
         ~className=?,
         ~content=?,
-        ~coordinate=?,
+        ~position=?,
         ~cursor=?,
         ~formatter=?,
         ~isAnimationActive=?,
@@ -65,12 +67,13 @@ module Jsx2 = {
       make,
       makeProps(
         ~active?,
+        ~allowEscapeViewBox?,
         ~animationBegin?,
         ~animationDuration?,
         ~animationEasing?,
         ~className?,
         ~content?,
-        ~coordinate?,
+        ~position?,
         ~cursor?,
         ~formatter?,
         ~isAnimationActive?,

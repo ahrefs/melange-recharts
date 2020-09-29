@@ -4,14 +4,14 @@ open BsRecharts__Utils;
 [@bs.module "recharts"] [@react.component]
 external make:
   (
-    ~align: [@bs.string] [ | `left | `center | `right]=?,
+    ~align: [ | `left | `center | `right]=?,
     ~chartHeight: int=?,
     ~chartWidth: int=?,
     ~content: 'content=?,
     ~className: string=?,
     ~height: int=?,
     ~iconSize: int=?,
-    ~iconType: [@bs.string] [
+    ~iconType: [
                  | `line
                  | `square
                  | `rect
@@ -23,7 +23,7 @@ external make:
                  | `wye
                ]
                  =?,
-    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
+    ~layout: [ | `horizontal | `vertical]=?,
     ~margin: margin=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
@@ -34,7 +34,7 @@ external make:
     ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~payload: array(Js.t({..}))=?,
-    ~verticalAlign: [@bs.string] [ | `top | `middle | `bottom]=?,
+    ~verticalAlign: [ | `top | `middle | `bottom]=?,
     ~width: int=?,
     ~wrapperStyle: Js.t({..})=?
   ) =>
