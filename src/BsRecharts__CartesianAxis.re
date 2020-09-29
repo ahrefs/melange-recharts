@@ -11,7 +11,7 @@ external make:
     ~label: 'label=?,
     ~minTickGap: int=?,
     ~mirror: bool=?,
-    ~orientation: [@bs.string] [ | `top | `bottom | `left | `right]=?,
+    ~orientation: [ | `top | `bottom | `left | `right]=?,
     ~tick: 'tick=?,
     ~tickLine: 'tickLine=?,
     ~tickMargin: int,

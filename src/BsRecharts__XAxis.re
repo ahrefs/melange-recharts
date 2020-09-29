@@ -4,7 +4,7 @@ open BsRecharts__Utils;
 [@bs.module "recharts"] [@react.component]
 external make:
   (
-    ~_type: [@bs.string] [ | `number | `category]=?,
+    ~_type: [ | `number | `category]=?,
     ~allowDataOverflow: bool=?,
     ~allowDecimals: bool=?,
     ~allowDuplicatedCategory: bool=?,
@@ -27,10 +27,10 @@ external make:
     ~onMouseOut: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~orientation: [@bs.string] [ | `bottom | `top]=?,
+    ~orientation: [ | `bottom | `top]=?,
     ~padding: paddingHorizontal=?,
     ~reversed: bool=?,
-    ~scale: [@bs.string] [
+    ~scale: [
               | `auto
               | `linear
               | `pow

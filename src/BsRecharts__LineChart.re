@@ -7,7 +7,7 @@ external make:
     ~className: string=?,
     ~data: array('dataItem),
     ~height: int=?,
-    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
+    ~layout: [ | `horizontal | `vertical]=?,
     ~margin: margin=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
@@ -52,7 +52,9 @@ module Jsx2 = {
         ~onMouseMove?,
         ~syncId?,
         ~width?,
-        ~children={React.array(children)},
+        ~children={
+          React.array(children);
+        },
         (),
       ),
       children,
