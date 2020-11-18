@@ -1,3 +1,7 @@
+# v0.4.1 (18.11.2020)
+
+- Add `background` prop to `Cell`
+
 # v0.4.0 (29.09.2020)
 
 - Bump recharts from 1.6.2 to 1.8.5 (#33)
