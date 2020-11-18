@@ -3,7 +3,7 @@
 [@bs.module "recharts"] [@react.component]
 external make:
   (
-    ~background: string=?,
+    ~background: 'background=?,
     ~className: string=?,
     ~fill: string=?,
     ~stroke: string=?,
