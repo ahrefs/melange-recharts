@@ -1,3 +1,7 @@
+# v0.4.2 (16.12.2020)
+
+- Add onMouseUp/onMouseDon to LineChart/BarChart/ComposedChart/AreaChart
+
 # v0.4.1 (18.11.2020)
 
 - Add `background` prop to `Cell`
