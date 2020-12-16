@@ -120,7 +120,7 @@ module Jsx2 = {
         ~maxBarSize?,
         ~onClick?,
         ~onMouseUp?,
-        ~onMouseDown?
+        ~onMouseDown?,
         ~onMouseEnter?,
         ~onMouseLeave?,
         ~onMouseMove?,
