@@ -1,6 +1,10 @@
+# v0.4.3 (16.12.2020)
+
+- Fix typo in BarChart
+
 # v0.4.2 (16.12.2020)
 
-- Add onMouseUp/onMouseDon to LineChart/BarChart/ComposedChart/AreaChart
+- Add onMouseUp/onMouseDown to LineChart/BarChart/ComposedChart/AreaChart
 
 # v0.4.1 (18.11.2020)
 
