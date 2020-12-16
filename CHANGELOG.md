@@ -1,10 +1,14 @@
+# v0.4.4 (16.12.2020)
+
+- Add `fillOpacity` prop to `ReferenceArea`
+
 # v0.4.3 (16.12.2020)
 
-- Fix typo in BarChart
+- Fix typo in `BarChart`
 
 # v0.4.2 (16.12.2020)
 
-- Add onMouseUp/onMouseDown to LineChart/BarChart/ComposedChart/AreaChart
+- Add `onMouseUp`/`onMouseDown` to `LineChart`/`BarChart`/`ComposedChart`/`AreaChart`
 
 # v0.4.1 (18.11.2020)
 
@@ -12,12 +16,12 @@
 
 # v0.4.0 (29.09.2020)
 
-- Bump recharts from 1.6.2 to 1.8.5 (#33)
+- Bump `recharts` from 1.6.2 to 1.8.5 (#33)
 
 # v0.3.3 (21.02.2020)
 
-- Bump lodash from 4.17.11 to 4.17.15 (#26)
-- Add bindings for ReferenceArea (#25)
+- Bump `lodash` from 4.17.11 to 4.17.15 (#26)
+- Add bindings for `ReferenceArea` (#25)
 
 # v0.3.2 (31.07.2019)
 
