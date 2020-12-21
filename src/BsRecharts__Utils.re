@@ -79,3 +79,22 @@ module StrOrNode = {
     | Node(v) => Obj.magic(v);
   let encodeOpt = Belt.Option.map(_, encode);
 };
+
+module TooltipCursor = {
+  [@bs.deriving abstract]
+  type config = {
+    fill: string,
+    stroke: string,
+    strokeWidth: int,
+  };
+
+  type t;
+  type arg =
+    | Config(config)
+    | Component(React.element);
+  let encode: arg => t =
+    fun
+    | Config(v) => Obj.magic(v)
+    | Component(v) => Obj.magic(v);
+  let encodeOpt = Belt.Option.map(_, encode);
+};

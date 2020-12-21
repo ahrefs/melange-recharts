@@ -1,4 +1,5 @@
 // http://recharts.org/en-US/api/Tooltip
+open BsRecharts__Utils;
 
 [@bs.module "recharts"] [@react.component]
 external make:
@@ -18,7 +19,7 @@ external make:
     ~className: string=?,
     ~content: 'content=?,
     ~position: Js.t({..})=?,
-    ~cursor: 'cursor=?,
+    ~cursor: TooltipCursor.t=?,
     ~formatter: 'formatter=?,
     ~isAnimationActive: bool=?,
     ~itemSorter: 'itemSorter=?,
@@ -34,6 +35,58 @@ external make:
   ) =>
   React.element =
   "Tooltip";
+
+let makeProps =
+    (
+      ~active=?,
+      ~allowEscapeViewBox=?,
+      ~animationBegin=?,
+      ~animationDuration=?,
+      ~animationEasing=?,
+      ~className=?,
+      ~content=?,
+      ~position=?,
+      ~cursor=?,
+      ~formatter=?,
+      ~isAnimationActive=?,
+      ~itemSorter=?,
+      ~itemStyle=?,
+      ~label=?,
+      ~labelFormatter=?,
+      ~labelStyle=?,
+      ~offset=?,
+      ~payload=?,
+      ~separator=?,
+      ~viewBox=?,
+      ~wrapperStyle=?,
+      (),
+    ) =>
+  makeProps(
+    ~active?,
+    ~allowEscapeViewBox?,
+    ~animationBegin?,
+    ~animationDuration?,
+    ~animationEasing?,
+    ~className?,
+    ~content?,
+    ~position?,
+    ~cursor=?{
+      cursor->TooltipCursor.encodeOpt;
+    },
+    ~formatter?,
+    ~isAnimationActive?,
+    ~itemSorter?,
+    ~itemStyle?,
+    ~label?,
+    ~labelFormatter?,
+    ~labelStyle?,
+    ~offset?,
+    ~payload?,
+    ~separator?,
+    ~viewBox?,
+    ~wrapperStyle?,
+    (),
+  );
 
 module Jsx2 = {
   let component = ReasonReact.statelessComponent(__MODULE__);
