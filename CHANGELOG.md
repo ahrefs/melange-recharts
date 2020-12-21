@@ -1,3 +1,7 @@
+# v0.4.7 (21.12.2020)
+
+- make `TooltipCursor` config props optional
+
 # v0.4.6 (21.12.2020)
 
 - Add `Bool(bool)` variant to `TooltipCursor`
