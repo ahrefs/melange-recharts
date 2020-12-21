@@ -90,10 +90,12 @@ module TooltipCursor = {
 
   type t;
   type arg =
+    | Bool(bool)
     | Config(config)
     | Component(React.element);
   let encode: arg => t =
     fun
+    | Bool(v) => Obj.magic(v)
     | Config(v) => Obj.magic(v)
     | Component(v) => Obj.magic(v);
   let encodeOpt = Belt.Option.map(_, encode);
