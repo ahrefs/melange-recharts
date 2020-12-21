@@ -1,3 +1,7 @@
+# v0.4.6 (21.12.2020)
+
+- Add `Bool(bool)` variant to `TooltipCursor`
+
 # v0.4.5 (21.12.2020)
 
 - Add type of `Tooltip.cursor`
