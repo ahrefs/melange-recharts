@@ -83,8 +83,11 @@ module StrOrNode = {
 module TooltipCursor = {
   [@bs.deriving abstract]
   type config = {
+    [@bs.optional]
     fill: string,
+    [@bs.optional]
     stroke: string,
+    [@bs.optional]
     strokeWidth: int,
   };
 
