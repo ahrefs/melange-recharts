@@ -1,6 +1,6 @@
 {
   "name": "@ahrefs/bs-recharts",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "scripts": {
     "build": "bsb -make-world",
     "watch": "bsb -make-world -w",

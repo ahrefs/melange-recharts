@@ -1,3 +1,7 @@
+# v0.4.5 (21.12.2020)
+
+- Add type of `Tooltip.cursor`
+
 # v0.4.4 (16.12.2020)
 
 - Add `fillOpacity` prop to `ReferenceArea`
