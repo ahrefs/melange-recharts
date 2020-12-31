@@ -1,23 +1,11 @@
 // http://recharts.org/en-US/api/Line
 
+open BsRecharts__Utils;
+
 [@bs.module "recharts"] [@react.component]
 external make:
   (
-    ~_type: [
-              | `basis
-              | `basisClosed
-              | `basisOpen
-              | `linear
-              | `linearClosed
-              | `natural
-              | `monotoneX
-              | `monotoneY
-              | `monotone
-              | `step
-              | `stepBefore
-              | `stepAfter
-            ]
-              =?,
+    ~_type: lineType=?,
     ~activeDot: 'activeDot=?,
     ~animationBegin: int=?,
     ~animationDuration: int=?,
@@ -36,8 +24,8 @@ external make:
     ~id: string=?,
     ~isAnimationActive: bool=?,
     ~label: 'label=?,
-    ~layout: [ | `horizontal | `vertical]=?,
-    ~legendType: [
+    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
+    ~legendType: [@bs.string] [
                    | `line
                    | `square
                    | `rect

@@ -1,3 +1,18 @@
+type lineType = [
+  | `basis
+  | `basisClosed
+  | `basisOpen
+  | `linear
+  | `linearClosed
+  | `natural
+  | `monotoneX
+  | `monotoneY
+  | `monotone
+  | `step
+  | `stepBefore
+  | `stepAfter
+];
+
 type margin = {
   .
   "top": int,

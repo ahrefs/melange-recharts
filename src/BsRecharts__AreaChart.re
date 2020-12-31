@@ -9,7 +9,7 @@ external make:
     ~className: string=?,
     ~data: array('dataItem),
     ~height: int=?,
-    ~layout: [ | `horizontal | `vertical]=?,
+    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
     ~margin: margin=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
@@ -17,7 +17,7 @@ external make:
     ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~stackOffset: [ | `expand | `none | `wiggle | `silhouette]=?,
+    ~stackOffset: [@bs.string] [ | `expand | `none | `wiggle | `silhouette]=?,
     ~syncId: string=?,
     ~width: int=?,
     ~children: React.element

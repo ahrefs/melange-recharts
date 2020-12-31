@@ -7,7 +7,7 @@ external make:
     ~className: string=?,
     ~data: array('dataItem),
     ~height: int=?,
-    ~layout: [ | `horizontal | `vertical]=?,
+    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
     ~margin: margin=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,

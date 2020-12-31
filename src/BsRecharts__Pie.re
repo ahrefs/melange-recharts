@@ -28,7 +28,7 @@ external make:
     ~isAnimationActive: bool=?,
     ~label: 'label=?,
     ~labelLine: 'labelLine=?,
-    ~legendType: [
+    ~legendType: [@bs.string] [
                    | `line
                    | `square
                    | `rect

@@ -10,7 +10,7 @@ external make:
     ~barSize: int=?,
     ~className: string=?,
     ~height: int=?,
-    ~layout: [ | `horizontal | `vertical]=?,
+    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
     ~margin: margin=?,
     ~maxBarSize: int=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
@@ -20,7 +20,7 @@ external make:
     ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~reverseStackOrder: bool=?,
-    ~stackOffset: [ | `expand | `none | `wiggle | `silhouette | `sign]=?,
+    ~stackOffset: [@bs.string] [ | `expand | `none | `wiggle | `silhouette | `sign]=?,
     ~syncId: string=?,
     ~width: int=?,
     ~children: React.element

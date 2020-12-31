@@ -22,8 +22,8 @@ external make:
     ~id: string=?,
     ~isAnimationActive: bool=?,
     ~label: 'label=?,
-    ~layout: [ | `horizontal | `vertical]=?,
-    ~legendType: [
+    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
+    ~legendType: [@bs.string] [
                    | `line
                    | `square
                    | `rect

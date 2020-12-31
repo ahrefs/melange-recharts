@@ -3,7 +3,7 @@
 [@bs.module "recharts"] [@react.component]
 external make:
   (
-    ~legendType: [
+    ~legendType: [@bs.string] [
                    | `line
                    | `square
                    | `rect
