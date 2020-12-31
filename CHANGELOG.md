@@ -1,3 +1,10 @@
+# v0.4.8 (31.12.2020)
+
+- Add `hide` prop to `Line` bindings
+- Add `hide` prop to `Area` bindings
+- Extract `Line`/`Area` `type_` prop inline definition.
+- Add missing `[@bs.string]` annotation.
+
 # v0.4.7 (21.12.2020)
 
 - make `TooltipCursor` config props optional
