@@ -15,7 +15,7 @@ external make:
     ~height: int=?,
     ~hide: bool=?,
     ~interval: AxisInterval.t=?,
-    ~label: StrOrNode.t=?,
+    ~label: 'label=?,
     ~minTickGap: int=?,
     ~mirror: bool=?,
     ~name: string=?,
@@ -115,9 +115,7 @@ let makeProps =
     ~interval=?{
       interval->AxisInterval.encodeOpt;
     },
-    ~label=?{
-      label->StrOrNode.encodeOpt;
-    },
+    ~label?,
     ~minTickGap?,
     ~mirror?,
     ~name?,
