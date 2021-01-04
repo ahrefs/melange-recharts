@@ -1,5 +1,9 @@
 # v0.4.8 (31.12.2020)
 
+- Update type of `label` prop in `XAxis` and `YAxis`
+
+# v0.4.8 (31.12.2020)
+
 - Add `hide` prop to `Line` bindings
 - Add `hide` prop to `Area` bindings
 - Extract `Line`/`Area` `type_` prop inline definition.
