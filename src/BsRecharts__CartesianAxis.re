@@ -24,47 +24,8 @@ external make:
   React.element =
   "CartesianAxis";
 
-let makeProps =
-    (
-      ~axisLine=?,
-      ~className=?,
-      ~height=?,
-      ~interval=?,
-      ~label=?,
-      ~minTickGap=?,
-      ~mirror=?,
-      ~orientation=?,
-      ~tick=?,
-      ~tickLine=?,
-      ~tickMargin,
-      ~tickSize=?,
-      ~viewBox=?,
-      ~width=?,
-      ~x=?,
-      ~y=?,
-      (),
-    ) =>
-  makeProps(
-    ~axisLine?,
-    ~className?,
-    ~height?,
-    ~interval=?{
-      interval->AxisInterval.encodeOpt;
-    },
-    ~label?,
-    ~minTickGap?,
-    ~mirror?,
-    ~orientation?,
-    ~tick?,
-    ~tickLine?,
-    ~tickMargin,
-    ~tickSize?,
-    ~viewBox?,
-    ~width?,
-    ~x?,
-    ~y?,
-    (),
-  );
+let makeProps = (~interval=?) =>
+  makeProps(~interval=?interval->AxisInterval.encodeOpt);
 
 module Jsx2 = {
   let component = ReasonReact.statelessComponent(__MODULE__);

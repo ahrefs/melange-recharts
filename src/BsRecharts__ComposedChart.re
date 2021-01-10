@@ -34,54 +34,10 @@ external make:
   React.element =
   "ComposedChart";
 
-let makeProps =
-    (
-      ~className=?,
-      ~data,
-      ~barCategoryGap=?,
-      ~barGap=?,
-      ~barSize=?,
-      ~height=?,
-      ~layout=?,
-      ~margin=?,
-      ~onClick=?,
-      ~onMouseUp=?,
-      ~onMouseDown=?,
-      ~onMouseEnter=?,
-      ~onMouseLeave=?,
-      ~onMouseMove=?,
-      ~reverseStackOrder=?,
-      ~stackOffset=?,
-      ~syncId=?,
-      ~width=?,
-      ~children,
-      (),
-    ) =>
+let makeProps = (~barCategoryGap=?, ~barGap=?) =>
   makeProps(
-    ~className?,
-    ~data,
-    ~barCategoryGap=?{
-      barCategoryGap->PxOrPrc.encodeOpt;
-    },
-    ~barGap=?{
-      barGap->PxOrPrc.encodeOpt;
-    },
-    ~barSize?,
-    ~height?,
-    ~layout?,
-    ~margin?,
-    ~onClick?,
-    ~onMouseUp?,
-    ~onMouseDown?,
-    ~onMouseEnter?,
-    ~onMouseLeave?,
-    ~onMouseMove?,
-    ~reverseStackOrder?,
-    ~stackOffset?,
-    ~syncId?,
-    ~width?,
-    ~children,
-    (),
+    ~barCategoryGap=?barCategoryGap->PxOrPrc.encodeOpt,
+    ~barGap=?barGap->PxOrPrc.encodeOpt,
   );
 
 module Jsx2 = {

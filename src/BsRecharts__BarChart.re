@@ -35,56 +35,10 @@ external make:
   React.element =
   "BarChart";
 
-let makeProps =
-    (
-      ~data,
-      ~barCategoryGap=?,
-      ~barGap=?,
-      ~barSize=?,
-      ~className=?,
-      ~height=?,
-      ~layout=?,
-      ~margin=?,
-      ~maxBarSize=?,
-      ~onClick=?,
-      ~onMouseUp=?,
-      ~onMouseDown=?,
-      ~onMouseEnter=?,
-      ~onMouseLeave=?,
-      ~onMouseMove=?,
-      ~reverseStackOrder=?,
-      ~stackOffset=?,
-      ~syncId=?,
-      ~width=?,
-      ~children,
-      (),
-    ) =>
+let makeProps = (~barCategoryGap=?, ~barGap=?) =>
   makeProps(
-    ~data,
-    ~barCategoryGap=?{
-      barCategoryGap->PxOrPrc.encodeOpt;
-    },
-    ~barGap=?{
-      barGap->PxOrPrc.encodeOpt;
-    },
-    ~barSize?,
-    ~className?,
-    ~height?,
-    ~layout?,
-    ~margin?,
-    ~maxBarSize?,
-    ~onClick?,
-    ~onMouseUp?,
-    ~onMouseDown?,
-    ~onMouseEnter?,
-    ~onMouseLeave?,
-    ~onMouseMove?,
-    ~reverseStackOrder?,
-    ~stackOffset?,
-    ~syncId?,
-    ~width?,
-    ~children,
-    (),
+    ~barCategoryGap=?barCategoryGap->PxOrPrc.encodeOpt,
+    ~barGap=?barGap->PxOrPrc.encodeOpt,
   );
 
 module Jsx2 = {

@@ -36,57 +36,8 @@ external make:
   React.element =
   "Tooltip";
 
-let makeProps =
-    (
-      ~active=?,
-      ~allowEscapeViewBox=?,
-      ~animationBegin=?,
-      ~animationDuration=?,
-      ~animationEasing=?,
-      ~className=?,
-      ~content=?,
-      ~position=?,
-      ~cursor=?,
-      ~formatter=?,
-      ~isAnimationActive=?,
-      ~itemSorter=?,
-      ~itemStyle=?,
-      ~label=?,
-      ~labelFormatter=?,
-      ~labelStyle=?,
-      ~offset=?,
-      ~payload=?,
-      ~separator=?,
-      ~viewBox=?,
-      ~wrapperStyle=?,
-      (),
-    ) =>
-  makeProps(
-    ~active?,
-    ~allowEscapeViewBox?,
-    ~animationBegin?,
-    ~animationDuration?,
-    ~animationEasing?,
-    ~className?,
-    ~content?,
-    ~position?,
-    ~cursor=?{
-      cursor->TooltipCursor.encodeOpt;
-    },
-    ~formatter?,
-    ~isAnimationActive?,
-    ~itemSorter?,
-    ~itemStyle?,
-    ~label?,
-    ~labelFormatter?,
-    ~labelStyle?,
-    ~offset?,
-    ~payload?,
-    ~separator?,
-    ~viewBox?,
-    ~wrapperStyle?,
-    (),
-  );
+let makeProps = (~cursor=?) =>
+  makeProps(~cursor=?cursor->TooltipCursor.encodeOpt);
 
 module Jsx2 = {
   let component = ReasonReact.statelessComponent(__MODULE__);

@@ -60,86 +60,12 @@ external make:
   React.element =
   "Pie";
 
-let makeProps =
-    (
-      ~activeIndex=?,
-      ~activeShape=?,
-      ~animationBegin=?,
-      ~animationDuration=?,
-      ~animationEasing=?,
-      ~className=?,
-      ~cx=?,
-      ~cy=?,
-      ~data,
-      ~dataKey,
-      ~endAngle=?,
-      ~fill=?,
-      ~id=?,
-      ~innerRadius=?,
-      ~isAnimationActive=?,
-      ~label=?,
-      ~labelLine=?,
-      ~legendType=?,
-      ~minAngle=?,
-      ~nameKey=?,
-      ~onClick=?,
-      ~onMouseDown=?,
-      ~onMouseEnter=?,
-      ~onMouseLeave=?,
-      ~onMouseMove=?,
-      ~onMouseOut=?,
-      ~onMouseOver=?,
-      ~onMouseUp=?,
-      ~outerRadius=?,
-      ~paddingAngle=?,
-      ~startAngle=?,
-      ~stroke=?,
-      ~children=?,
-      (),
-    ) =>
+let makeProps = (~cx=?, ~cy=?, ~innerRadius=?, ~outerRadius=?) =>
   makeProps(
-    ~activeIndex?,
-    ~activeShape?,
-    ~animationBegin?,
-    ~animationDuration?,
-    ~animationEasing?,
-    ~className?,
-    ~cx=?{
-      cx->PxOrPrc.encodeOpt;
-    },
-    ~cy=?{
-      cy->PxOrPrc.encodeOpt;
-    },
-    ~data,
-    ~dataKey,
-    ~endAngle?,
-    ~fill?,
-    ~id?,
-    ~innerRadius=?{
-      innerRadius->PxOrPrc.encodeOpt;
-    },
-    ~isAnimationActive?,
-    ~label?,
-    ~labelLine?,
-    ~legendType?,
-    ~minAngle?,
-    ~nameKey?,
-    ~onClick?,
-    ~onMouseDown?,
-    ~onMouseEnter?,
-    ~onMouseLeave?,
-    ~onMouseMove?,
-    ~onMouseOut?,
-    ~onMouseOver?,
-    ~onMouseUp?,
-    ~outerRadius=?{
-      outerRadius->PxOrPrc.encodeOpt;
-    },
-    ~paddingAngle?,
-    ~startAngle?,
-    ~stroke?,
-    ~children?,
-    (),
+    ~cx=?cx->PxOrPrc.encodeOpt,
+    ~cy=?cy->PxOrPrc.encodeOpt,
+    ~innerRadius=?innerRadius->PxOrPrc.encodeOpt,
+    ~outerRadius=?outerRadius->PxOrPrc.encodeOpt,
   );
 
 module Jsx2 = {

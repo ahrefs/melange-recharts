@@ -17,30 +17,10 @@ external make:
   React.element =
   "ResponsiveContainer";
 
-let makeProps =
-    (
-      ~className=?,
-      ~debounce=?,
-      ~height=?,
-      ~minHeight=?,
-      ~minWidth=?,
-      ~width=?,
-      ~children,
-      (),
-    ) =>
+let makeProps = (~height=?, ~width=?) =>
   makeProps(
-    ~className?,
-    ~debounce?,
-    ~height=?{
-      height->PxOrPrc.encodeOpt;
-    },
-    ~minHeight?,
-    ~minWidth?,
-    ~width=?{
-      width->PxOrPrc.encodeOpt;
-    },
-    ~children,
-    (),
+    ~height=?height->PxOrPrc.encodeOpt,
+    ~width=?width->PxOrPrc.encodeOpt,
   );
 
 module Jsx2 = {
