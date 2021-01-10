@@ -1,4 +1,8 @@
-# v0.4.8 (31.12.2020)
+# v1.0.1 (09.01.2021)
+
+- `key` prop is restored for BarChart, CartesianAxis, ComposerChart, Pie, ResponsiveContainer, Tooltip, XAxis, and YAxis
+
+# v1.0.0 (03.01.2020)
 
 - Update type of `label` prop in `XAxis` and `YAxis`
 
