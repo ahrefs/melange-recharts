@@ -11,7 +11,18 @@ external make:
     ~className: string=?,
     ~height: int=?,
     ~iconSize: int=?,
-    ~iconType: [@bs.string] [ | `line | `square | `rect | `circle | `cross | `diamond | `star | `triangle | `wye]=?,
+    ~iconType: [@bs.string] [
+                 | `line
+                 | `square
+                 | `rect
+                 | `circle
+                 | `cross
+                 | `diamond
+                 | `star
+                 | `triangle
+                 | `wye
+               ]
+                 =?,
     ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
     ~margin: margin=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,

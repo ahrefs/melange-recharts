@@ -19,7 +19,14 @@ external make:
     ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~reverseStackOrder: bool=?,
-    ~stackOffset: [@bs.string] [ | `expand | `none | `wiggle | `silhouette | `sign]=?,
+    ~stackOffset: [@bs.string] [
+                    | `expand
+                    | `none
+                    | `wiggle
+                    | `silhouette
+                    | `sign
+                  ]
+                    =?,
     ~syncId: string=?,
     ~width: int=?,
     ~children: React.element
