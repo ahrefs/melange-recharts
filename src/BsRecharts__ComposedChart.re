@@ -19,14 +19,7 @@ external make:
     ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~reverseStackOrder: bool=?,
-    ~stackOffset: [@bs.string] [
-                    | `expand
-                    | `none
-                    | `wiggle
-                    | `silhouette
-                    | `sign
-                  ]
-                    =?,
+    ~stackOffset: [@bs.string] [ | `expand | `none | `wiggle | `silhouette | `sign]=?,
     ~syncId: string=?,
     ~width: int=?,
     ~children: React.element
@@ -35,62 +28,4 @@ external make:
   "ComposedChart";
 
 let makeProps = (~barCategoryGap=?, ~barGap=?) =>
-  makeProps(
-    ~barCategoryGap=?barCategoryGap->PxOrPrc.encodeOpt,
-    ~barGap=?barGap->PxOrPrc.encodeOpt,
-  );
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make =
-      (
-        ~className=?,
-        ~data,
-        ~barCategoryGap=?,
-        ~barGap=?,
-        ~barSize=?,
-        ~height=?,
-        ~layout=?,
-        ~margin=?,
-        ~onClick=?,
-        ~onMouseUp=?,
-        ~onMouseDown=?,
-        ~onMouseEnter=?,
-        ~onMouseLeave=?,
-        ~onMouseMove=?,
-        ~reverseStackOrder=?,
-        ~stackOffset=?,
-        ~syncId=?,
-        ~width=?,
-        children,
-      ) =>
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(
-        ~className?,
-        ~data,
-        ~barCategoryGap?,
-        ~barGap?,
-        ~barSize?,
-        ~height?,
-        ~layout?,
-        ~margin?,
-        ~onClick?,
-        ~onMouseUp?,
-        ~onMouseDown?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~reverseStackOrder?,
-        ~stackOffset?,
-        ~syncId?,
-        ~width?,
-        ~children={
-          React.array(children);
-        },
-        (),
-      ),
-      children,
-    );
-};
+  makeProps(~barCategoryGap=?barCategoryGap->PxOrPrc.encodeOpt, ~barGap=?barGap->PxOrPrc.encodeOpt);

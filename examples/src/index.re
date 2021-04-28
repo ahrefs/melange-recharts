@@ -8,4 +8,7 @@ let data = [|
   {"name": "Page G", "uv": 3490, "pv": 4300, "amt": 2100},
 |];
 
-ReactDOMRe.renderToElementWithId(<Demo data />, "root");
+switch (ReactDOM.querySelector("#root")) {
+| Some(root) => ReactDOM.render(<Demo data />, root)
+| None => () // do nothing
+};

@@ -14,11 +14,11 @@
     "@ahrefs/bs-recharts": "file:../",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "reason-react": ">=0.7.0",
+    "@rescript/react": "^0.10.2",
     "recharts": "^1.6.2"
   },
   "devDependencies": {
-    "bs-platform": "^8,2,0",
+    "bs-platform": "^8.3.0",
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.0.1",
     "webpack-cli": "^3.1.1",

@@ -8,7 +8,7 @@
   ],
   "bs-dependencies": [
     "@ahrefs/bs-recharts",
-    "reason-react"
+    "@rescript/react"
   ],
   "package-specs": [{
     "module": "commonjs",

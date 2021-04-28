@@ -16,36 +16,3 @@ external make:
   ) =>
   React.element =
   "PieChart";
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make =
-      (
-        ~className=?,
-        ~height=?,
-        ~margin=?,
-        ~onClick=?,
-        ~onMouseEnter=?,
-        ~onMouseLeave=?,
-        ~width=?,
-        children,
-      ) =>
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(
-        ~className?,
-        ~height?,
-        ~margin?,
-        ~onClick?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~width?,
-        ~children={
-          React.array(children);
-        },
-        (),
-      ),
-      children,
-    );
-};

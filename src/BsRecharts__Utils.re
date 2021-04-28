@@ -87,7 +87,7 @@ module StrOrNode = {
   type t;
   type arg =
     | Str(string)
-    | Node(ReasonReact.reactElement);
+    | Node(React.element);
   let encode: arg => t =
     fun
     | Str(v) => Obj.magic(v)
