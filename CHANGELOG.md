@@ -1,3 +1,10 @@
+# v1.0.2 (19.05.2021)
+
+-  Bump url-parse from 1.4.7 to 1.5.1 in /examples (#40)
+-  Bump lodash from 4.17.19 to 4.17.21 in /examples (#41)
+-  Bump elliptic from 6.5.3 to 6.5.4 in /examples (#36)
+-  Bump y18n from 4.0.0 to 4.0.1 in /examples (#37)
+
 # v1.0.1 (09.01.2021)
 
 - `key` prop is restored for BarChart, CartesianAxis, ComposerChart, Pie, ResponsiveContainer, Tooltip, XAxis, and YAxis
