@@ -33,6 +33,6 @@
   },
   "peerDependencies": {
     "reason-react": ">=0.7.0",
-    "recharts": "^1.8.5"
+    "recharts": "^2.0.9"
   }
 }
