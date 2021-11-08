@@ -1,3 +1,7 @@
+# v1.0.2 (08.11.2021)
+
+- Add `cursor` prop to `Bar` bindings
+
 # v1.0.2 (19.05.2021)
 
 -  Bump url-parse from 1.4.7 to 1.5.1 in /examples (#40)
