@@ -1,4 +1,8 @@
-# v1.0.2 (08.11.2021)
+# v1.0.4 (09.11.2021)
+
+- Add `radius` prop to `Bar` bindings
+
+# v1.0.3 (08.11.2021)
 
 - Add `cursor` prop to `Bar` bindings
 
