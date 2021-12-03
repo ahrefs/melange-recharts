@@ -1,4 +1,4 @@
-# v2.0.0 (09.11.2021)
+# v2.0.0 (03.12.2021)
 
 - Bump `bs-platform@9`
 - Drop `Jsx2` wrappers
