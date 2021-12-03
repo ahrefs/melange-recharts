@@ -1,3 +1,8 @@
+# v2.0.0 (09.11.2021)
+
+- Bump `bs-platform@9`
+- Drop `Jsx2` wrappers
+
 # v1.0.4 (09.11.2021)
 
 - Add `radius` prop to `Bar` bindings

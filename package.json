@@ -1,6 +1,6 @@
 {
   "name": "@ahrefs/bs-recharts",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "Reson bindings for recharts",
   "author": "ahrefs",
   "license": "MIT",
