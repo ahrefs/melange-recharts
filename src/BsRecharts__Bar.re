@@ -1,4 +1,5 @@
 // http://recharts.org/en-US/api/Bar
+open BsRecharts__Utils;
 
 [@bs.module "recharts"] [@react.component]
 external make:
@@ -23,20 +24,8 @@ external make:
     ~id: string=?,
     ~isAnimationActive: bool=?,
     ~label: 'label=?,
-    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
-    ~legendType: [@bs.string] [
-                   | `line
-                   | `square
-                   | `rect
-                   | `circle
-                   | `cross
-                   | `diamond
-                   | `square
-                   | `star
-                   | `triangle
-                   | `wye
-                 ]
-                   =?,
+    ~layout: layout=?,
+    ~legendType: legendType=?,
     ~maxBarSize: int=?,
     ~minPointSize: int=?,
     ~name: string=?,
@@ -58,83 +47,3 @@ external make:
   ) =>
   React.element =
   "Bar";
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make =
-      (
-        ~animationBegin=?,
-        ~animationDuration=?,
-        ~animationEasing=?,
-        ~background=?,
-        ~barSize=?,
-        ~className=?,
-        ~cursor=?,
-        ~data=?,
-        ~dataKey,
-        ~fill=?,
-        ~id=?,
-        ~isAnimationActive=?,
-        ~label=?,
-        ~layout=?,
-        ~legendType=?,
-        ~maxBarSize=?,
-        ~minPointSize=?,
-        ~name=?,
-        ~onClick=?,
-        ~onMouseDown=?,
-        ~onMouseEnter=?,
-        ~onMouseLeave=?,
-        ~onMouseMove=?,
-        ~onMouseOut=?,
-        ~onMouseOver=?,
-        ~onMouseUp=?,
-        ~radius=?,
-        ~shape=?,
-        ~stackId=?,
-        ~unit=?,
-        ~xAxisId=?,
-        ~yAxisId=?,
-        children,
-      ) =>
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(
-        ~animationBegin?,
-        ~animationDuration?,
-        ~animationEasing?,
-        ~background?,
-        ~barSize?,
-        ~className?,
-        ~cursor?,
-        ~data?,
-        ~dataKey,
-        ~fill?,
-        ~id?,
-        ~isAnimationActive?,
-        ~label?,
-        ~layout?,
-        ~legendType?,
-        ~maxBarSize?,
-        ~minPointSize?,
-        ~name?,
-        ~onClick?,
-        ~onMouseDown?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~onMouseOut?,
-        ~onMouseOver?,
-        ~onMouseUp?,
-        ~radius?,
-        ~shape?,
-        ~stackId?,
-        ~unit?,
-        ~xAxisId?,
-        ~yAxisId?,
-        (),
-      ),
-      children,
-    );
-};

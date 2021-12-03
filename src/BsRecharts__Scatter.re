@@ -1,21 +1,10 @@
 // http://recharts.org/en-US/api/Scatter
+open BsRecharts__Utils;
 
 [@bs.module "recharts"] [@react.component]
 external make:
   (
-    ~legendType: [@bs.string] [
-                   | `line
-                   | `square
-                   | `rect
-                   | `circle
-                   | `cross
-                   | `diamond
-                   | `square
-                   | `star
-                   | `triangle
-                   | `wye
-                 ]
-                   =?,
+    ~legendType: legendType=?,
     ~xAxisId: string=?,
     ~yAxisId: string=?,
     ~zAxisId: string=?,
@@ -50,70 +39,3 @@ external make:
   ) =>
   React.element =
   "Scatter";
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make =
-      (
-        ~legendType=?,
-        ~xAxisId=?,
-        ~yAxisId=?,
-        ~zAxisId=?,
-        ~className=?,
-        ~name=?,
-        ~data,
-        ~fill=?,
-        ~line=?,
-        ~shape=?,
-        ~lineType=?,
-        ~points=?,
-        ~isAnimationActive=?,
-        ~animationBegin=?,
-        ~animationDuration=?,
-        ~animationEasing=?,
-        ~onClick=?,
-        ~onMouseEnter=?,
-        ~onMouseLeave=?,
-        ~onMouseOut=?,
-        ~onMouseUp=?,
-        ~onMouseDown=?,
-        ~onMouseMove=?,
-        ~id=?,
-        children,
-      ) =>
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(
-        ~legendType?,
-        ~xAxisId?,
-        ~yAxisId?,
-        ~zAxisId?,
-        ~className?,
-        ~name?,
-        ~data,
-        ~fill?,
-        ~line?,
-        ~shape?,
-        ~lineType?,
-        ~points?,
-        ~isAnimationActive?,
-        ~animationBegin?,
-        ~animationDuration?,
-        ~animationEasing?,
-        ~onClick?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseOut?,
-        ~onMouseUp?,
-        ~onMouseDown?,
-        ~onMouseMove?,
-        ~id?,
-        ~children={
-          React.array(children);
-        },
-        (),
-      ),
-      children,
-    );
-};

@@ -13,6 +13,32 @@ type lineType = [
   | `stepAfter
 ];
 
+type legendType = [ | `line | `square | `rect | `circle | `cross | `diamond | `square | `star | `triangle | `wye];
+
+type scale = [
+  | `auto
+  | `linear
+  | `pow
+  | `sqrt
+  | `log
+  | `identity
+  | `time
+  | `band
+  | `point
+  | `ordinal
+  | `quantile
+  | `quantize
+  | `utcTime
+  | `sequential
+  | `threshold
+];
+
+type axisType = [ | `number | `category];
+
+type layout = [ | `horizontal | `vertical];
+
+type stackOffset = [ | `expand | `none | `wiggle | `silhouette | `sign];
+
 type margin = {
   .
   "top": int,

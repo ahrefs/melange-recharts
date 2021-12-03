@@ -7,7 +7,7 @@ external make:
     ~className: string=?,
     ~data: array('dataItem),
     ~height: int=?,
-    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
+    ~layout: layout=?,
     ~margin: margin=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
@@ -21,48 +21,3 @@ external make:
   ) =>
   React.element =
   "LineChart";
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make =
-      (
-        ~className=?,
-        ~data,
-        ~height=?,
-        ~layout=?,
-        ~margin=?,
-        ~onClick=?,
-        ~onMouseUp=?,
-        ~onMouseDown=?,
-        ~onMouseEnter=?,
-        ~onMouseLeave=?,
-        ~onMouseMove=?,
-        ~syncId=?,
-        ~width=?,
-        children,
-      ) =>
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(
-        ~className?,
-        ~data,
-        ~height?,
-        ~layout?,
-        ~margin?,
-        ~onClick?,
-        ~onMouseUp?,
-        ~onMouseDown?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~syncId?,
-        ~width?,
-        ~children={
-          React.array(children);
-        },
-        (),
-      ),
-      children,
-    );
-};

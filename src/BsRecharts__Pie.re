@@ -28,19 +28,7 @@ external make:
     ~isAnimationActive: bool=?,
     ~label: 'label=?,
     ~labelLine: 'labelLine=?,
-    ~legendType: [@bs.string] [
-                   | `line
-                   | `square
-                   | `rect
-                   | `circle
-                   | `cross
-                   | `diamond
-                   | `square
-                   | `star
-                   | `triangle
-                   | `wye
-                 ]
-                   =?,
+    ~legendType: legendType=?,
     ~minAngle: int=?,
     ~nameKey: string=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
@@ -67,86 +55,3 @@ let makeProps = (~cx=?, ~cy=?, ~innerRadius=?, ~outerRadius=?) =>
     ~innerRadius=?innerRadius->PxOrPrc.encodeOpt,
     ~outerRadius=?outerRadius->PxOrPrc.encodeOpt,
   );
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make =
-      (
-        ~activeIndex=?,
-        ~activeShape=?,
-        ~animationBegin=?,
-        ~animationDuration=?,
-        ~animationEasing=?,
-        ~className=?,
-        ~cx=?,
-        ~cy=?,
-        ~data,
-        ~dataKey,
-        ~endAngle=?,
-        ~fill=?,
-        ~id=?,
-        ~innerRadius=?,
-        ~isAnimationActive=?,
-        ~label=?,
-        ~labelLine=?,
-        ~legendType=?,
-        ~minAngle=?,
-        ~nameKey=?,
-        ~onClick=?,
-        ~onMouseDown=?,
-        ~onMouseEnter=?,
-        ~onMouseLeave=?,
-        ~onMouseMove=?,
-        ~onMouseOut=?,
-        ~onMouseOver=?,
-        ~onMouseUp=?,
-        ~outerRadius=?,
-        ~paddingAngle=?,
-        ~startAngle=?,
-        ~stroke=?,
-        children,
-      ) =>
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(
-        ~activeIndex?,
-        ~activeShape?,
-        ~animationBegin?,
-        ~animationDuration?,
-        ~animationEasing?,
-        ~className?,
-        ~cx?,
-        ~cy?,
-        ~data,
-        ~dataKey,
-        ~endAngle?,
-        ~fill?,
-        ~id?,
-        ~innerRadius?,
-        ~isAnimationActive?,
-        ~label?,
-        ~labelLine?,
-        ~legendType?,
-        ~minAngle?,
-        ~nameKey?,
-        ~onClick?,
-        ~onMouseDown?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~onMouseOut?,
-        ~onMouseOver?,
-        ~onMouseUp?,
-        ~outerRadius?,
-        ~paddingAngle?,
-        ~startAngle?,
-        ~stroke?,
-        ~children={
-          React.array(children);
-        },
-        (),
-      ),
-      children,
-    );
-};

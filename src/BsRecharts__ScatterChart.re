@@ -1,5 +1,4 @@
 // http://recharts.org/en-US/api/ScatterChart
-
 open BsRecharts__Utils;
 
 [@bs.module "recharts"] [@react.component]
@@ -20,44 +19,3 @@ external make:
   ) =>
   React.element =
   "ScatterChart";
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make =
-      (
-        ~className=?,
-        ~height=?,
-        ~margin=?,
-        ~onClick=?,
-        ~onMouseEnter=?,
-        ~onMouseLeave=?,
-        ~onMouseOut=?,
-        ~onMouseUp=?,
-        ~onMouseDown=?,
-        ~onMouseMove=?,
-        ~width=?,
-        children,
-      ) =>
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(
-        ~className?,
-        ~height?,
-        ~margin?,
-        ~onClick?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseOut?,
-        ~onMouseUp?,
-        ~onMouseDown?,
-        ~onMouseMove?,
-        ~width?,
-        ~children={
-          React.array(children);
-        },
-        (),
-      ),
-      children,
-    );
-};

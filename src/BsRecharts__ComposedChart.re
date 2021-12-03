@@ -10,7 +10,7 @@ external make:
     ~barGap: PxOrPrc.t=?,
     ~barSize: int=?,
     ~height: int=?,
-    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
+    ~layout: layout=?,
     ~margin: margin=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
@@ -19,14 +19,7 @@ external make:
     ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~reverseStackOrder: bool=?,
-    ~stackOffset: [@bs.string] [
-                    | `expand
-                    | `none
-                    | `wiggle
-                    | `silhouette
-                    | `sign
-                  ]
-                    =?,
+    ~stackOffset: stackOffset=?,
     ~syncId: string=?,
     ~width: int=?,
     ~children: React.element
@@ -35,62 +28,4 @@ external make:
   "ComposedChart";
 
 let makeProps = (~barCategoryGap=?, ~barGap=?) =>
-  makeProps(
-    ~barCategoryGap=?barCategoryGap->PxOrPrc.encodeOpt,
-    ~barGap=?barGap->PxOrPrc.encodeOpt,
-  );
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make =
-      (
-        ~className=?,
-        ~data,
-        ~barCategoryGap=?,
-        ~barGap=?,
-        ~barSize=?,
-        ~height=?,
-        ~layout=?,
-        ~margin=?,
-        ~onClick=?,
-        ~onMouseUp=?,
-        ~onMouseDown=?,
-        ~onMouseEnter=?,
-        ~onMouseLeave=?,
-        ~onMouseMove=?,
-        ~reverseStackOrder=?,
-        ~stackOffset=?,
-        ~syncId=?,
-        ~width=?,
-        children,
-      ) =>
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(
-        ~className?,
-        ~data,
-        ~barCategoryGap?,
-        ~barGap?,
-        ~barSize?,
-        ~height?,
-        ~layout?,
-        ~margin?,
-        ~onClick?,
-        ~onMouseUp?,
-        ~onMouseDown?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~reverseStackOrder?,
-        ~stackOffset?,
-        ~syncId?,
-        ~width?,
-        ~children={
-          React.array(children);
-        },
-        (),
-      ),
-      children,
-    );
-};
+  makeProps(~barCategoryGap=?barCategoryGap->PxOrPrc.encodeOpt, ~barGap=?barGap->PxOrPrc.encodeOpt);

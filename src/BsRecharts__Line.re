@@ -1,5 +1,4 @@
 // http://recharts.org/en-US/api/Line
-
 open BsRecharts__Utils;
 
 [@bs.module "recharts"] [@react.component]
@@ -25,20 +24,8 @@ external make:
     ~id: string=?,
     ~isAnimationActive: bool=?,
     ~label: 'label=?,
-    ~layout: [@bs.string] [ | `horizontal | `vertical]=?,
-    ~legendType: [@bs.string] [
-                   | `line
-                   | `square
-                   | `rect
-                   | `circle
-                   | `cross
-                   | `diamond
-                   | `square
-                   | `star
-                   | `triangle
-                   | `wye
-                 ]
-                   =?,
+    ~layout: layout=?,
+    ~legendType: legendType=?,
     ~name: string=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
@@ -57,79 +44,3 @@ external make:
   ) =>
   React.element =
   "Line";
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make =
-      (
-        ~_type=?,
-        ~activeDot=?,
-        ~animationBegin=?,
-        ~animationDuration=?,
-        ~animationEasing=?,
-        ~className=?,
-        ~connectNulls=?,
-        ~hide=?,
-        ~dataKey,
-        ~dot=?,
-        ~id=?,
-        ~isAnimationActive=?,
-        ~label=?,
-        ~layout=?,
-        ~legendType=?,
-        ~name=?,
-        ~onClick=?,
-        ~onMouseDown=?,
-        ~onMouseEnter=?,
-        ~onMouseLeave=?,
-        ~onMouseMove=?,
-        ~onMouseOut=?,
-        ~onMouseOver=?,
-        ~onMouseUp=?,
-        ~points=?,
-        ~stroke=?,
-        ~strokeWidth=?,
-        ~unit=?,
-        ~xAxisId=?,
-        ~yAxisId=?,
-        children,
-      ) =>
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(
-        ~_type?,
-        ~activeDot?,
-        ~animationBegin?,
-        ~animationDuration?,
-        ~animationEasing?,
-        ~className?,
-        ~connectNulls?,
-        ~hide?,
-        ~dataKey,
-        ~dot?,
-        ~id?,
-        ~isAnimationActive?,
-        ~label?,
-        ~layout?,
-        ~legendType?,
-        ~name?,
-        ~onClick?,
-        ~onMouseDown?,
-        ~onMouseEnter?,
-        ~onMouseLeave?,
-        ~onMouseMove?,
-        ~onMouseOut?,
-        ~onMouseOver?,
-        ~onMouseUp?,
-        ~points?,
-        ~stroke?,
-        ~strokeWidth?,
-        ~unit?,
-        ~xAxisId?,
-        ~yAxisId?,
-        (),
-      ),
-      children,
-    );
-};
