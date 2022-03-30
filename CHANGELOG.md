@@ -1,3 +1,8 @@
+# v2.1.0 (30.03.2022)
+
+- Reinstate `recharts` as peer dependency
+- Add `ticksCount` to `YAxis`
+
 # v2.0.0 (03.12.2021)
 
 - Bump `bs-platform@9`
