@@ -32,6 +32,7 @@ external make:
     ~reversed: bool=?,
     ~scale: scale=?,
     ~tick: 'tick=?,
+    ~tickCount: int=?,
     ~tickFormatter: 'tickFormatter=?,
     ~tickLine: 'tickLine=?,
     ~tickMargin: int=?,
