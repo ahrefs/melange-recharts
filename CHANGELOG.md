@@ -1,4 +1,8 @@
-# v3.0.0 (30.03.2022)
+# v3.1.0 (19.08.2022)
+
+- Bump `recharts` peer dependency to `2.1.13`
+
+# v3.0.0 (08.08.2022)
 
 - Bump `recharts` peer dependency to `2.1.13`
 

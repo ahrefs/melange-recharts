@@ -1,6 +1,6 @@
 {
   "name": "@ahrefs/bs-recharts",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Reason bindings for recharts",
   "author": "ahrefs",
   "license": "MIT",
