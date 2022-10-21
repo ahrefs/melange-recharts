@@ -1,3 +1,9 @@
+# v3.2.0 (21.10.2022)
+
+- add bindings to `ZAxis`
+- change `data` prop type for `Scatter` bindings
+- add `stroke`, `strokeDasharray`, `hide` props to `Scatter` bindings
+
 # v3.1.0 (19.08.2022)
 
 - Bump `recharts` peer dependency to `2.1.13`
