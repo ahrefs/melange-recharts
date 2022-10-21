@@ -45,3 +45,5 @@ module Utils = BsRecharts__Utils;
 module XAxis = BsRecharts__XAxis;
 
 module YAxis = BsRecharts__YAxis;
+
+module ZAxis = BsRecharts__ZAxis;
