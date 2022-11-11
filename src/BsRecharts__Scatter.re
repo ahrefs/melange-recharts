@@ -13,7 +13,7 @@ external make:
     ~data: array('data),
     ~fill: string=?,
     ~stroke: string=?,
-    ~strokeDasharray: int=?,
+    ~strokeDasharray: string=?,
     ~line: 'line=?,
     ~hide: bool=?,
     ~shape: 'shape=?,
