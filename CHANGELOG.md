@@ -1,3 +1,7 @@
+# v3.3.0 (11.11.2022)
+
+- change `strokeDasharray` type from `int` to `string` in `Scatter` bindings
+
 # v3.2.0 (21.10.2022)
 
 - add bindings to `ZAxis`
