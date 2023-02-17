@@ -21,7 +21,7 @@ external make:
     ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~children: React.element
+    ~children: React.element=?
   ) =>
   React.element =
   "Treemap";
