@@ -1,3 +1,6 @@
+# v3.4.1 (17.02.2023)
+
+- add missing `Treemap` to `BsTreemap`
 # v3.4.0 (17.02.2023)
 
 - add `Treemap`
