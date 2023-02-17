@@ -47,3 +47,5 @@ module XAxis = BsRecharts__XAxis;
 module YAxis = BsRecharts__YAxis;
 
 module ZAxis = BsRecharts__ZAxis;
+
+module Treemap = BsRecharts__Treemap;
