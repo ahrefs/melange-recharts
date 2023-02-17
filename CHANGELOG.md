@@ -1,3 +1,7 @@
+# v3.4.0 (17.02.2023)
+
+- add `Treemap`
+
 # v3.3.0 (11.11.2022)
 
 - change `strokeDasharray` type from `int` to `string` in `Scatter` bindings
