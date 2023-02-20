@@ -16,6 +16,8 @@ module ComposedChart = BsRecharts__ComposedChart;
 
 module Cell = BsRecharts__Cell;
 
+module LabelList = BsRecharts__LabelList;
+
 module Legend = BsRecharts__Legend;
 
 module Line = BsRecharts__Line;
