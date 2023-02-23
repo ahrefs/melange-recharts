@@ -1,3 +1,7 @@
+# v3.5.0 (20.02.2023)
+
+- add `LabelList`
+
 # v3.4.1 (17.02.2023)
 
 - add missing `Treemap` to `BsTreemap`
