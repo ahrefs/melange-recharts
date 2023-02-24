@@ -1,3 +1,7 @@
+# v3.6.0 (24.02.2023)
+
+- add `Dot` bindings
+
 # v3.5.0 (20.02.2023)
 
 - add `LabelList`
