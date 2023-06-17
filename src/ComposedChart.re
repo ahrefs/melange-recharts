@@ -1,5 +1,5 @@
 // http://recharts.org/en-US/api/ComposedChart
-open BsRecharts__Utils;
+open Utils;
 
 [@bs.module "recharts"] [@react.component]
 external make:

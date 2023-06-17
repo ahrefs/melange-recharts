@@ -1,31 +1,23 @@
-// http://recharts.org/en-US/api/Line
-open BsRecharts__Utils;
+// http://recharts.org/en-US/api/YAxis
+open Utils;
 
 [@bs.module "recharts"] [@react.component]
 external make:
   (
-    ~_type: lineType=?,
-    ~activeDot: 'activeDot=?,
-    ~animationBegin: int=?,
-    ~animationDuration: int=?,
-    ~animationEasing: [@bs.string] [
-                        | `ease
-                        | [@bs.as "ease-in"] `easeIn
-                        | [@bs.as "ease-out"] `easeOut
-                        | [@bs.as "ease-in-out"] `easeInOut
-                        | `linear
-                      ]
-                        =?,
+    ~_type: axisType=?,
+    ~allowDataOverflow: bool=?,
+    ~allowDecimals: bool=?,
+    ~allowDuplicatedCategory: bool=?,
+    ~axisLine: 'axisLine=?,
     ~className: string=?,
-    ~connectNulls: bool=?,
+    ~dataKey: string=?,
+    ~domain: array('domain)=?,
+    ~height: int=?,
     ~hide: bool=?,
-    ~dataKey: 'dataKey,
-    ~dot: 'dot=?,
-    ~id: string=?,
-    ~isAnimationActive: bool=?,
+    ~interval: AxisInterval.t=?,
     ~label: 'label=?,
-    ~layout: layout=?,
-    ~legendType: legendType=?,
+    ~minTickGap: int=?,
+    ~mirror: bool=?,
     ~name: string=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
@@ -35,12 +27,22 @@ external make:
     ~onMouseOut: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~points: array(Js.t({..}))=?,
-    ~stroke: string=?,
-    ~strokeWidth: int=?,
+    ~orientation: [ | `left | `right]=?,
+    ~padding: paddingVertical=?,
+    ~reversed: bool=?,
+    ~scale: scale=?,
+    ~tick: 'tick=?,
+    ~tickCount: int=?,
+    ~tickFormatter: 'tickFormatter=?,
+    ~tickLine: 'tickLine=?,
+    ~tickMargin: int=?,
+    ~ticks: array('ticks)=?,
+    ~tickSize: int=?,
     ~unit: string=?,
-    ~xAxisId: string=?,
+    ~width: int=?,
     ~yAxisId: string=?
   ) =>
   React.element =
-  "Line";
+  "YAxis";
+
+let makeProps = (~interval=?) => makeProps(~interval=?interval->AxisInterval.encodeOpt);

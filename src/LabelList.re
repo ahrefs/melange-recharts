@@ -13,7 +13,7 @@ external make:
     ~labelFormatter: 'labelFormatter=?,
     ~valueAccessor: 'valueAccessor=?,
     ~offset: int=?,
-    ~position: [
+    ~position: [@bs.string] [
                  | `top
                  | `left
                  | `right

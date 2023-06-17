@@ -8,3 +8,5 @@ yarn-debug.log*
 yarn-error.log*
 *.bs.js
 .merlin
+_build
+_opam

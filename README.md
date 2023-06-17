@@ -1,53 +1,45 @@
-# bs-recharts
+# melange-recharts
 
-This is [Bucklescript](https://bucklescript.github.io/) bindings for [Recharts](http://recharts.org/).
+These are the [Melange](https://melange.re/) bindings for [Recharts](http://recharts.org/).
 🚧 It is not completed, we are adding bindings as we go. Doesn't follow semver at this point. 🚧
 
-# Install, [npm](https://www.npmjs.com/package/@ahrefs/bs-recharts)
+## Install
+
+Install [opam](https://opam.ocaml.org/) package manager.
+
+Then:
 
 ```
-yarn add @ahrefs/bs-recharts
+opam pin add melange-recharts.dev git+https://github.com/ahrefs/melange-recharts.git#master
 ```
 
-# Setup
+The bindings support the version `^2.1.12` of `recharts` npm package, which should be installed separately:
 
-Add bs-recharts to `bs-depenencies` in your `bsconfig.json`!
-
-```js
-{
-  /* ... */
-  "bs-dependencies": [
-    "@ahrefs/bs-recharts"
-  ],
-  /* ... */
-}
+```json
+  "dependencies": {
+    "recharts": "^2.1.12"
+  }
 ```
 
-# Usage Example
+## Setup
 
-```re
-open BsRecharts;
+Add `melange-recharts` to the `libraries` in your `dune` file:
 
-[@react-component]
-let make = (~data) =>
-  <ResponsiveContainer height=(Px(200)) width=(Px(300))>
-    <BarChart
-      barCategoryGap=(Px(1))
-      margin={"top": 0, "right": 0, "bottom": 0, "left": 0}
-      data>
-      <Bar name="Some bar" dataKey="pv" fill="#2078b4" stackId="a" />
-      <Bar name="Other bar" dataKey="uv" fill="#ff7f02" stackId="a" />
-      <Tooltip />
-      <Legend align=`left iconType=`circle />
-    </BarChart>
-  </ResponsiveContainer>;
+```dune
+; ...
+  (libraries melange-recharts)
+; ...
 ```
 
-# Helpers
+## Usage Example
+
+See [Example.re](./example/Example.re);
+
+## Helpers
 
 Some of polymorphic params are represented as a variant, list below:
 
-```
+```reason
 module AxisInterval = {
   ...
   type arg =
@@ -61,8 +53,8 @@ module AxisInterval = {
 module PxOrPrc = {
   ...
   type arg =
-    | Px(int)
-    | Prc(int);
+    | Px(float)
+    | Prc(float);
   ...
 };
 
@@ -77,7 +69,7 @@ module StrOrNode = {
 
 you will use it like this:
 
-```
+```reason
 <XAxis
   interval=PreserveStart
   label=Str("text")
