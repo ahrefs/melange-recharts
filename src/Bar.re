@@ -1,11 +1,9 @@
-// http://recharts.org/en-US/api/Area
-open BsRecharts__Utils;
+// http://recharts.org/en-US/api/Bar
+open Utils;
 
 [@bs.module "recharts"] [@react.component]
 external make:
   (
-    ~_type: lineType=?,
-    ~activeDot: 'activeDot=?,
     ~animationBegin: int=?,
     ~animationDuration: int=?,
     ~animationEasing: [@bs.string] [
@@ -16,19 +14,20 @@ external make:
                         | `linear
                       ]
                         =?,
-    ~baseLine: 'baseLine=?,
-    ~connectNulls: bool=?,
-    ~hide: bool=?,
+    ~background: 'background=?,
+    ~barSize: int=?,
     ~className: string=?,
+    ~cursor: string=?,
+    ~data: array('data)=?,
     ~dataKey: 'dataKey,
-    ~dot: 'dot=?,
     ~fill: string=?,
-    ~fillOpacity: float=?,
     ~id: string=?,
     ~isAnimationActive: bool=?,
     ~label: 'label=?,
     ~layout: layout=?,
     ~legendType: legendType=?,
+    ~maxBarSize: int=?,
+    ~minPointSize: int=?,
     ~name: string=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
@@ -38,13 +37,13 @@ external make:
     ~onMouseOut: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~points: array(Js.t({..}))=?,
+    ~radius: array(int)=?,
+    ~shape: 'shape=?,
     ~stackId: string=?,
-    ~stroke: string=?,
-    ~strokeWidth: int=?,
     ~unit: string=?,
     ~xAxisId: string=?,
-    ~yAxisId: string=?
+    ~yAxisId: string=?,
+    ~children: React.element=?
   ) =>
   React.element =
-  "Area";
+  "Bar";

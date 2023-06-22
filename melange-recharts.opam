@@ -1,0 +1,39 @@
+opam-version: "2.0"
+synopsis: "Melange bindings for recharts"
+description: "Melange bindings for recharts JavaScript library."
+maintainer: [
+  "Liubomyr Mykhalchenko <liubomyr.mykhalchenko@ahrefs.com>"
+]
+authors: [
+  "Liubomyr Mykhalchenko <liubomyr.mykhalchenko@ahrefs.com>"
+]
+license: "MIT"
+tags: ["melange" "org:ahrefs"]
+homepage: "https://github.com/ahrefs/melange-recharts/"
+doc: "https://github.com/ahrefs/melange-recharts/"
+bug-reports: "https://github.com/ahrefs/melange-recharts/issues"
+depends: [
+  "dune" {>= "3.8"}
+  "ocaml" {>= "4.14.0"}
+  "melange" {>= "1.0.0"}
+  "reason" {>= "3.8.2"}
+  "reactjs-jsx-ppx" {>= "1.0.0"}
+  "reason-react" {>= "0.11.0"}
+  "ocaml-lsp-server" {with-test}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/ahrefs/melange-recharts.git"

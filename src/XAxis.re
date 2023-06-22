@@ -1,5 +1,5 @@
-// http://recharts.org/en-US/api/ZAxis
-open BsRecharts__Utils;
+// http://recharts.org/en-US/api/XAxis
+open Utils;
 
 [@bs.module "recharts"] [@react.component]
 external make:
@@ -19,7 +19,6 @@ external make:
     ~minTickGap: int=?,
     ~mirror: bool=?,
     ~name: string=?,
-    ~range: array(int)=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
@@ -28,8 +27,8 @@ external make:
     ~onMouseOut: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~orientation: [ | `left | `right]=?,
-    ~padding: paddingVertical=?,
+    ~orientation: [ | `bottom | `top]=?,
+    ~padding: paddingHorizontal=?,
     ~reversed: bool=?,
     ~scale: scale=?,
     ~tick: 'tick=?,
@@ -41,9 +40,9 @@ external make:
     ~tickSize: int=?,
     ~unit: string=?,
     ~width: int=?,
-    ~yAxisId: string=?
+    ~xAxisId: string=?
   ) =>
   React.element =
-  "ZAxis";
+  "XAxis";
 
 let makeProps = (~interval=?) => makeProps(~interval=?interval->AxisInterval.encodeOpt);
