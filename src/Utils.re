@@ -122,7 +122,7 @@ module StrOrNode = {
 };
 
 module TooltipCursor = {
-  [@bs.deriving abstract]
+  [@deriving abstract]
   type config = {
     [@bs.optional]
     fill: string,
