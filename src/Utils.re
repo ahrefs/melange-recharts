@@ -125,11 +125,11 @@ module TooltipCursor = {
   [@deriving abstract]
   type config = {
     [@bs.optional]
-    fill: string,
+    fill: option(string),
     [@bs.optional]
-    stroke: string,
+    stroke: option(string),
     [@bs.optional]
-    strokeWidth: int,
+    strokeWidth: option(int),
   };
 
   type t;
