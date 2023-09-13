@@ -1,6 +1,6 @@
 // http://recharts.org/en-US/api/LabelList
 
-[@bs.module "recharts"] [@react.component]
+[@mel.module "recharts"] [@react.component]
 external make:
   (
     ~className: string=?,
@@ -13,7 +13,7 @@ external make:
     ~labelFormatter: 'labelFormatter=?,
     ~valueAccessor: 'valueAccessor=?,
     ~offset: int=?,
-    ~position: [@bs.string] [
+    ~position: [@mel.string] [
                  | `top
                  | `left
                  | `right
@@ -30,7 +30,7 @@ external make:
                  | `insideBottomRight
                  | `insideStart
                  | `insideEnd
-                 | [@bs.as "end"] `end_
+                 | [@mel.as "end"] `end_
                  | `center
                ]
                  =?,

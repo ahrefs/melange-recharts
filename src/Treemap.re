@@ -1,6 +1,6 @@
 // https://recharts.org/en-US/api/Treemap
 
-[@bs.module "recharts"] [@react.component]
+[@mel.module "recharts"] [@react.component]
 external make:
   (
     ~data: array('dataItem),

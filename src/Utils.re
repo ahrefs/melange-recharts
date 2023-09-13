@@ -124,11 +124,11 @@ module StrOrNode = {
 module TooltipCursor = {
   [@deriving abstract]
   type config = {
-    [@bs.optional]
+    [@mel.optional]
     fill: option(string),
-    [@bs.optional]
+    [@mel.optional]
     stroke: option(string),
-    [@bs.optional]
+    [@mel.optional]
     strokeWidth: option(int),
   };
 

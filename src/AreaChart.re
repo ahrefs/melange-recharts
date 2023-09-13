@@ -1,7 +1,7 @@
 // http://recharts.org/en-US/api/AreaChart
 open Utils;
 
-[@bs.module "recharts"] [@react.component]
+[@mel.module "recharts"] [@react.component]
 external make:
   (
     ~baseValue: 'baseValue=?,
