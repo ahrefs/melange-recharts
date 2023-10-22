@@ -2,4 +2,4 @@
  (target example)
  (libraries reason-react recharts)
  (preprocess
-  (pps melange.ppx reactjs-jsx-ppx)))
+  (pps melange.ppx reason-react-ppx)))

@@ -1,6 +1,6 @@
 // http://recharts.org/en-US/api/Dot
 
-[@bs.module "recharts"] [@react.component]
+[@mel.module "recharts"] [@react.component]
 external make:
   (
     ~r: int,

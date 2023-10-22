@@ -1,7 +1,7 @@
 // http://recharts.org/en-US/api/Legend
 open Utils;
 
-[@bs.module "recharts"] [@react.component]
+[@mel.module "recharts"] [@react.component]
 external make:
   (
     ~align: [ | `left | `center | `right]=?,

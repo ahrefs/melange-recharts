@@ -1,215 +1,216 @@
-# Unrelease
+## 4.0.0 (2023-10-22)
 
-- migrate to Melange
+- Migrate to Melange v2.
 
-# v3.6.0 (24.02.2023)
+## 3.6.0 (2023-02-24)
 
 - add `Dot` bindings
 
-# v3.5.0 (20.02.2023)
+## 3.5.0 (2023-02-20)
 
 - add `LabelList`
 
-# v3.4.1 (17.02.2023)
+## 3.4.1 (2023-02-17)
 
 - add missing `Treemap` to `BsTreemap`
-# v3.4.0 (17.02.2023)
+
+## 3.4.0 (2023-02-17)
 
 - add `Treemap`
 
-# v3.3.0 (11.11.2022)
+## 3.3.0 (2022-11-11)
 
 - change `strokeDasharray` type from `int` to `string` in `Scatter` bindings
 
-# v3.2.0 (21.10.2022)
+## 3.2.0 (2022-10-21)
 
 - add bindings to `ZAxis`
 - change `data` prop type for `Scatter` bindings
 - add `stroke`, `strokeDasharray`, `hide` props to `Scatter` bindings
 
-# v3.1.0 (19.08.2022)
+## 3.1.0 (2022-08-19)
 
 - Bump `recharts` peer dependency to `2.1.13`
 
-# v3.0.0 (08.08.2022)
+## 3.0.0 (2022-08-08)
 
 - Bump `recharts` peer dependency to `2.1.13`
 
-# v2.1.0 (30.03.2022)
+## 2.1.0 (2022-03-30)
 
 - Reinstate `recharts` as peer dependency
 - Add `ticksCount` to `YAxis`
 
-# v2.0.0 (03.12.2021)
+## 2.0.0 (2021-12-03)
 
 - Bump `bs-platform@9`
 - Drop `Jsx2` wrappers
 
-# v1.0.4 (09.11.2021)
+## 1.0.4 (2021-11-09)
 
 - Add `radius` prop to `Bar` bindings
 
-# v1.0.3 (08.11.2021)
+## 1.0.3 (2021-11-08)
 
 - Add `cursor` prop to `Bar` bindings
 
-# v1.0.2 (19.05.2021)
+## 1.0.2 (2021-05-19)
 
 -  Bump url-parse from 1.4.7 to 1.5.1 in /examples (#40)
 -  Bump lodash from 4.17.19 to 4.17.21 in /examples (#41)
 -  Bump elliptic from 6.5.3 to 6.5.4 in /examples (#36)
 -  Bump y18n from 4.0.0 to 4.0.1 in /examples (#37)
 
-# v1.0.1 (09.01.2021)
+## 1.0.1 (2021-01-09)
 
 - `key` prop is restored for BarChart, CartesianAxis, ComposerChart, Pie, ResponsiveContainer, Tooltip, XAxis, and YAxis
 
-# v1.0.0 (03.01.2020)
+## 1.0.0 (2020-01-03)
 
 - Update type of `label` prop in `XAxis` and `YAxis`
 
-# v0.4.8 (31.12.2020)
+## 0.4.8 (2020-12-31)
 
 - Add `hide` prop to `Line` bindings
 - Add `hide` prop to `Area` bindings
 - Extract `Line`/`Area` `type_` prop inline definition.
 - Add missing `[@bs.string]` annotation.
 
-# v0.4.7 (21.12.2020)
+## 0.4.7 (2020-12-21)
 
 - make `TooltipCursor` config props optional
 
-# v0.4.6 (21.12.2020)
+## 0.4.6 (2020-12-21)
 
 - Add `Bool(bool)` variant to `TooltipCursor`
 
-# v0.4.5 (21.12.2020)
+## 0.4.5 (2020-12-21)
 
 - Add type of `Tooltip.cursor`
 
-# v0.4.4 (16.12.2020)
+## 0.4.4 (2020-12-16)
 
 - Add `fillOpacity` prop to `ReferenceArea`
 
-# v0.4.3 (16.12.2020)
+## 0.4.3 (2020-12-16)
 
 - Fix typo in `BarChart`
 
-# v0.4.2 (16.12.2020)
+## 0.4.2 (2020-12-16)
 
 - Add `onMouseUp`/`onMouseDown` to `LineChart`/`BarChart`/`ComposedChart`/`AreaChart`
 
-# v0.4.1 (18.11.2020)
+## 0.4.1 (2020-11-18)
 
 - Add `background` prop to `Cell`
 
-# v0.4.0 (29.09.2020)
+## 0.4.0 (2020-09-29)
 
 - Bump `recharts` from 1.6.2 to 1.8.5 (#33)
 
-# v0.3.3 (21.02.2020)
+## 0.3.3 (2020-02-21)
 
 - Bump `lodash` from 4.17.11 to 4.17.15 (#26)
 - Add bindings for `ReferenceArea` (#25)
 
-# v0.3.2 (31.07.2019)
+## 0.3.2 (2019-07-31)
 
 - Add `jsx2` wrappers
 
-# v0.3.1 (31.07.2019)
+## 0.3.1 (2019-07-31)
 
 - add `children` prop to `Bar` cmponent
 
-# v0.3.0 (08.07.2019)
+## 0.3.0 (2019-07-08)
 
 - migrate to jsx3 (#20)
 
-# v0.2.14 (20.05.2019)
+## 0.2.14 (2019-05-20)
 
 - move recharts to peerDependencies (#17)
 
-# v0.2.13 (28.03.2019)
+## 0.2.13 (2019-03-28)
 
 - remove deprecated `string_of_float`
 
-# v0.2.12 (26.12.2018)
+## 0.2.12 (2018-12-26)
 
 - add `strokeWidth` prop to `Cell`
 
-# v0.2.11 (26.12.2018)
+## 0.2.11 (2018-12-26)
 
 - add `stackOffset` prop to `ComposedChart`
 
-# v0.2.10 (29.11.2018)
+## 0.2.10 (2018-11-29)
 
 - untype `dataKey` prop
 
-# v0.2.9 (15.11.2018)
+## 0.2.9 (2018-11-15)
 
 - add `Scatter`
 - add `ScatterChart`
 
-# v0.2.8 (10.10.2018)
+## 0.2.8 (2018-10-10)
 
 - unwrap `barCategoryGap` and `barGap` in `ComposedChar`
 
-# v0.2.7 (10.10.2018)
+## 0.2.7 (2018-10-10)
 
 - export `ComposedChart`
 
-# v0.2.6 (10.10.2018)
+## 0.2.6 (2018-10-10)
 
 - add `ComposedChart`
 
-# v0.2.5 (10.10.2018)
+## 0.2.5 (2018-10-10)
 
 - fix `type_` in `Area`, `Line`
 
-# v0.2.4 (18.09.2018)
+## 0.2.4 (2018-09-18)
 
 - `dataKey` is required in `Pie`, `Brush`, `Bar` and `Area`
 - `tickMargin` is required in `CartesianAxis`
 
-# v0.2.3 (17.09.2018)
+## 0.2.3 (2018-09-17)
 
 - add 'stroke' to Pie
 
-# v0.2.2 (17.09.2018)
+## 0.2.2 (2018-09-17)
 
 - refmt
 - Pie chart updates:
   - add fill
   - encode PxOrPrc
 
-# v0.2.1 (16.08.2018)
+## 0.2.1 (2018-08-16)
 
 - change data type form `array(Js.t({..}))` to `array('dataItem)`, so we can accept `Json.t` too
 - add reason-react to devDeps
 
-# v0.2.0 (13.08.2018)
+## 0.2.0 (2018-08-13)
 
 - upgrade Reason React and bs-platform
 
-# v0.1.10 (9.08.2018)
+## 0.1.10 (201808--9)
 
 - add bindings to Brush component
 
-# v0.1.9 (9.08.2018)
+## 0.1.9 (201808--9)
 
 - move ReasonReact to peer dependencies
 
-# v0.1.8 (2.08.2018)
+## 0.1.8 (201808--2)
 
 - use floats for measurement
 
-# v0.1.7 (2.08.2018)
+## 0.1.7 (201808--2)
 
 - ReferenceLine bindings
 
-# v0.1.6 (14.07.2018)
+## 0.1.6 (2018-07-14)
 
 - Pie chart bindings
 
-# <= v0.1.5
+## <= v0.1.5
 
 - the begining of the `CHANGELOG.md`

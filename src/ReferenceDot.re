@@ -1,6 +1,6 @@
 // http://recharts.org/en-US/api/ReferenceDot
 
-[@bs.module "recharts"] [@react.component]
+[@mel.module "recharts"] [@react.component]
 external make:
   (
     ~alwaysShow: bool=?,

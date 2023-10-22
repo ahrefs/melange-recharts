@@ -1,18 +1,18 @@
 // http://recharts.org/en-US/api/Area
 open Utils;
 
-[@bs.module "recharts"] [@react.component]
+[@mel.module "recharts"] [@react.component]
 external make:
   (
     ~_type: lineType=?,
     ~activeDot: 'activeDot=?,
     ~animationBegin: int=?,
     ~animationDuration: int=?,
-    ~animationEasing: [@bs.string] [
+    ~animationEasing: [@mel.string] [
                         | `ease
-                        | [@bs.as "ease-in"] `easeIn
-                        | [@bs.as "ease-out"] `easeOut
-                        | [@bs.as "ease-in-out"] `easeInOut
+                        | [@mel.as "ease-in"] `easeIn
+                        | [@mel.as "ease-out"] `easeOut
+                        | [@mel.as "ease-in-out"] `easeInOut
                         | `linear
                       ]
                         =?,
