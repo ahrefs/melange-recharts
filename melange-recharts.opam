@@ -10,7 +10,6 @@ authors: [
 license: "MIT"
 tags: ["melange" "org:ahrefs"]
 homepage: "https://github.com/ahrefs/melange-recharts/"
-doc: "https://github.com/ahrefs/melange-recharts/"
 bug-reports: "https://github.com/ahrefs/melange-recharts/issues"
 depends: [
   "dune" {>= "3.8"}
