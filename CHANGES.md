@@ -191,19 +191,19 @@
 
 - upgrade Reason React and bs-platform
 
-## 0.1.10 (201808--9)
+## 0.1.10 (2018-08-09)
 
 - add bindings to Brush component
 
-## 0.1.9 (201808--9)
+## 0.1.9 (2018-08-09)
 
 - move ReasonReact to peer dependencies
 
-## 0.1.8 (201808--2)
+## 0.1.8 (2018-08-02)
 
 - use floats for measurement
 
-## 0.1.7 (201808--2)
+## 0.1.7 (2018-08-02)
 
 - ReferenceLine bindings
 
