@@ -94,7 +94,7 @@ module AxisInterval = {
     | PreserveEnd => Obj.magic("preserveEnd")
     | PreserveStartEnd => Obj.magic("preserveStartEnd")
     | Num(num) => Obj.magic(num);
-  let encodeOpt = Belt.Option.map(_, encode);
+  let encodeOpt = Option.map(encode);
 };
 
 module PxOrPrc = {
@@ -106,7 +106,7 @@ module PxOrPrc = {
     fun
     | Px(v) => Obj.magic(v)
     | Prc(v) => Obj.magic(Js.Float.toString(v) ++ "%");
-  let encodeOpt = Belt.Option.map(_, encode);
+  let encodeOpt = Option.map(encode);
 };
 
 module StrOrNode = {
@@ -118,7 +118,7 @@ module StrOrNode = {
     fun
     | Str(v) => Obj.magic(v)
     | Node(v) => Obj.magic(v);
-  let encodeOpt = Belt.Option.map(_, encode);
+  let encodeOpt = Option.map(encode);
 };
 
 module TooltipCursor = {
@@ -142,5 +142,5 @@ module TooltipCursor = {
     | Bool(v) => Obj.magic(v)
     | Config(v) => Obj.magic(v)
     | Component(v) => Obj.magic(v);
-  let encodeOpt = Belt.Option.map(_, encode);
+  let encodeOpt = Option.map(encode);
 };

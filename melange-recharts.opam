@@ -40,6 +40,7 @@ depexts: [
   ["recharts"] {npm-version = "^2.1.12"}
 ]
 pin-depends: [
-  [ "reason-react.dev"      "git+https://github.com/reasonml/reason-react.git#7ca984c9a406b01e906fda1898f705f135fad202" ]
-  [ "reason-react-ppx.dev"  "git+https://github.com/reasonml/reason-react.git#7ca984c9a406b01e906fda1898f705f135fad202" ]
+  ["melange.dev" "git+https://github.com/melange-re/melange#982cba971fa662439f0675465ef854424771ca3d"]
+  ["reason-react.dev" "https://github.com/reasonml/reason-react/archive/f799ac03d79d39de04fe937075607c348f8053b4.tar.gz"]
+  ["reason-react-ppx.dev" "https://github.com/reasonml/reason-react/archive/f799ac03d79d39de04fe937075607c348f8053b4.tar.gz"]
 ]
