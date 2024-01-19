@@ -122,7 +122,7 @@ module StrOrNode = {
 };
 
 module TooltipCursor = {
-  [@deriving abstract]
+  [@deriving jsProperties]
   type config = {
     [@mel.optional]
     fill: option(string),
