@@ -14,7 +14,7 @@ bug-reports: "https://github.com/ahrefs/melange-recharts/issues"
 depends: [
   "dune" {>= "3.8"}
   "ocaml"
-  "melange" {>= "2.0.0"}
+  "melange" {>= "3.0.0"}
   "reason" {>= "3.10.0"}
   "reason-react" {>= "0.14.0"}
   "reason-react-ppx" {>= "0.14.0"}
@@ -40,7 +40,6 @@ depexts: [
   ["recharts"] {npm-version = "^2.1.12"}
 ]
 pin-depends: [
-  ["melange.dev" "git+https://github.com/melange-re/melange#982cba971fa662439f0675465ef854424771ca3d"]
-  ["reason-react.dev" "https://github.com/reasonml/reason-react/archive/f799ac03d79d39de04fe937075607c348f8053b4.tar.gz"]
-  ["reason-react-ppx.dev" "https://github.com/reasonml/reason-react/archive/f799ac03d79d39de04fe937075607c348f8053b4.tar.gz"]
+  ["reason-react.dev" "https://github.com/reasonml/reason-react/archive/7856cb0c3fdad99c9d4e6f1453e53aeb0e737c3b.tar.gz"]
+  ["reason-react-ppx.dev" "https://github.com/reasonml/reason-react/archive/7856cb0c3fdad99c9d4e6f1453e53aeb0e737c3b.tar.gz"]
 ]
