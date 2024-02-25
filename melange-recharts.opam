@@ -16,8 +16,8 @@ depends: [
   "ocaml"
   "melange" {>= "2.0.0"}
   "reason" {>= "3.10.0"}
-  "reason-react"
-  "reason-react-ppx"
+  "reason-react" {>= "0.14.0"}
+  "reason-react-ppx" {>= "0.14.0"}
   "ocaml-lsp-server" {with-test}
   "odoc" {with-doc}
 ]
@@ -38,4 +38,8 @@ build: [
 dev-repo: "git+https://github.com/ahrefs/melange-recharts.git"
 depexts: [
   ["recharts"] {npm-version = "^2.1.12"}
+]
+pin-depends: [
+  [ "reason-react.dev"      "git+https://github.com/reasonml/reason-react.git#7ca984c9a406b01e906fda1898f705f135fad202" ]
+  [ "reason-react-ppx.dev"  "git+https://github.com/reasonml/reason-react.git#7ca984c9a406b01e906fda1898f705f135fad202" ]
 ]
