@@ -9,8 +9,8 @@ Install [opam](https://opam.ocaml.org/) package manager.
 
 Then:
 
-```
-opam pin add melange-recharts.dev git+https://github.com/ahrefs/melange-recharts.git#master
+```sh
+opam install melange-recharts
 ```
 
 The bindings support the version `^2.1.12` of `recharts` npm package, which should be installed separately:
@@ -25,7 +25,7 @@ The bindings support the version `^2.1.12` of `recharts` npm package, which shou
 
 Add `melange-recharts` to the `libraries` in your `dune` file:
 
-```dune
+```lisp
 ; ...
   (libraries melange-recharts)
 ; ...

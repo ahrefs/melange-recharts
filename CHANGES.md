@@ -1,3 +1,7 @@
+## 4.0.1 (2024-02-16)
+
+- add `strokeDasharray` to `Line`
+
 ## 4.0.0 (2023-10-22)
 
 - Migrate to Melange v2.

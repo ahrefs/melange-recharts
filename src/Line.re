@@ -38,6 +38,7 @@ external make:
     ~points: array(Js.t({..}))=?,
     ~stroke: string=?,
     ~strokeWidth: int=?,
+    ~strokeDasharray: string=?,
     ~unit: string=?,
     ~xAxisId: string=?,
     ~yAxisId: string=?
