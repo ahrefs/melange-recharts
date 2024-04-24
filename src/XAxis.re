@@ -40,7 +40,8 @@ external make:
     ~tickSize: int=?,
     ~unit: string=?,
     ~width: int=?,
-    ~xAxisId: string=?
+    ~xAxisId: string=?,
+    ~style: Js.t({..})=?
   ) =>
   React.element =
   "XAxis";

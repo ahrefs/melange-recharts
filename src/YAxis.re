@@ -40,7 +40,8 @@ external make:
     ~tickSize: int=?,
     ~unit: string=?,
     ~width: int=?,
-    ~yAxisId: string=?
+    ~yAxisId: string=?,
+    ~style: Js.t({..})=?
   ) =>
   React.element =
   "YAxis";
