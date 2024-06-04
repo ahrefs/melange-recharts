@@ -1,3 +1,7 @@
+## 4.0.2 (2024-06-04)
+
+- add `filterNull` to `Tooltip`
+
 ## 4.0.1 (2024-02-16)
 
 - add `strokeDasharray` to `Line`
