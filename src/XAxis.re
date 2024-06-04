@@ -31,6 +31,7 @@ external make:
     ~padding: paddingHorizontal=?,
     ~reversed: bool=?,
     ~scale: scale=?,
+    ~style: ReactDOMStyle.t=?,
     ~tick: 'tick=?,
     ~tickCount: int=?,
     ~tickFormatter: 'tickFormatter=?,
@@ -45,4 +46,5 @@ external make:
   React.element =
   "XAxis";
 
-let makeProps = (~interval=?) => makeProps(~interval=?interval->AxisInterval.encodeOpt);
+let makeProps = (~interval=?) =>
+  makeProps(~interval=?interval->AxisInterval.encodeOpt);

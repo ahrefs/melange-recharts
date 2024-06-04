@@ -31,14 +31,42 @@ external make:
     ~legendType: legendType=?,
     ~minAngle: int=?,
     ~nameKey: string=?,
-    ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~onMouseDown: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
-    ~onMouseMove: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~onMouseOut: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~onMouseOver: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~onMouseUp: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
+    // Pulled from:
+    // https://github.com/recharts/recharts/blob/7fb227dae542c3d3093506e6d80a2c2c366f9a26/src/polar/Pie.tsx#L107-L109
+    ~onClick: (
+                Js.Nullable.t(Js.t({.. "payload": 'dataItem})),
+                int,
+                ReactEvent.Mouse.t
+              ) =>
+              unit
+                =?,
+    ~onMouseDown: (Js.t({.. "payload": 'dataItem}), ReactEvent.Mouse.t) =>
+                  unit
+                    =?,
+    ~onMouseEnter: (
+                     Js.Nullable.t(Js.t({.. "payload": 'dataItem})),
+                     int,
+                     ReactEvent.Mouse.t
+                   ) =>
+                   unit
+                     =?,
+    ~onMouseLeave: (
+                     Js.Nullable.t(Js.t({.. "payload": 'dataItem})),
+                     int,
+                     ReactEvent.Mouse.t
+                   ) =>
+                   unit
+                     =?,
+    ~onMouseMove: (Js.t({.. "payload": 'dataItem}), ReactEvent.Mouse.t) =>
+                  unit
+                    =?,
+    ~onMouseOut: (Js.t({.. "payload": 'dataItem}), ReactEvent.Mouse.t) => unit
+                   =?,
+    ~onMouseOver: (Js.t({.. "payload": 'dataItem}), ReactEvent.Mouse.t) =>
+                  unit
+                    =?,
+    ~onMouseUp: (Js.t({.. "payload": 'dataItem}), ReactEvent.Mouse.t) => unit
+                  =?,
     ~outerRadius: PxOrPrc.t=?,
     ~paddingAngle: int=?,
     ~startAngle: int=?,
