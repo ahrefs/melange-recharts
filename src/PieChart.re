@@ -7,9 +7,9 @@ external make:
     ~className: string=?,
     ~height: int=?,
     ~margin: margin=?,
-    ~onClick: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), ReactEvent.Mouse.t) => unit=?,
-    ~onMouseLeave: (Js.t({..}), ReactEvent.Mouse.t) => unit=?,
+    ~onClick: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
+    ~onMouseLeave: (Js.t({..}), React.Event.Mouse.t) => unit=?,
     ~width: int=?,
     ~children: React.element
   ) =>
