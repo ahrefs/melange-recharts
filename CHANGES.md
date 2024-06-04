@@ -1,6 +1,7 @@
-## 4.0.2 (2024-06-04)
+## 4.0.3 (2024-06-04)
 
 - add `filterNull` to `Tooltip`
+- support `melange.3.0.0` and `reason-react.0.14.0`
 
 ## 4.0.1 (2024-02-16)
 
