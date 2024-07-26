@@ -1,3 +1,7 @@
+## 4.0.4 (2024-07-26)
+
+- add `data` to `Line`
+
 ## 4.0.3 (2024-06-04)
 
 - add `filterNull` to `Tooltip`
