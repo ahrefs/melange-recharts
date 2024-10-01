@@ -13,6 +13,7 @@ external make:
     ~layout: layout=?,
     ~margin: margin=?,
     ~maxBarSize: int=?,
+    ~style: ReactDOM.Style.t=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseDown: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
