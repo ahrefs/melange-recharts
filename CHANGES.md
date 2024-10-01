@@ -1,3 +1,12 @@
+## 4.0.5 (2024-10-01)
+
+- add `style` to `AreaChart`
+- add `style` to `BarChart`
+- add `style` to `ComposedChart`
+- add `style` to `LineChart`
+- add `style` to `PieChart`
+- add `style` to `ScatterChart`
+
 ## 4.0.4 (2024-07-26)
 
 - add `data` to `Line`
