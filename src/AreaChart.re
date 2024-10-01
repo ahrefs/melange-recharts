@@ -10,6 +10,7 @@ external make:
     ~height: int=?,
     ~layout: layout=?,
     ~margin: margin=?,
+    ~style: ReactDOM.Style.t=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseDown: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
