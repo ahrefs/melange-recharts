@@ -39,6 +39,7 @@ external make:
     ~points: array(Js.t({..}))=?,
     ~stroke: string=?,
     ~strokeWidth: int=?,
+    ~strokeOpacity: option(float)=?,
     ~strokeDasharray: string=?,
     ~unit: string=?,
     ~xAxisId: string=?,

@@ -1,3 +1,7 @@
+## 4.0.6 (2024-10-19)
+
+- add `strokeOpacity` to `Line`
+
 ## 4.0.5 (2024-10-01)
 
 - add `style` to `AreaChart`
