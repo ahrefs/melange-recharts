@@ -14,11 +14,10 @@ bug-reports: "https://github.com/ahrefs/melange-recharts/issues"
 depends: [
   "dune" {>= "3.8"}
   "ocaml"
-  "melange" {>= "2.0.0"}
+  "melange" {>= "3.0.0"}
   "reason" {>= "3.10.0"}
-  "reason-react"
-  "reason-react-ppx"
-  "ocaml-lsp-server" {with-test}
+  "reason-react" {>= "0.14.0"}
+  "reason-react-ppx" {>= "0.14.0"}
   "odoc" {with-doc}
 ]
 build: [

@@ -1,3 +1,29 @@
+## 4.0.6 (2024-10-19)
+
+- add `strokeOpacity` to `Line`
+
+## 4.0.5 (2024-10-01)
+
+- add `style` to `AreaChart`
+- add `style` to `BarChart`
+- add `style` to `ComposedChart`
+- add `style` to `LineChart`
+- add `style` to `PieChart`
+- add `style` to `ScatterChart`
+
+## 4.0.4 (2024-07-26)
+
+- add `data` to `Line`
+
+## 4.0.3 (2024-06-04)
+
+- add `filterNull` to `Tooltip`
+- support `melange.3.0.0` and `reason-react.0.14.0`
+
+## 4.0.1 (2024-02-16)
+
+- add `strokeDasharray` to `Line`
+
 ## 4.0.0 (2023-10-22)
 
 - Migrate to Melange v2.

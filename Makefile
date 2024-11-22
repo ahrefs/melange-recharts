@@ -13,7 +13,7 @@ help: ## Print this help message
 
 .PHONY: create-switch
 create-switch: ## Create opam switch
-	opam switch create . 5.1.0 -y --deps-only
+	opam switch create . 5.1.1 -y --deps-only
 
 .PHONY: init
 init: create-switch install ## Configure everything to develop this repository in local
@@ -22,6 +22,7 @@ init: create-switch install ## Configure everything to develop this repository i
 install: ## Install development dependencies
 	opam update
 	opam install -y . --deps-only --with-test
+	opam install ocaml-lsp-server # can be added to opam with `--with-dev-setup` once opam 2.2 is more prevalent
 
 .PHONY: build
 build: ## Build the project

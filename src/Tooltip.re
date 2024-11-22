@@ -20,6 +20,7 @@ external make:
     ~content: 'content=?,
     ~position: Js.t({..})=?,
     ~cursor: TooltipCursor.t=?,
+    ~filterNull: bool=?,
     ~formatter: 'formatter=?,
     ~isAnimationActive: bool=?,
     ~itemSorter: 'itemSorter=?,
