@@ -17,7 +17,8 @@ external make:
     ~onClick: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseDown: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
-    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
+    ~onMouseEnter:
+      (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseLeave: (Js.t({..}), React.Event.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~reverseStackOrder: bool=?,
@@ -30,4 +31,7 @@ external make:
   "BarChart";
 
 let makeProps = (~barCategoryGap=?, ~barGap=?) =>
-  makeProps(~barCategoryGap=?barCategoryGap->PxOrPrc.encodeOpt, ~barGap=?barGap->PxOrPrc.encodeOpt);
+  makeProps(
+    ~barCategoryGap=?barCategoryGap->PxOrPrc.encodeOpt,
+    ~barGap=?barGap->PxOrPrc.encodeOpt,
+  );

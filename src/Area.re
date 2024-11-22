@@ -8,14 +8,15 @@ external make:
     ~activeDot: 'activeDot=?,
     ~animationBegin: int=?,
     ~animationDuration: int=?,
-    ~animationEasing: [@mel.string] [
-                        | `ease
-                        | [@mel.as "ease-in"] `easeIn
-                        | [@mel.as "ease-out"] `easeOut
-                        | [@mel.as "ease-in-out"] `easeInOut
-                        | `linear
-                      ]
-                        =?,
+    ~animationEasing:
+      [@mel.string] [
+        | `ease
+        | [@mel.as "ease-in"] `easeIn
+        | [@mel.as "ease-out"] `easeOut
+        | [@mel.as "ease-in-out"] `easeInOut
+        | `linear
+      ]
+        =?,
     ~baseLine: 'baseLine=?,
     ~connectNulls: bool=?,
     ~hide: bool=?,
@@ -32,7 +33,8 @@ external make:
     ~name: string=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseDown: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
-    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
+    ~onMouseEnter:
+      (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseLeave: (Js.t({..}), React.Event.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseOut: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
