@@ -2,6 +2,13 @@
 
 [@mel.module "recharts"] [@react.component]
 external make:
-  (~background: 'background=?, ~className: string=?, ~fill: string=?, ~stroke: string=?, ~strokeWidth: int=?) =>
+  (
+    ~background: 'background=?,
+    ~className: string=?,
+    ~fill: string=?,
+    ~fillOpacity: float=?,
+    ~stroke: string=?,
+    ~strokeWidth: int=?
+  ) =>
   React.element =
   "Cell";
