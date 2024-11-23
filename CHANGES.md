@@ -1,3 +1,8 @@
+## 4.0.7 (2024-11-23)
+
+- add `payload` to `Pie` and `Bar` event handler
+- add `style` to `XAxis` and `YAxis`
+
 ## 4.0.6 (2024-10-19)
 
 - add `strokeOpacity` to `Line`
