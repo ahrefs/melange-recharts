@@ -1,3 +1,14 @@
+## 5.0.0 (2024-11-26)
+
+- fix curried functions in event handlers for `XAxis`, `YAxis`, and `ZAxis`
+- change `dataKey` type from `string` to `'dataKey` in `XAxis`, `YAxis`, and `ZAxis`
+- change `tickSize` type from `int` to `float` in `XAxis`, `YAxis`, and `ZAxis`
+- add `transform` and `stroke` props to `XAxis`, `YAxis`, and `ZAxis`
+- add `style` prop to `ZAxis`
+- add `fillOpacity` prop to `Cell`
+- add optional flags to `Treemap` props `stroke`, `fill`, `isAnimationActive`, `animationDuration`
+- wrap `Pie` event handlers data prop in `Js.Nullable.t`
+
 ## 4.0.7 (2024-11-23)
 
 - add `payload` to `Pie` and `Bar` event handler
