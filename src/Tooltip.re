@@ -8,14 +8,15 @@ external make:
     ~allowEscapeViewBox: Js.t({..})=?,
     ~animationBegin: int=?,
     ~animationDuration: int=?,
-    ~animationEasing: [@mel.string] [
-                        | `ease
-                        | [@mel.as "ease-in"] `easeIn
-                        | [@mel.as "ease-out"] `easeOut
-                        | [@mel.as "ease-in-out"] `easeInOut
-                        | `linear
-                      ]
-                        =?,
+    ~animationEasing:
+      [@mel.string] [
+        | `ease
+        | [@mel.as "ease-in"] `easeIn
+        | [@mel.as "ease-out"] `easeOut
+        | [@mel.as "ease-in-out"] `easeInOut
+        | `linear
+      ]
+        =?,
     ~className: string=?,
     ~content: 'content=?,
     ~position: Js.t({..})=?,
@@ -37,4 +38,5 @@ external make:
   React.element =
   "Tooltip";
 
-let makeProps = (~cursor=?) => makeProps(~cursor=?cursor->TooltipCursor.encodeOpt);
+let makeProps = (~cursor=?) =>
+  makeProps(~cursor=?cursor->TooltipCursor.encodeOpt);

@@ -6,14 +6,15 @@ external make:
   (
     ~animationBegin: int=?,
     ~animationDuration: int=?,
-    ~animationEasing: [@mel.string] [
-                        | `ease
-                        | [@mel.as "ease-in"] `easeIn
-                        | [@mel.as "ease-out"] `easeOut
-                        | [@mel.as "ease-in-out"] `easeInOut
-                        | `linear
-                      ]
-                        =?,
+    ~animationEasing:
+      [@mel.string] [
+        | `ease
+        | [@mel.as "ease-in"] `easeIn
+        | [@mel.as "ease-out"] `easeOut
+        | [@mel.as "ease-in-out"] `easeInOut
+        | `linear
+      ]
+        =?,
     ~background: 'background=?,
     ~barSize: int=?,
     ~className: string=?,
@@ -29,14 +30,22 @@ external make:
     ~maxBarSize: int=?,
     ~minPointSize: int=?,
     ~name: string=?,
-    ~onClick: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
-    ~onMouseDown: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
-    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
-    ~onMouseLeave: (Js.t({..}), React.Event.Mouse.t) => unit=?,
-    ~onMouseMove: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
-    ~onMouseOut: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
-    ~onMouseOver: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
-    ~onMouseUp: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
+    ~onClick:
+      (Js.t({.. "payload": 'dataItem}), int, React.Event.Mouse.t) => unit=?,
+    ~onMouseDown:
+      (Js.t({.. "payload": 'dataItem}), React.Event.Mouse.t) => unit=?,
+    ~onMouseEnter:
+      (Js.t({.. "payload": 'dataItem}), int, React.Event.Mouse.t) => unit=?,
+    ~onMouseLeave:
+      (Js.t({.. "payload": 'dataItem}), int, React.Event.Mouse.t) => unit=?,
+    ~onMouseMove:
+      (Js.t({.. "payload": 'dataItem}), React.Event.Mouse.t) => unit=?,
+    ~onMouseOut:
+      (Js.t({.. "payload": 'dataItem}), React.Event.Mouse.t) => unit=?,
+    ~onMouseOver:
+      (Js.t({.. "payload": 'dataItem}), React.Event.Mouse.t) => unit=?,
+    ~onMouseUp:
+      (Js.t({.. "payload": 'dataItem}), React.Event.Mouse.t) => unit=?,
     ~radius: array(int)=?,
     ~shape: 'shape=?,
     ~stackId: string=?,

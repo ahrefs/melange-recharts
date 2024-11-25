@@ -21,16 +21,23 @@ external make:
     ~name: string=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseDown: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
-    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
+    ~onMouseEnter:
+      (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseLeave: (Js.t({..}), React.Event.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseOut: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseOver: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
-    ~orientation: [ | `left | `right]=?,
+    ~orientation:
+      [
+        | `left
+        | `right
+      ]
+        =?,
     ~padding: paddingVertical=?,
     ~reversed: bool=?,
     ~scale: scale=?,
+    ~style: ReactDOM.Style.t=?,
     ~tick: 'tick=?,
     ~tickCount: int=?,
     ~tickFormatter: 'tickFormatter=?,
@@ -45,4 +52,5 @@ external make:
   React.element =
   "YAxis";
 
-let makeProps = (~interval=?) => makeProps(~interval=?interval->AxisInterval.encodeOpt);
+let makeProps = (~interval=?) =>
+  makeProps(~interval=?interval->AxisInterval.encodeOpt);
