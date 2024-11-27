@@ -8,18 +8,42 @@ external make:
     ~allowDataOverflow: bool=?,
     ~allowDecimals: bool=?,
     ~allowDuplicatedCategory: bool=?,
-    ~axisLine: 'axisLine=?,
+    ~axisLine:
+      [@mel.unwrap] [
+        | `Bool(bool)
+        | `Obj(Js.t({..}))
+      ]
+        =?,
     ~className: string=?,
-    ~dataKey: 'dataKey=?,
+    ~dataKey:
+      [@mel.unwrap] [
+        | `Str(string)
+        | `Int(int)
+        | `Fn('dataObj => 'tick)
+      ]
+        =?,
     ~domain: array('domain)=?,
     ~height: int=?,
     ~hide: bool=?,
     ~interval: AxisInterval.t=?,
-    ~label: 'label=?,
+    ~label:
+      [@mel.unwrap] [
+        | `Str(string)
+        | `Int(int)
+        | `Float(float)
+        | `Component(React.element)
+        | `Obj(Js.t({..}))
+      ]
+        =?,
     ~minTickGap: int=?,
     ~mirror: bool=?,
-    ~name: string=?,
-    ~range: array(int)=?,
+    ~name:
+      [@mel.unwrap] [
+        | `Str(string)
+        | `Int(int)
+        | `Float(float)
+      ]
+        =?,
     ~onClick: (. Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseDown:
       (. Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
@@ -40,21 +64,39 @@ external make:
       ]
         =?,
     ~padding: paddingVertical=?,
+    ~range: array(int)=?,
     ~reversed: bool=?,
     ~scale: scale=?,
     ~stroke: string=?,
     ~style: ReactDOM.Style.t=?,
-    ~tick: 'tick=?,
+    ~tick:
+      [@mel.unwrap] [
+        | `Obj(Js.t({..}))
+        | `Component(React.element)
+        | `Bool(bool)
+        | `Fn('tick => React.element)
+      ]
+        =?,
     ~tickCount: int=?,
-    ~tickFormatter: 'tickFormatter=?,
-    ~tickLine: 'tickLine=?,
+    ~tickFormatter: (. 'tick, int) => string=?,
+    ~tickLine:
+      [@mel.unwrap] [
+        | `Bool(bool)
+        | `Obj(Js.t({..}))
+      ]
+        =?,
     ~tickMargin: int=?,
     ~ticks: array('ticks)=?,
-    ~tickSize: float=?,
+    ~tickSize:
+      [@mel.unwrap] [
+        | `Float(float)
+        | `Int(int)
+      ]
+        =?,
     ~transform: string=?,
     ~unit: string=?,
     ~width: int=?,
-    ~yAxisId: string=?
+    ~zAxisId: string=?
   ) =>
   React.element =
   "ZAxis";
@@ -70,6 +112,7 @@ let makeProps =
       ~onMouseOut=?,
       ~onMouseOver=?,
       ~onMouseUp=?,
+      ~tickFormatter=?,
     ) =>
   makeProps(
     ~interval=?interval |> AxisInterval.encodeOpt,
@@ -110,5 +153,10 @@ let makeProps =
       onMouseUp
       |> Option.map(onMouseUp =>
            (. payload, event) => onMouseUp(payload, event)
+         ),
+    ~tickFormatter=?
+      tickFormatter
+      |> Option.map(tickFormatter =>
+           (. tick, index) => tickFormatter(tick, index)
          ),
   );

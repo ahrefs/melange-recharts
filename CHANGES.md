@@ -1,8 +1,15 @@
-## 5.0.0 (2024-11-26)
+## 5.0.0 (2024-11-28)
 
+- change `axisLine` type from `any` to `[ | `Bool(bool) | `Obj(Js.t({..}))]` in `XAxis`, `YAxis`, and `ZAxis`
+- change `dataKey` type from `string` to `[ | `Str(string) | `Int(int) | `Fn('dataObj => 'dataKey)]` in `XAxis`, `YAxis`, and `ZAxis`
+- change `label` type from `any` to `[ | `Str(string) | `Int(int) | `Float(float) | `Component(React.element) | `Obj(Js.t({..}))]` in `XAxis`, `YAxis`, and `ZAxis`
+- change `name` type from `string` to `[ | `Str(string) | `Int(int) | `Float(float)]` in `XAxis`, `YAxis`, and `ZAxis`
+- add `range` prop to `XAxis` and `YAxis`
+- change `tick` type from `any` to `[ | `Obj(Js.t({..})) | `Component(React.element) | `Bool(bool) | `Fn('tick => React.element)]` in `XAxis`, `YAxis`, and `ZAxis`
+- change `tickFormatter` type from `any` to `(. 'tick, int) => string` in `XAxis`, `YAxis`, and `ZAxis` and wrap it with a curried function
+- change `tickLine` type from `any` to `[ | `Bool(bool) | `Obj(Js.t({..}))]` in `XAxis`, `YAxis`, and `ZAxis`
+- change `tickSize` type from `float` to `[ | `Float(float) | `Int(int)]` in `XAxis`, `YAxis`, and `ZAxis`
 - fix curried functions in event handlers for `XAxis`, `YAxis`, and `ZAxis`
-- change `dataKey` type from `string` to `'dataKey` in `XAxis`, `YAxis`, and `ZAxis`
-- change `tickSize` type from `int` to `float` in `XAxis`, `YAxis`, and `ZAxis`
 - add `transform` and `stroke` props to `XAxis`, `YAxis`, and `ZAxis`
 - add `style` prop to `ZAxis`
 - add `fillOpacity` prop to `Cell`
