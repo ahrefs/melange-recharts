@@ -1,6 +1,4 @@
 // http://recharts.org/en-US/api/Tooltip
-open Utils;
-
 [@mel.module "recharts"] [@react.component]
 external make:
   (
@@ -20,7 +18,20 @@ external make:
     ~className: string=?,
     ~content: 'content=?,
     ~position: Js.t({..})=?,
-    ~cursor: TooltipCursor.t=?,
+    ~cursor:
+      [@mel.unwrap] [
+        | `Bool(bool)
+        | `Obj(
+            Js.t({
+              .
+              "fill": option(string),
+              "stroke": option(string),
+              "strokeWidth": option(int),
+            }),
+          )
+        | `Element(React.element)
+      ]
+        =?,
     ~filterNull: bool=?,
     ~formatter: 'formatter=?,
     ~isAnimationActive: bool=?,
@@ -37,6 +48,3 @@ external make:
   ) =>
   React.element =
   "Tooltip";
-
-let makeProps = (~cursor=?) =>
-  makeProps(~cursor=?cursor->TooltipCursor.encodeOpt);
