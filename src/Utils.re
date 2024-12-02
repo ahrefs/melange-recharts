@@ -131,27 +131,3 @@ module PxOrPrc = {
     | Prc(v) => Obj.magic(Js.Float.toString(v) ++ "%");
   let encodeOpt = Option.map(encode);
 };
-
-module TooltipCursor = {
-  [@deriving jsProperties]
-  type config = {
-    [@mel.optional]
-    fill: option(string),
-    [@mel.optional]
-    stroke: option(string),
-    [@mel.optional]
-    strokeWidth: option(int),
-  };
-
-  type t;
-  type arg =
-    | Bool(bool)
-    | Config(config)
-    | Component(React.element);
-  let encode: arg => t =
-    fun
-    | Bool(v) => Obj.magic(v)
-    | Config(v) => Obj.magic(v)
-    | Component(v) => Obj.magic(v);
-  let encodeOpt = Option.map(encode);
-};
