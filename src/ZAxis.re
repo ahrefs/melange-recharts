@@ -31,7 +31,7 @@ external make:
         | `Str(string)
         | `Int(int)
         | `Float(float)
-        | `Component(React.element)
+        | `Element(React.element)
         | `Obj(Js.t({..}))
       ]
         =?,
@@ -72,7 +72,7 @@ external make:
     ~tick:
       [@mel.unwrap] [
         | `Obj(Js.t({..}))
-        | `Component(React.element)
+        | `Element(React.element)
         | `Bool(bool)
         | `Fn('tick => React.element)
       ]
