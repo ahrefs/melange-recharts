@@ -132,18 +132,6 @@ module PxOrPrc = {
   let encodeOpt = Option.map(encode);
 };
 
-module StrOrNode = {
-  type t;
-  type arg =
-    | Str(string)
-    | Node(React.element);
-  let encode: arg => t =
-    fun
-    | Str(v) => Obj.magic(v)
-    | Node(v) => Obj.magic(v);
-  let encodeOpt = Option.map(encode);
-};
-
 module TooltipCursor = {
   [@deriving jsProperties]
   type config = {

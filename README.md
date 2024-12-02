@@ -57,14 +57,6 @@ module PxOrPrc = {
     | Prc(float);
   ...
 };
-
-module StrOrNode = {
-  ...
-  type arg =
-    | Str(string)
-    | Node(ReasonReact.reactElement);
-  ...
-};
 ```
 
 you will use it like this:
@@ -72,15 +64,9 @@ you will use it like this:
 ```reason
 <XAxis
   interval=PreserveStart
-  label=Str("text")
 />
 <XAxis
   interval=Num(12)
-  label=Node(
-    <span>
-      (ReasonReact.stringToElement("text"))
-    </span>
-  )
 />
 ```
 
