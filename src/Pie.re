@@ -35,39 +35,52 @@ external make:
     // Pulled from:
     // https://github.com/recharts/recharts/blob/7fb227dae542c3d3093506e6d80a2c2c366f9a26/src/polar/Pie.tsx#L107-L109
     ~onClick:
-      (
-        Js.Nullable.t(Js.t({.. "payload": 'dataItem})),
-        int,
-        React.Event.Mouse.t
-      ) =>
+      (Js.Nullable.t({.. "payload": 'dataItem}), int, React.Event.Mouse.t) =>
       unit
         =?,
-    ~onMouseDown:
-      (Js.t({.. "payload": 'dataItem}), React.Event.Mouse.t) => unit=?,
     ~onMouseEnter:
-      (
-        Js.Nullable.t(Js.t({.. "payload": 'dataItem})),
-        int,
-        React.Event.Mouse.t
-      ) =>
+      (Js.Nullable.t({.. "payload": 'dataItem}), int, React.Event.Mouse.t) =>
       unit
         =?,
     ~onMouseLeave:
+      (Js.Nullable.t({.. "payload": 'dataItem}), int, React.Event.Mouse.t) =>
+      unit
+        =?,
+    ~onMouseDown:
       (
         Js.Nullable.t(Js.t({.. "payload": 'dataItem})),
-        int,
         React.Event.Mouse.t
       ) =>
       unit
         =?,
     ~onMouseMove:
-      (Js.t({.. "payload": 'dataItem}), React.Event.Mouse.t) => unit=?,
+      (
+        Js.Nullable.t(Js.t({.. "payload": 'dataItem})),
+        React.Event.Mouse.t
+      ) =>
+      unit
+        =?,
     ~onMouseOut:
-      (Js.t({.. "payload": 'dataItem}), React.Event.Mouse.t) => unit=?,
+      (
+        Js.Nullable.t(Js.t({.. "payload": 'dataItem})),
+        React.Event.Mouse.t
+      ) =>
+      unit
+        =?,
     ~onMouseOver:
-      (Js.t({.. "payload": 'dataItem}), React.Event.Mouse.t) => unit=?,
+      (
+        Js.Nullable.t(Js.t({.. "payload": 'dataItem})),
+        React.Event.Mouse.t
+      ) =>
+      unit
+        =?,
     ~onMouseUp:
-      (Js.t({.. "payload": 'dataItem}), React.Event.Mouse.t) => unit=?,
+      (
+        Js.Nullable.t(Js.t({.. "payload": 'dataItem})),
+        React.Event.Mouse.t
+      ) =>
+      unit
+        =?,
     ~outerRadius: PxOrPrc.t=?,
     ~paddingAngle: int=?,
     ~startAngle: int=?,

@@ -1,3 +1,7 @@
+## Unpublished
+
+- *[breaking]* improve bindings for XYZ axes, Treemap, Pie and Cell components [#59](https://github.com/ahrefs/melange-recharts/pull/59)
+
 ## 4.0.7 (2024-11-23)
 
 - add `payload` to `Pie` and `Bar` event handler
