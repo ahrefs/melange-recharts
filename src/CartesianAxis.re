@@ -24,4 +24,5 @@ external make:
   React.element =
   "CartesianAxis";
 
-let makeProps = (~interval=?) => makeProps(~interval=?interval->AxisInterval.encodeOpt);
+let makeProps = (~interval=?) =>
+  makeProps(~interval=?interval->AxisInterval.encodeOpt);

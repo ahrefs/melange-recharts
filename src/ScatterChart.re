@@ -9,8 +9,7 @@ external make:
     ~margin: margin=?,
     ~style: ReactDOM.Style.t=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
-    ~onMouseEnter:
-      (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseLeave: (Js.t({..}), React.Event.Mouse.t) => unit=?,
     ~onMouseOut: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,

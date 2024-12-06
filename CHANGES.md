@@ -1,3 +1,7 @@
+## 5.0.2
+
+- change Tooltip.cursor Obj type to open object type
+
 ## 5.0.1
 
 - update `recharts` to `2.14.1`

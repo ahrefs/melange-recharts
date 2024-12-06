@@ -17,4 +17,7 @@ external make:
   "ResponsiveContainer";
 
 let makeProps = (~height=?, ~width=?) =>
-  makeProps(~height=?height->PxOrPrc.encodeOpt, ~width=?width->PxOrPrc.encodeOpt);
+  makeProps(
+    ~height=?height->PxOrPrc.encodeOpt,
+    ~width=?width->PxOrPrc.encodeOpt,
+  );
