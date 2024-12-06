@@ -22,18 +22,16 @@ external make:
     ~isAnimationActive: bool=?,
     ~animationBegin: int=?,
     ~animationDuration: int=?,
-    ~animationEasing:
-      [@mel.string] [
-        | `ease
-        | [@mel.as "ease-in"] `easeIn
-        | [@mel.as "ease-out"] `easeOut
-        | [@mel.as "ease-in-out"] `easeInOut
-        | `linear
-      ]
-        =?,
+    ~animationEasing: [@mel.string] [
+                        | `ease
+                        | [@mel.as "ease-in"] `easeIn
+                        | [@mel.as "ease-out"] `easeOut
+                        | [@mel.as "ease-in-out"] `easeInOut
+                        | `linear
+                      ]
+                        =?,
     ~onClick: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
-    ~onMouseEnter:
-      (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
+    ~onMouseEnter: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseLeave: (Js.t({..}), React.Event.Mouse.t) => unit=?,
     ~onMouseOut: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
