@@ -6,32 +6,23 @@ external make:
     ~allowEscapeViewBox: Js.t({..})=?,
     ~animationBegin: int=?,
     ~animationDuration: int=?,
-    ~animationEasing:
-      [@mel.string] [
-        | `ease
-        | [@mel.as "ease-in"] `easeIn
-        | [@mel.as "ease-out"] `easeOut
-        | [@mel.as "ease-in-out"] `easeInOut
-        | `linear
-      ]
-        =?,
+    ~animationEasing: [@mel.string] [
+                        | `ease
+                        | [@mel.as "ease-in"] `easeIn
+                        | [@mel.as "ease-out"] `easeOut
+                        | [@mel.as "ease-in-out"] `easeInOut
+                        | `linear
+                      ]
+                        =?,
     ~className: string=?,
     ~content: 'content=?,
     ~position: Js.t({..})=?,
-    ~cursor:
-      [@mel.unwrap] [
-        | `Bool(bool)
-        | `Obj(
-            Js.t({
-              .
-              "fill": option(string),
-              "stroke": option(string),
-              "strokeWidth": option(int),
-            }),
-          )
-        | `Element(React.element)
-      ]
-        =?,
+    ~cursor: [@mel.unwrap] [
+               | `Bool(bool)
+               | `Obj(Js.t({..}))
+               | `Element(React.element)
+             ]
+               =?,
     ~filterNull: bool=?,
     ~formatter: 'formatter=?,
     ~isAnimationActive: bool=?,
