@@ -36,5 +36,5 @@ build: [
 ]
 dev-repo: "git+https://github.com/ahrefs/melange-recharts.git"
 depexts: [
-  ["recharts"] {npm-version = "^2.1.12"}
+  ["recharts"] {npm-version = "^2.14.1"}
 ]

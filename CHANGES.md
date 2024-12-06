@@ -1,4 +1,8 @@
-## Unpublished
+## 5.0.1
+
+- update `recharts` to `2.14.1`
+
+## 5.0.0
 
 - *[breaking]* improve bindings for XYZ axes, Treemap, Pie and Cell components [#59](https://github.com/ahrefs/melange-recharts/pull/59)
 - *[breaking]* remove `TooltipCursor` module [#60](https://github.com/ahrefs/melange-recharts/pull/60)
