@@ -1,3 +1,7 @@
+## 5.0.3
+
+- fix tick props in `XAxis`, `YAxis` and `ZAxis`
+
 ## 5.0.2
 
 - change Tooltip.cursor Obj type to open object type

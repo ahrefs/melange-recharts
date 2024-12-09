@@ -1,6 +1,14 @@
 // http://recharts.org/en-US/api/YAxis
 open Utils;
 
+type tickArgs = {
+  index: int,
+  payload: option({. "value": float}),
+  visibleTicksCount: int,
+  x: int,
+  y: int,
+};
+
 [@mel.module "recharts"] [@react.component]
 external make:
   (
@@ -54,7 +62,7 @@ external make:
              | `Obj(Js.t({..}))
              | `Element(React.element)
              | `Bool(bool)
-             | `Fn('tick => React.element)
+             | `Fn('tickProps => React.element)
            ]
              =?,
     ~tickCount: int=?,

@@ -54,7 +54,7 @@ external make:
              | `Obj(Js.t({..}))
              | `Element(React.element)
              | `Bool(bool)
-             | `Fn('tick => React.element)
+             | `Fn('tickProps => React.element)
            ]
              =?,
     ~tickCount: int=?,
