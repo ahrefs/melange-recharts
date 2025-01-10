@@ -19,6 +19,7 @@ external make:
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~stackOffset: stackOffset=?,
     ~syncId: string=?,
+    ~syncMethod: syncMethod=?,
     ~width: int=?,
     ~children: React.element
   ) =>

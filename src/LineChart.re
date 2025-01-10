@@ -17,6 +17,7 @@ external make:
     ~onMouseLeave: (Js.t({..}), React.Event.Mouse.t) => unit=?,
     ~onMouseMove: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~syncId: string=?,
+    ~syncMethod: syncMethod=?,
     ~width: int=?,
     ~children: React.element
   ) =>

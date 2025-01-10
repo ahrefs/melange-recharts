@@ -50,6 +50,8 @@ type layout = [ | `horizontal | `vertical];
 
 type stackOffset = [ | `expand | `none | `wiggle | `silhouette | `sign];
 
+type syncMethod = [ | `index | `value];
+
 type margin = {
   .
   "top": int,
