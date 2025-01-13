@@ -22,6 +22,7 @@ external make:
     ~reverseStackOrder: bool=?,
     ~stackOffset: stackOffset=?,
     ~syncId: string=?,
+    ~syncMethod: syncMethod=?,
     ~width: int=?,
     ~children: React.element
   ) =>
