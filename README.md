@@ -13,11 +13,11 @@ Then:
 opam install melange-recharts
 ```
 
-The bindings support the version `^2.1.12` of `recharts` npm package, which should be installed separately:
+The bindings support the version `^2.15.1` of `recharts` npm package, which should be installed separately:
 
 ```json
   "dependencies": {
-    "recharts": "^2.1.12"
+    "recharts": "^2.15.1"
   }
 ```
 

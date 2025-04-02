@@ -1,3 +1,8 @@
+## 5.1.0
+
+- add `SanKey` binding
+- update `recharts` to `2.15.1`
+
 ## 5.0.4
 
 - add `syncMethod` prop to `LineChart`, `AreaChart`, `BarChart`, `ComposedChart`
