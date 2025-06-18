@@ -21,7 +21,13 @@ external make:
     ~cx: PxOrPrc.t=?,
     ~cy: PxOrPrc.t=?,
     ~data: array('dataItem),
-    ~dataKey: 'dataKey,
+    ~dataKey:
+      [@mel.unwrap] [
+        | `Str(string)
+        | `Int(int)
+        | `Fn('dataObj => 'data)
+      ]
+        =?,
     ~endAngle: int=?,
     ~fill: string=?,
     ~id: string=?,
