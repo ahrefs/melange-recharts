@@ -94,7 +94,6 @@ module PieChart = {
 
   [@react.component]
   let make = () => {
-    let animationDuration = 800;
     let (selectedItem, setSelectedItem) = React.useState(() => None);
 
     let rawData = [
@@ -157,11 +156,10 @@ module PieChart = {
             cy={Prc(50.)}
             innerRadius={Px(innerRadius)}
             outerRadius={Px(outerRadius)}
-            paddingAngle=2
             startAngle=90
             endAngle=(-270)
             animationBegin=0
-            animationDuration
+            animationDuration=800
             onClick>
             {data
              |> Array.mapi((index, item) => {
