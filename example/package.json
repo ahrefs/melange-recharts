@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "react": "19.1",
-    "react-dom": "19.1",
-    "recharts": "^2.15.3"
-  }
-}
