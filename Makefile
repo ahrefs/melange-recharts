@@ -50,4 +50,4 @@ watch: ## Watch for the filesystem and rebuild on every change
 
 .PHONY: run
 run: ## Run the example
-	npx static-serve _build/default/example/
+	npx static-serve _build/default/example/example/
