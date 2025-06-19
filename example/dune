@@ -1,5 +1,8 @@
 (melange.emit
  (target example)
- (libraries reason-react recharts)
+ (module_systems
+  (es6 mjs))
+ (libraries reason-react melange.dom recharts)
+ (runtime_deps index.html)
  (preprocess
   (pps melange.ppx reason-react-ppx)))

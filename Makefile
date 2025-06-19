@@ -47,3 +47,7 @@ format-check: ## Checks if format is correct
 .PHONY: watch
 watch: ## Watch for the filesystem and rebuild on every change
 	$(DUNE) build --watch @melange
+
+.PHONY: run
+run: ## Run the example
+	npx static-serve _build/default/example/
