@@ -18,6 +18,7 @@ external make:
     ~onMouseUp: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~r: int=?,
     ~stroke: string=?,
+    ~strokeWidth: int=?,
     ~strokeDasharray: string=?,
     ~x: string=?,
     ~xAxis: Js.t({..})=?,
