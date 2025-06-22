@@ -1,3 +1,7 @@
+## 5.1.1
+
+- add `strokeWidth` prop to `ReferenceLine`
+
 ## 5.1.0
 
 - add `SanKey` binding
