@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo melange-recharts</title>
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unocss/reset/normalize.min.css" />
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <style>
+      :root {
+        font-family: Inter, sans-serif;
+        font-feature-settings: 'liga' 1, 'calt' 1;
+        /* fix for Chrome */
+      }
+
+      @supports (font-variation-settings: normal) {
+        :root {
+          font-family: InterVariable, sans-serif;
+        }
+      }
+
+      html,
+      body,
+      #root {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      * {
+        font-family: Inter, sans-serif;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "melange/": "./example/node_modules/melange/",
+          "melange.belt/": "./example/node_modules/melange.belt/",
+          "melange.js/": "./example/node_modules/melange.js/",
+          "reason-react/": "./example/node_modules/reason-react/",
+          "melange-recharts/": "./example/node_modules/melange-recharts/",
+          "react": "https://esm.sh/react@19.1.0",
+          "react/jsx-runtime": "https://esm.sh/react@19.1.0/jsx-runtime",
+          "react-dom": "https://esm.sh/react-dom@19.1.0",
+          "react-dom/client": "https://esm.sh/react-dom@19.1.0/client",
+          "recharts": "https://esm.sh/recharts@2.15.1"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+  <script type="module" src="./example/example/Example.mjs"></script>
+
+</html>

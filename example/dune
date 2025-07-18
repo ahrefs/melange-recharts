@@ -1,5 +1,13 @@
 (melange.emit
  (target example)
- (libraries reason-react recharts)
+ (module_systems
+  (es6 mjs))
+ (libraries reason-react melange.dom recharts)
  (preprocess
   (pps melange.ppx reason-react-ppx)))
+
+(rule
+ (alias melange)
+ (deps index.html)
+ (action ; no action needed, this is just to have index.html in the build directory
+  (run true)))
