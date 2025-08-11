@@ -1,3 +1,7 @@
+## 5.1.2
+
+- add `shared` prop to `Tooltip`
+
 ## 5.1.1
 
 - add `strokeWidth` prop to `ReferenceLine`
