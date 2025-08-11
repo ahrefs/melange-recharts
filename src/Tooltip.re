@@ -34,6 +34,7 @@ external make:
     ~offset: int=?,
     ~payload: array(Js.t({..}))=?,
     ~separator: string=?,
+    ~shared: bool=?,
     ~viewBox: Js.t({..})=?,
     ~wrapperStyle: Js.t({..})=?
   ) =>
