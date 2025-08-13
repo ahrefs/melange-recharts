@@ -14,7 +14,9 @@ external make:
     ~verticalPoints: array('verticalPoints)=?,
     ~width: int=?,
     ~x: int=?,
-    ~y: int=?
+    ~xAxisId: string=?,
+    ~y: int=?,
+    ~yAxisId: string=?
   ) =>
   React.element =
   "CartesianGrid";

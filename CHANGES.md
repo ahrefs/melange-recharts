@@ -1,3 +1,8 @@
+## 6.0.0
+
+- _[breaking]_ update recharts to 3.1.2
+- _[breaking]_ some updates to bindings based on [changelog](https://github.com/recharts/recharts/wiki/3.0-migration-guide#breaking-code-changes) 
+
 ## 5.1.2
 
 - add `shared` prop to `Tooltip`

@@ -18,7 +18,6 @@ external make:
     ~hide: bool=?,
     ~shape: 'shape=?,
     ~lineType: 'lineType=?,
-    ~points: array('point)=?,
     ~isAnimationActive: bool=?,
     ~animationBegin: int=?,
     ~animationDuration: int=?,

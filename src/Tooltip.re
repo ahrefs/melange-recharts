@@ -33,6 +33,7 @@ external make:
     ~labelStyle: Js.t({..})=?,
     ~offset: int=?,
     ~payload: array(Js.t({..}))=?,
+    ~portal: 'portal=?,
     ~separator: string=?,
     ~shared: bool=?,
     ~viewBox: Js.t({..})=?,

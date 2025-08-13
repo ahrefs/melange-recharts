@@ -4,7 +4,6 @@ open Utils;
 [@mel.module "recharts"] [@react.component]
 external make:
   (
-    ~activeIndex: array(Js.t({..}))=?,
     ~activeShape: 'activeShape=?,
     ~animationBegin: int=?,
     ~animationDuration: int=?,
