@@ -6,7 +6,6 @@ external make:
     ~alwaysShow: bool=?,
     ~className: string=?,
     ~fill: string=?,
-    ~isFront: bool=?,
     ~label: 'label=?,
     ~onClick: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
     ~onMouseDown: (Js.Nullable.t(Js.t({..})), React.Event.Mouse.t) => unit=?,
