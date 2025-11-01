@@ -1,3 +1,7 @@
+## 5.1.3
+
+- add `strokeLinecap` and `strokeLinejoin` props to Line
+
 ## 5.1.2
 
 - add `shared` prop to `Tooltip`

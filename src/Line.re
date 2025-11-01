@@ -41,6 +41,8 @@ external make:
     ~strokeWidth: int=?,
     ~strokeOpacity: option(float)=?,
     ~strokeDasharray: string=?,
+    ~strokeLinecap: string=?,
+    ~strokeLinejoin: string=?,
     ~unit: string=?,
     ~xAxisId: string=?,
     ~yAxisId: string=?
